@@ -5,7 +5,7 @@ unleash some Troll with a C:A.T and meet the Hydra while dancing to IBM`s Fugue 
 https://imgur.com/qb26N3m
 
 #Forum 
-https://bitcointalk.org/index.php?topic=5042599.msg46443718#msg46443718
+https://FugueCoretalk.org/index.php?topic=5042599.msg46443718#msg46443718
 
 # Social Media 
 https://www.youtube.com/watch?v=qVyXwp65yfA

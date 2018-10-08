@@ -51,7 +51,7 @@ enum RPCErrorCode
     RPC_DESERIALIZATION_ERROR       = -22, // Error parsing or validating structure in raw format
 
     // P2P client errors
-    RPC_CLIENT_NOT_CONNECTED        = -9,  // FugueCore is not connected
+    RPC_CLIENT_NOT_CONNECTED        = -9,  // Fuguecoin is not connected
     RPC_CLIENT_IN_INITIAL_DOWNLOAD  = -10, // Still downloading initial blocks
 
     // Wallet errors
@@ -101,7 +101,7 @@ public:
 };
 
 /*
-  FugueCore RPC command dispatcher.
+  Fuguecoin RPC command dispatcher.
  */
 class CRPCTable
 {
@@ -142,9 +142,11 @@ extern json_spirit::Value importprivkey(const json_spirit::Array& params, bool f
 
 extern json_spirit::Value getgenerate(const json_spirit::Array& params, bool fHelp); // in rpcmining.cpp
 extern json_spirit::Value setgenerate(const json_spirit::Array& params, bool fHelp);
+extern json_spirit::Value getnetworkhashps(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value gethashespersec(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value getmininginfo(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value getwork(const json_spirit::Array& params, bool fHelp);
+extern json_spirit::Value getwork2(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value getblocktemplate(const json_spirit::Array& params, bool fHelp);
 extern json_spirit::Value submitblock(const json_spirit::Array& params, bool fHelp);
 

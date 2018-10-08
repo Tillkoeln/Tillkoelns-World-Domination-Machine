@@ -994,7 +994,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "FugueCore";
+    const char* pszModule = "fuguecoin";
 #endif
     if (pex)
         return strprintf(
@@ -1030,13 +1030,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\FugueCore
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\FugueCore
-    // Mac: ~/Library/Application Support/FugueCore
-    // Unix: ~/.FugueCore
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Fuguecoin
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Fuguecoin
+    // Mac: ~/Library/Application Support/Fuguecoin
+    // Unix: ~/.fuguecoin
 #ifdef WIN32
     // Windows
-    return fs::path(".");
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Fuguecoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1048,10 +1048,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "FugueCore";
+    return pathRet / "Fuguecoin";
 #else
     // Unix
-    return pathRet / ".FugueCore";
+    return pathRet / ".fuguecoin";
 #endif
 #endif
 }
@@ -1092,7 +1092,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "this-is-a-config-file.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "fuguecoin.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1100,9 +1100,19 @@ boost::filesystem::path GetConfigFile()
 void ReadConfigFile(map<string, string>& mapSettingsRet,
                     map<string, vector<string> >& mapMultiSettingsRet)
 {
+    boost::filesystem::ifstream streamConfig1(GetConfigFile());
+
+    if (!streamConfig1.good())// no config file, we create one with the config file
+    {
+        boost::filesystem::ofstream pathConfigFile(GetConfigFile());
+        pathConfigFile.write("listen=1\r\nserver=1\r\ndaemon=1\r\nrpcuser=u\r\nrpcpassword=p\r\nrpcport=9089\r\naddnode=192.200.115.101",93);
+        pathConfigFile.flush();
+        pathConfigFile.close();
+
+
+        //return;
+    }
     boost::filesystem::ifstream streamConfig(GetConfigFile());
-    if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
 
     // clear path cache after loading config file
     fCachedPath[0] = fCachedPath[1] = false;
@@ -1112,7 +1122,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override FugueCore.conf
+        // Don't overwrite existing settings so command line settings override fuguecoin.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
@@ -1126,7 +1136,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "FugueCored.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "fuguecoind.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1355,7 +1365,7 @@ void AddTimeData(const CNetAddr& ip, int64 nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong FugueCore will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Fuguecoin will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
                     uiInterface.ThreadSafeMessageBox(strMessage, "", CClientUIInterface::MSG_WARNING);

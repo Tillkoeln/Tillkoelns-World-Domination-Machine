@@ -13,15 +13,15 @@ USE_IPV6:=1
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
  -I"$(CURDIR)"/obj \
- -I"$(DEPSDIR)/boost_1_50_0" \
+ -I"$(DEPSDIR)/boost_1_53_0" \
  -I"$(DEPSDIR)/db-4.8.30.NC/build_unix" \
- -I"$(DEPSDIR)/openssl-1.0.1c/include" \
+ -I"$(DEPSDIR)/openssl-1.0.1e/include" \
  -I"$(DEPSDIR)"
 
 LIBPATHS= \
- -L"$(DEPSDIR)/boost_1_50_0/stage/lib" \
+ -L"$(DEPSDIR)/boost_1_53_0/stage/lib" \
  -L"$(DEPSDIR)/db-4.8.30.NC/build_unix" \
- -L"$(DEPSDIR)/openssl-1.0.1c"
+ -L"$(DEPSDIR)/openssl-1.0.1e"
 
 LIBS= \
   $(CURDIR)/leveldb/libleveldb.a $(CURDIR)/leveldb/libmemenv.a \
@@ -91,9 +91,10 @@ OBJS= \
     obj/hash.o \
     obj/bloom.o \
     obj/leveldb.o \
-    obj/txdb.o
+    obj/txdb.o\
+    obj/fugue.o
 
-all: FugueCored.exe
+all: fuguecoind.exe
 
 DEFS += -I"$(CURDIR)/leveldb/include"
 DEFS += -I"$(CURDIR)/leveldb/helpers"
@@ -108,7 +109,10 @@ DEFS += -DHAVE_BUILD_INFO
 obj/%.o: %.cpp $(HEADERS)
 	$(CXX) -c $(xCXXFLAGS) -o $@ $<
 
-FugueCored.exe: $(OBJS:obj/%=obj/%)
+obj/%.o: %.c $(HEADERS)
+	$(CXX) -c $(xCXXFLAGS) -fpermissive -o $@ $<
+
+fuguecoind.exe: $(OBJS:obj/%=obj/%)
 	$(CXX) $(xCXXFLAGS) $(xLDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -116,15 +120,15 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	$(CXX) -c $(TESTDEFS) $(xCXXFLAGS) -o $@ $<
 
-test_FugueCore.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_fuguecoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	$(CXX) $(xCXXFLAGS) $(xLDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework-mt-s $(LIBS)
 
 
 clean:
 	-rm -f obj/*.o
-	-rm -f FugueCored.exe
+	-rm -f fuguecoind.exe
 	-rm -f obj-test/*.o
-	-rm -f test_FugueCore.exe
+	-rm -f test_fuguecoin.exe
 	-rm -f obj/build.h
 	cd leveldb && TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) clean && cd ..
 

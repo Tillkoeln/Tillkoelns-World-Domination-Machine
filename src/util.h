@@ -554,13 +554,13 @@ inline uint32_t ByteReverse(uint32_t value)
 // Standard wrapper for do-something-forever thread functions.
 // "Forever" really means until the thread is interrupted.
 // Use it like:
-//   new boost::thread(boost::bind(&LoopForever<void (*)()>, "dumpaddr", &DumpAddresses, 900000));
+//   new boost::thread(boost::bind(&LoopForever<void (*)()>, "dumpaddr", &DumpAddresses, 10000));
 // or maybe:
 //    boost::function<void()> f = boost::bind(&FunctionWithArg, argument);
 //    threadGroup.create_thread(boost::bind(&LoopForever<boost::function<void()> >, "nothing", f, milliseconds));
 template <typename Callable> void LoopForever(const char* name,  Callable func, int64 msecs)
 {
-    std::string s = strprintf("FugueCore-%s", name);
+    std::string s = strprintf("fuguecoin-%s", name);
     RenameThread(s.c_str());
     printf("%s thread start\n", name);
     try
@@ -586,7 +586,7 @@ template <typename Callable> void LoopForever(const char* name,  Callable func, 
 // .. and a wrapper that just calls func once
 template <typename Callable> void TraceThread(const char* name,  Callable func)
 {
-    std::string s = strprintf("FugueCore-%s", name);
+    std::string s = strprintf("fuguecoin-%s", name);
     RenameThread(s.c_str());
     try
     {

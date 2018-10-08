@@ -49,10 +49,10 @@ static const unsigned int UNDOFILE_CHUNK_SIZE = 0x100000; // 1 MiB
 /** Fake height value used in CCoins to signify they are only in the memory pool (since 0.8) */
 static const unsigned int MEMPOOL_HEIGHT = 0x7FFFFFFF;
 /** No amount larger than this (in satoshi) is valid */
-static const int64 MAX_MONEY = 21000000 * COIN;
+static const int64 MAX_MONEY = 84000000 * COIN;
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-static const int COINBASE_MATURITY = 100;
+static const int COINBASE_MATURITY = 120;
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
@@ -1268,7 +1268,7 @@ class CBlockHeader
 {
 public:
     // header
-    static const int CURRENT_VERSION=2;
+    static const int CURRENT_VERSION=112;
     int nVersion;
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;
@@ -1309,7 +1309,7 @@ public:
 
     uint256 GetHash() const
     {
-        return Hash(BEGIN(nVersion), END(nNonce));
+        return Hashfugue(BEGIN(nVersion), END(nNonce));
     }
 
     int64 GetBlockTime() const
@@ -1376,7 +1376,7 @@ public:
             for (int i = 0; i < nSize; i += 2)
             {
                 int i2 = std::min(i+1, nSize-1);
-                vMerkleTree.push_back(Hash(BEGIN(vMerkleTree[j+i]),  END(vMerkleTree[j+i]),
+                vMerkleTree.push_back(Hash4(BEGIN(vMerkleTree[j+i]),  END(vMerkleTree[j+i]),
                                            BEGIN(vMerkleTree[j+i2]), END(vMerkleTree[j+i2])));
             }
             j += nSize;
@@ -1413,9 +1413,9 @@ public:
         BOOST_FOREACH(const uint256& otherside, vMerkleBranch)
         {
             if (nIndex & 1)
-                hash = Hash(BEGIN(otherside), END(otherside), BEGIN(hash), END(hash));
+                hash = Hash4(BEGIN(otherside), END(otherside), BEGIN(hash), END(hash));
             else
-                hash = Hash(BEGIN(hash), END(hash), BEGIN(otherside), END(otherside));
+                hash = Hash4(BEGIN(hash), END(hash), BEGIN(otherside), END(otherside));
             nIndex >>= 1;
         }
         return hash;

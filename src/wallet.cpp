@@ -1211,10 +1211,9 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend,
                 }
 
                 int64 nChange = nValueIn - nValue - nFeeRet;
-                // The following if statement should be removed once enough miners
-                // have upgraded to the 0.9 GetMinFee() rules. Until then, this avoids
-                // creating free transactions that have change outputs less than
-                // CENT bitcoins.
+                // if sub-cent change is required, the fee must be raised to at least nMinTxFee
+                // or until nChange becomes zero
+                // NOTE: this depends on the exact behaviour of GetMinFee
                 if (nFeeRet < CTransaction::nMinTxFee && nChange > 0 && nChange < CENT)
                 {
                     int64 nMoveToFee = min(nChange, CTransaction::nMinTxFee - nFeeRet);
@@ -1237,7 +1236,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend,
 
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-FugueCore-address
+                    // change transaction isn't always pay-to-fuguecoin-address
                     CScript scriptChange;
                     scriptChange.SetDestination(vchPubKey.GetID());
 
@@ -1402,7 +1401,7 @@ string CWallet::SendMoneyToDestination(const CTxDestination& address, int64 nVal
     if (nValue + nTransactionFee > GetBalance())
         return _("Insufficient funds");
 
-    // Parse FugueCore address
+    // Parse Fuguecoin address
     CScript scriptPubKey;
     scriptPubKey.SetDestination(address);
 
