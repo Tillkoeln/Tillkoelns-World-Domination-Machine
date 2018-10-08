@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About Bitcoin</string>
+   <string>About FugueCore</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
@@ -50,7 +50,7 @@
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string>&lt;b&gt;Bitcoin&lt;/b&gt; version</string>
+          <string>&lt;b&gt;FugueCore&lt;/b&gt; version</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -91,7 +91,7 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string notr="true">Copyright &amp;copy; 2009-YYYY The Bitcoin developers</string>
+        <string notr="true">Copyright &amp;copy; 1337-YYYY The Bitcoin developers featuring whoop whoop trallalalala by Tillkoeln</string>
        </property>
        <property name="textFormat">
         <enum>Qt::RichText</enum>
@@ -110,9 +110,9 @@
         <string>
 This is experimental software.
 
-Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
+Distributed under the MIT/X11 software license, google gives you more info about,.
 
-This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</string>
+This product includes many software from many different people feel free to research around openssl or berkley´s DataBase or the Tetris developer,  and finaly google for Tillkoeln</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

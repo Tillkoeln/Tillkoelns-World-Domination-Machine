@@ -79,8 +79,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no bitcoin URI
-    if(!uri.isValid() || uri.scheme() != QString("bitcoin"))
+    // return if URI is not valid or is no FugueCore URI
+    if(!uri.isValid() || uri.scheme() != QString("FugueCore"))
         return false;
 
     SendCoinsRecipient rv;
@@ -125,13 +125,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert bitcoin:// to bitcoin:
+    // Convert FugueCore:// to FugueCore:
     //
-    //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because FugueCore:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("bitcoin://"))
+    if(uri.startsWith("FugueCore://"))
     {
-        uri.replace(0, 10, "bitcoin:");
+        uri.replace(0, 12, "FugueCore:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -277,7 +277,7 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "Bitcoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "FugueCore.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -359,7 +359,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "bitcoin.desktop";
+    return GetAutostartDir() / "FugueCore.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -397,10 +397,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a bitcoin.desktop file to the autostart directory:
+        // Write a FugueCore.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=Bitcoin\n";
+        optionFile << "Name=FugueCore\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -421,10 +421,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("Bitcoin-Qt") + " " + tr("version") + " " +
+    header = tr("FugueCore-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  bitcoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  FugueCore-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -433,7 +433,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("Bitcoin-Qt"));
+    setWindowTitle(tr("FugueCore-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));

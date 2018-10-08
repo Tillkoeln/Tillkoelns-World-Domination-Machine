@@ -61,7 +61,7 @@
             <item>
              <widget class="QLabel" name="labelWalletStatus">
               <property name="toolTip">
-               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</string>
+               <string>come back later if Your wallet had automatically synchronizes with the JustinBieber MickyMouse FanClub Forum.</string>
               </property>
               <property name="styleSheet">
                <string notr="true">QLabel { color: red; }</string>
@@ -122,7 +122,7 @@
                <string>Your current balance</string>
               </property>
               <property name="text">
-               <string notr="true">0 BTC</string>
+               <string notr="true">0 FuGuE</string>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -148,10 +148,10 @@
                <cursorShape>IBeamCursor</cursorShape>
               </property>
               <property name="toolTip">
-               <string>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</string>
+               <string>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance .. make sense or ? </string>
               </property>
               <property name="text">
-               <string notr="true">0 BTC</string>
+               <string notr="true">0 FuGuE</string>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -174,10 +174,10 @@
                </font>
               </property>
               <property name="toolTip">
-               <string>Mined balance that has not yet matured</string>
+               <string>Mined balance that has not yet Milfed</string>
               </property>
               <property name="text">
-               <string notr="true">0 BTC</string>
+               <string notr="true">0 FC</string>
               </property>
               <property name="textInteractionFlags">
                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -227,7 +227,7 @@
             <item>
              <widget class="QLabel" name="labelTransactionsStatus">
               <property name="toolTip">
-               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</string>
+               <string>The displayed information may be out of date. Your wallet automatically synchronizes with the FugueCore network after a connection is established, but this process has not completed yet.</string>
               </property>
               <property name="styleSheet">
                <string notr="true">QLabel { color: red; }</string>

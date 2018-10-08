@@ -16,7 +16,7 @@ OptionsModel::OptionsModel(QObject *parent) :
 bool static ApplyProxySettings()
 {
     QSettings settings;
-    CService addrProxy(settings.value("addrProxy", "127.0.0.1:9050").toString().toStdString());
+    CService addrProxy(settings.value("addrProxy", "127.0.0.1:9042").toString().toStdString());
     int nSocksVersion(settings.value("nSocksVersion", 5).toInt());
     if (!settings.value("fUseProxy", false).toBool()) {
         addrProxy = CService();
@@ -179,7 +179,7 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             if (GetProxy(NET_IPV4, proxy))
                 return QVariant(proxy.first.GetPort());
             else
-                return QVariant(9050);
+                return QVariant(9042);
         }
         case ProxySocksVersion: {
             proxyType proxy;
@@ -232,7 +232,7 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             break;
         case ProxyIP: {
             proxyType proxy;
-            proxy.first = CService("127.0.0.1", 9050);
+            proxy.first = CService("127.0.0.1", 9042);
             GetProxy(NET_IPV4, proxy);
 
             CNetAddr addr(value.toString().toStdString());
@@ -243,7 +243,7 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
         break;
         case ProxyPort: {
             proxyType proxy;
-            proxy.first = CService("127.0.0.1", 9050);
+            proxy.first = CService("127.0.0.1", 9042);
             GetProxy(NET_IPV4, proxy);
 
             proxy.first.SetPort(value.toInt());

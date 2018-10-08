@@ -162,7 +162,7 @@ bool AppInit(int argc, char* argv[])
         //
         // Parameters
         //
-        // If Qt is used, parameters/bitcoin.conf are parsed in qt/bitcoin.cpp's main()
+        // If Qt is used, parameters/FugueCore.conf are parsed in qt/FugueCore.cpp's main()
         ParseParameters(argc, argv);
         if (!boost::filesystem::is_directory(GetDataDir(false)))
         {
@@ -173,13 +173,13 @@ bool AppInit(int argc, char* argv[])
 
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
-            // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("Bitcoin version") + " " + FormatFullVersion() + "\n\n" +
+            // First part of help message is specific to FugueCored / RPC client
+            std::string strUsage = _("FugueCore version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  bitcoind [options]                     " + "\n" +
-                  "  bitcoind [options] <command> [params]  " + _("Send command to -server or bitcoind") + "\n" +
-                  "  bitcoind [options] help                " + _("List commands") + "\n" +
-                  "  bitcoind [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  FugueCored [options]                     " + "\n" +
+                  "  FugueCored [options] <command> [params]  " + _("Send command to -server or FugueCored") + "\n" +
+                  "  FugueCored [options] help                " + _("List commands") + "\n" +
+                  "  FugueCored [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -189,7 +189,7 @@ bool AppInit(int argc, char* argv[])
 
         // Command-line RPC
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "bitcoin:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "FugueCore:"))
                 fCommandLine = true;
 
         if (fCommandLine)
@@ -292,8 +292,8 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -?                     " + _("This help message") + "\n" +
-        "  -conf=<file>           " + _("Specify configuration file (default: bitcoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: bitcoind.pid)") + "\n" +
+        "  -conf=<file>           " + _("Specify configuration file (default: FugueCore.conf)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: FugueCored.pid)") + "\n" +
         "  -gen                   " + _("Generate coins (default: 0)") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
         "  -dbcache=<n>           " + _("Set database cache size in megabytes (default: 25)") + "\n" +
@@ -621,18 +621,18 @@ bool AppInit2(boost::thread_group& threadGroup)
 
     std::string strDataDir = GetDataDir().string();
 
-    // Make sure only a single Bitcoin process is using the data directory.
+    // Make sure only a single FugueCore process is using the data directory.
     boost::filesystem::path pathLockFile = GetDataDir() / ".lock";
     FILE* file = fopen(pathLockFile.string().c_str(), "a"); // empty lock file; created if it doesn't exist.
     if (file) fclose(file);
     static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
     if (!lock.try_lock())
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. Bitcoin is probably already running."), strDataDir.c_str()));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. FugueCore is probably already running."), strDataDir.c_str()));
 
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("Bitcoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
+    printf("FugueCore version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
     printf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
     if (!fLogTimestamps)
         printf("Startup time: %s\n", DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime()).c_str());
@@ -642,7 +642,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     std::ostringstream strErrors;
 
     if (fDaemon)
-        fprintf(stdout, "Bitcoin server starting\n");
+        fprintf(stdout, "FugueCore server starting\n");
 
     if (nScriptCheckThreads) {
         printf("Using %u threads for script verification\n", nScriptCheckThreads);
@@ -728,7 +728,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     CService addrProxy;
     bool fProxy = false;
     if (mapArgs.count("-proxy")) {
-        addrProxy = CService(mapArgs["-proxy"], 9050);
+        addrProxy = CService(mapArgs["-proxy"], 9042);
         if (!addrProxy.IsValid())
             return InitError(strprintf(_("Invalid -proxy address: '%s'"), mapArgs["-proxy"].c_str()));
 
@@ -907,7 +907,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         return InitError(_("You need to rebuild the databases using -reindex to change -txindex"));
 
     // as LoadBlockIndex can take several minutes, it's possible the user
-    // requested to kill bitcoin-qt during the last operation. If so, exit.
+    // requested to kill FugueCore-qt during the last operation. If so, exit.
     // As the program has not fully started yet, Shutdown() is possibly overkill.
     if (fRequestShutdown)
     {
@@ -964,10 +964,10 @@ bool AppInit2(boost::thread_group& threadGroup)
             InitWarning(msg);
         }
         else if (nLoadWalletRet == DB_TOO_NEW)
-            strErrors << _("Error loading wallet.dat: Wallet requires newer version of Bitcoin") << "\n";
+            strErrors << _("Error loading wallet.dat: Wallet requires newer version of FugueCore") << "\n";
         else if (nLoadWalletRet == DB_NEED_REWRITE)
         {
-            strErrors << _("Wallet needed to be rewritten: restart Bitcoin to complete") << "\n";
+            strErrors << _("Wallet needed to be rewritten: restart FugueCore to complete") << "\n";
             printf("%s", strErrors.str().c_str());
             return InitError(strErrors.str());
         }
