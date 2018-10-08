@@ -1,0 +1,1259 @@
+
+<!DOCTYPE HTML>
+
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    
+    
+    <title>Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances | Altoros</title>
+
+    
+        
+        <link media="screen, print" rel="stylesheet" href="https://www.altoros.com/blog/wp-content/themes/engine/style.css"
+              type="text/css"/>
+
+        
+                <link rel="shortcut icon"
+              href="/favicon.ico"/>
+
+        <link href="//fonts.googleapis.com/css?family=Rajdhani:300,500,700&amp;subset=" rel="stylesheet" type="text/css">
+    <meta property="og:image" content="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances.gif" />
+    <link rel="pingback" href="https://www.altoros.com/blog/xmlrpc.php"/>
+
+    
+    
+    	<script>function theChampLoadEvent(e){var t=window.onload;if(typeof window.onload!="function"){window.onload=e}else{window.onload=function(){t();e()}}}</script>
+		<script type="text/javascript">var theChampCloseIconPath = 'https://www.altoros.com/blog/wp-content/plugins/super-socializer/images/close.png';var heateorSsSDKBlockedMsg = `Your browser is blocking some features of this website. Please follow the instructions at <a href=\'http://support.heateor.com/browser-blocking-social-features/\' target=\'_blank\' style=\'color:#33a9d8\'>http://support.heateor.com/browser-blocking-social-features/</a> to unblock these.`</script>
+		<script> var theChampSiteUrl = 'https://www.altoros.com/blog', theChampVerified = 0, theChampEmailPopup = 0; </script>
+			<script> var theChampLoadingImgPath = 'https://www.altoros.com/blog/wp-content/plugins/super-socializer/images/ajax_loader.gif'; var theChampAjaxUrl = 'https://www.altoros.com/blog/wp-admin/admin-ajax.php'; var theChampRedirectionUrl = 'https://www.altoros.com/blog/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances/'; var theChampRegRedirectionUrl = 'https://www.altoros.com/blog/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances/'; </script>
+				<script> var theChampFacebookScope = 'public_profile,email', theChampFBKey = '148319482293476', theChampVerified = 0; var theChampAjaxUrl = 'https://www.altoros.com/blog/wp-admin/admin-ajax.php'; var theChampPopupTitle = ''; var theChampEmailPopup = 0; var theChampEmailAjaxUrl = 'https://www.altoros.com/blog/wp-admin/admin-ajax.php'; var theChampEmailPopupTitle = ''; var theChampEmailPopupErrorMsg = ''; var theChampEmailPopupUniqueId = ''; var theChampEmailPopupVerifyMessage = ''; var theChampLJLoginUsernameString = 'Enter your LiveJournal username'; var theChampLJAuthUrl = 'https://www.altoros.com/blog/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances/?SuperSocializerAuth=LiveJournal'; var theChampSteamAuthUrl = ""; var theChampTwitterRedirect = 'https%3A%2F%2Fwww.altoros.com%2Fblog%2Fansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances%2F';  var heateorMSEnabled = 0; var theChampTwitterAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitter&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampTwitchAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitch"; var theChampXingAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Xing&super_socializer_redirect_to=" + theChampTwitterRedirect;</script>
+				<script type="text/javascript" src="//platform.linkedin.com/in.js">
+		  api_key: 75g4t4j7mlwdp7
+onLoad: theChampLinkedInOnLoad
+		</script>
+				<script> var theChampSharingAjaxUrl = 'https://www.altoros.com/blog/wp-admin/admin-ajax.php', heateorSsUrlCountFetched = [], heateorSsSharesText = 'Shares', heateorSsShareText = 'Share', theChampPluginIconPath = 'https://www.altoros.com/blog/wp-content/plugins/super-socializer/images/logo.png', theChampHorizontalSharingCountEnable = 1, theChampVerticalSharingCountEnable = 0, theChampSharingOffset = 0, theChampCounterOffset = 0, theChampMobileStickySharingEnabled = 0;var heateorSsCopyLinkMessage = "Link copied.";
+				</script>
+			<style type="text/css">
+	.the_champ_horizontal_sharing .theChampSharing{
+					color: #fff;
+				border-width: 0px;
+		border-style: solid;
+		border-color: transparent;
+	}
+		.the_champ_horizontal_sharing .theChampTCBackground{
+		color:#666;
+	}
+		.the_champ_horizontal_sharing .theChampSharing:hover{
+				border-color: transparent;
+	}
+	.the_champ_vertical_sharing .theChampSharing{
+					color: #fff;
+				border-width: 0px;
+		border-style: solid;
+		border-color: transparent;
+	}
+		.the_champ_vertical_sharing .theChampTCBackground{
+		color:#666;
+	}
+		.the_champ_vertical_sharing .theChampSharing:hover{
+				border-color: transparent;
+	}
+				div.the_champ_horizontal_sharing .the_champ_square_count{display: block}
+			.the_champ_horizontal_sharing .the_champ_square_count{
+			display:block;
+			text-indent:0!important;
+			visibility:hidden;
+			background-color:#58B8F8!important;
+			width:auto;
+			height:auto;
+			text-align:center;
+			min-width:8px!important;
+			padding:1px 4px!important;
+			color:#fff!important;
+			font-family:'Open Sans',arial,sans-serif!important;
+			font-size:10px!important;
+			font-weight:600!important;
+			-webkit-border-radius:15px!important;
+			border-radius:15px!important;
+			-webkit-box-shadow:0 2px 2px rgba(0,0,0,.4);
+			box-shadow:0 2px 2px rgba(0,0,0,.4);
+			text-shadow:0 -1px 0 rgba(0,0,0,.2);
+			line-height:14px!important;
+			border:2px solid #fff!important;
+			z-index:1;
+			margin:2px auto!important;
+			box-sizing:content-box!important
+		}	</style>
+	<!-- JM Twitter Cards by Julien Maury 9.4 -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@altoros">
+<meta name="twitter:site" content="@Altoros">
+<meta name="twitter:title" content="Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances">
+<meta name="twitter:description" content="The need for automationWhen manually deploying Hyperledger Fabric to multiple instances, you have to take numerous actions across all the instances involved. Naturally, this is both effort- and ti">
+<meta name="twitter:image" content="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances.png">
+<!-- /JM Twitter Cards by Julien Maury 9.4 -->
+
+<!-- This site is optimized with the Yoast SEO plugin v7.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Altoros introduces a utility that allows for deploying a blockchain network to multiple instances with a configurable amount of organizations and channels."/>
+<link rel="canonical" href="https://www.altoros.com/blog/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances | Altoros" />
+<meta property="og:description" content="Altoros introduces a utility that allows for deploying a blockchain network to multiple instances with a configurable amount of organizations and channels." />
+<meta property="og:url" content="https://www.altoros.com/blog/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances/" />
+<meta property="og:site_name" content="Altoros" />
+<meta property="article:tag" content="Blockchain" />
+<meta property="article:tag" content="Hyperledger" />
+<meta property="article:section" content="Tutorials" />
+<meta property="article:published_time" content="2018-08-28T19:44:15+00:00" />
+<meta property="article:modified_time" content="2018-09-05T14:44:03+00:00" />
+<meta property="og:updated_time" content="2018-09-05T14:44:03+00:00" />
+<meta property="og:image" content="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances.gif" />
+<meta property="og:image:secure_url" content="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances.gif" />
+<meta property="og:image:width" content="640" />
+<meta property="og:image:height" content="360" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//www.youtube.com' />
+<link rel='dns-prefetch' href='//js.hs-scripts.com' />
+<link rel='dns-prefetch' href='//s7.addthis.com' />
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Altoros &raquo; Feed" href="https://www.altoros.com/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Altoros &raquo; Comments Feed" href="https://www.altoros.com/blog/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="Altoros &raquo; iCal Feed" href="https://www.altoros.com/blog/cfevents/?ical=1" />
+<link rel="alternate" type="application/rss+xml" title="Altoros &raquo; Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances Comments Feed" href="https://www.altoros.com/blog/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.altoros.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.5"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<!-- managing ads with Advanced Ads --><script>
+					advanced_ads_ready=function(){var fns=[],listener,doc=typeof document==="object"&&document,hack=doc&&doc.documentElement.doScroll,domContentLoaded="DOMContentLoaded",loaded=doc&&(hack?/^loaded|^c/:/^loaded|^i|^c/).test(doc.readyState);if(!loaded&&doc){listener=function(){doc.removeEventListener(domContentLoaded,listener);window.removeEventListener("load",listener);loaded=1;while(listener=fns.shift())listener()};doc.addEventListener(domContentLoaded,listener);window.addEventListener("load",listener)}return function(fn){loaded?setTimeout(fn,0):fns.push(fn)}}();
+			</script><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='tribe_events-widget-calendar-pro-style-css'  href='https://www.altoros.com/blog/wp-content/plugins/events-calendar-pro/src/resources/css/widget-calendar-full.css?ver=4.4.19' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe_events--widget-calendar-pro-override-style-css'  href='https://www.altoros.com/blog/wp-content/plugins/events-calendar-pro/src/resources/css/widget-calendar-full.css?ver=4.4.19' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe_events-widget-calendar-pro-override-style-css'  href='https://www.altoros.com/blog/wp-content/plugins/events-calendar-pro/src/resources/css/widget-calendar-full.css?ver=4.4.19' type='text/css' media='all' />
+<link rel='stylesheet' id='validate-engine-css-css'  href='https://www.altoros.com/blog/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=2.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C700&#038;ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://www.altoros.com/blog/wp-content/plugins/rdv-youtube-playlist-video-player/packages/font-awesome/css/font-awesome.min.css?ver=4.9.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='youtube-video-player-style-css'  href='https://www.altoros.com/blog/wp-content/plugins/rdv-youtube-playlist-video-player/packages/youtube-video-player/css/youtube-video-player.min.css?ver=4.9.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='perfect-scrollbar-style-css'  href='https://www.altoros.com/blog/wp-content/plugins/rdv-youtube-playlist-video-player/packages/perfect-scrollbar/perfect-scrollbar.css?ver=4.9.5' type='text/css' media='screen' />
+<link rel='stylesheet' id='youtube_video_player_custom_css-css'  href='https://www.altoros.com/blog/wp-admin/admin-ajax.php?action=youtube_video_player_custom_css&#038;ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-css'  href='https://www.altoros.com/blog/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='cflive_style-css'  href='https://www.altoros.com/blog/wp-content/plugins/cflive-slider-recent-posts/style.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://www.altoros.com/blog/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='github-embed-css'  href='https://www.altoros.com/blog/wp-content/plugins/github-embed/css/github-embed.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://www.altoros.com/blog/wp-includes/css/dashicons.min.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='https://www.altoros.com/blog/wp-includes/js/thickbox/thickbox.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='reposidget_style-css'  href='https://www.altoros.com/blog/wp-content/plugins/wp-reposidget/wp-reposidget.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-events-calendar-pro-style-css'  href='https://www.altoros.com/blog/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full.min.css?ver=4.4.19' type='text/css' media='all' />
+<link rel='stylesheet' id='tribe-events-calendar-pro-mobile-style-css'  href='https://www.altoros.com/blog/wp-content/plugins/events-calendar-pro/src/resources/css/tribe-events-pro-full-mobile.min.css?ver=4.4.19' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='style-freezeframe-css'  href='https://www.altoros.com/blog/wp-content/themes/engine/freezeframe/css/freezeframe_styles.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='the_champ_frontend_css-css'  href='https://www.altoros.com/blog/wp-content/plugins/super-socializer/css/front.css?ver=7.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='the_champ_sharing_default_svg-css'  href='https://www.altoros.com/blog/wp-content/plugins/super-socializer/css/share-svg.css?ver=7.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-css'  href='https://www.altoros.com/blog/wp-content/plugins/ubermenu/pro/assets/css/ubermenu.min.css?ver=3.2.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-clean-white-css'  href='https://www.altoros.com/blog/wp-content/plugins/ubermenu/pro/assets/css/skins/cleanwhite.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-font-awesome-css'  href='https://www.altoros.com/blog/wp-content/plugins/ubermenu/assets/css/fontawesome/css/font-awesome.min.css?ver=4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='ubermenu-custom-stylesheet-css'  href='https://www.altoros.com/blog/wp-content/plugins/ubermenu/custom/custom.css?ver=3.2.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cf-select2-lib-css-css'  href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='cf-select2-custom-css-css'  href='https://www.altoros.com/blog/wp-content/themes/engine/select2-custom-styles.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='old_style-css'  href='https://www.altoros.com/blog/wp-content/themes/engine/old_style.css?985&#038;ver=4.9.5' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var TribeMiniCalendar = {"ajaxurl":"https:\/\/www.altoros.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/events-calendar-pro/src/resources/js/widget-calendar.js?ver=4.4.19'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/rdv-youtube-playlist-video-player/packages/youtube-video-player/js/youtube-video-player.jquery.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/rdv-youtube-playlist-video-player/packages/perfect-scrollbar/jquery.mousewheel.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/rdv-youtube-playlist-video-player/packages/perfect-scrollbar/perfect-scrollbar.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/rdv-youtube-playlist-video-player/js/plugin.js?ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/www.altoros.com\/blog\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<script type='text/javascript' src='https://www.youtube.com/iframe_api?ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var STTSettings = {"only_link_singular":"1","link_audio":"1","link_video":"1","link_youtube":"1","auto_replace_ts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/skip-to-timestamp//js/skiptotimestamp.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/wp-hide-post/public/js/wp-hide-post-public.js?ver=2.0.10'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/js/gifffer.js?ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var itAjax = {"ajaxurl":"https:\/\/www.altoros.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/js/ajax.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/js/moment.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/js/moment-timezone-with-data-2010-2020.min.js?ver=4.9.5'></script>
+<link rel='https://api.w.org/' href='https://www.altoros.com/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.altoros.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.altoros.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.5" />
+<link rel='shortlink' href='https://www.altoros.com/blog/?p=36076' />
+<link rel="alternate" type="application/json+oembed" href="https://www.altoros.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.altoros.com%2Fblog%2Fansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.altoros.com/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.altoros.com%2Fblog%2Fansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances%2F&#038;format=xml" />
+<!--[if lt IE 9]><script src="https://www.altoros.com/blog/wp-content/plugins/livecom/assets/js/libs/html5shiv/html5shiv.js"></script><![endif]--><style id="ubermenu-custom-generated-css">
+/** UberMenu Custom Menu Styles (Customizer) **/
+/* main */
+.ubermenu-main .ubermenu-item .ubermenu-submenu-drop { -webkit-transition-duration:.1s; -ms-transition-duration:.1s; transition-duration:.1s; }
+.ubermenu-main { background-color:#ffffff; background:-webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#ffffff)); background:-webkit-linear-gradient(top,#ffffff,#ffffff); background:-moz-linear-gradient(top,#ffffff,#ffffff); background:-ms-linear-gradient(top,#ffffff,#ffffff); background:-o-linear-gradient(top,#ffffff,#ffffff); background:linear-gradient(top,#ffffff,#ffffff); }
+.ubermenu-main .ubermenu-item-level-0 > .ubermenu-target { font-size:13px; color:#3d3d3d; }
+.ubermenu.ubermenu-main .ubermenu-item-level-0:hover > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-active > .ubermenu-target { color:#8e3233; }
+.ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-item > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-parent > .ubermenu-target, .ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-ancestor > .ubermenu-target { color:#3d3d3d; }
+.ubermenu-main .ubermenu-submenu .ubermenu-item-header > .ubermenu-target { color:#8e3233; }
+
+
+/* Status: Loaded from Transient */
+
+</style><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.altoros.com/blog"><link rel="https://theeventscalendar.com/" href="https://www.altoros.com/blog/wp-json/tribe/events/v1/" />      <meta name="onesignal" content="wordpress-plugin"/>
+          <link rel="manifest"
+            href="https://www.altoros.com/blog/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/manifest.json.php?gcm_sender_id="/>
+          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>    <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+        OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+        OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+        OneSignal.setDefaultNotificationUrl("https://www.altoros.com/blog");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = 'bbc10c76-eb6a-400f-add3-9c9868f1a6e5';
+oneSignal_options['autoRegister'] = false;
+oneSignal_options['httpPermissionRequest'] = { };
+oneSignal_options['httpPermissionRequest']['enable'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "https://www.altoros.com/blog/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.6433c312-cad6-4ca7-979f-88baba10a6f6";
+oneSignal_options['promptOptions'] = { };
+oneSignal_options['notifyButton'] = { };
+oneSignal_options['notifyButton']['enable'] = true;
+oneSignal_options['notifyButton']['position'] = 'bottom-right';
+oneSignal_options['notifyButton']['theme'] = 'default';
+oneSignal_options['notifyButton']['size'] = 'medium';
+oneSignal_options['notifyButton']['prenotify'] = true;
+oneSignal_options['notifyButton']['showCredit'] = true;
+oneSignal_options['notifyButton']['text'] = {};
+              OneSignal.init(window._oneSignalInitOptions);
+                    });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+
+<!-- Vipers Video Quicktags v6.6.0 | http://www.viper007bond.com/wordpress-plugins/vipers-video-quicktags/ -->
+<style type="text/css">
+.vvqbox { display: block; max-width: 100%; visibility: visible !important; margin: 10px auto; } .vvqbox img { max-width: 100%; height: 100%; } .vvqbox object { max-width: 100%; } 
+</style>
+<script type="text/javascript">
+// <![CDATA[
+	var vvqflashvars = {};
+	var vvqparams = { wmode: "opaque", allowfullscreen: "true", allowscriptaccess: "always" };
+	var vvqattributes = {};
+	var vvqexpressinstall = "https://www.altoros.com/blog/wp-content/plugins/vipers-video-quicktags/resources/expressinstall.swf";
+// ]]>
+</script>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #eeeeee; background-image: url("https://www.altoros.com/cflive/wp-content/uploads/2015/07/CFlive-bg.jpg"); background-position: center top; background-size: auto; background-repeat: no-repeat; background-attachment: fixed; }
+</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+        <link media="screen, print" rel="stylesheet" href="https://www.altoros.com/blog/wp-content/themes/engine/assets/fontello.css" type="text/css">
+    <link media="screen, print" rel="stylesheet" href="https://www.altoros.com/blog/wp-content/themes/engine/style_FE.css?16" type="text/css">
+    <link media="screen, print" rel="stylesheet" href="https://www.altoros.com/blog/wp-content/themes/engine/style_RV.css?366" type="text/css">
+        <link media="screen, print" rel="stylesheet" href="https://www.altoros.com/wp-content/themes/goodweb/style-mega-menu.css" type="text/css">
+        <link media="screen, print" rel="stylesheet" href="https://www.altoros.com/blog/wp-content/themes/engine/icon-mega-menu.css" type="text/css">
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">api_key: 75g4t4j7mlwdp7</script>
+    <meta name="google-site-verification" content="plIgPmyrKxvlPJSbsClQV43xM_1_v96EDnq33Uxdexk" />
+<!--    <link media="screen, projection, print" rel="stylesheet" href="--><!--/old_style.css?--><!--" type="text/css">-->
+    <script type="text/javascript" src="https://www.altoros.com/blog/wp-content/themes/engine/old_script.js?137"></script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+        $ = jQuery;
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-343776-44', 'auto');
+        ga('create', 'UA-343776-49', 'auto', {'name': 'eventsTracker'});
+        ga('eventsTracker.send', 'pageview');
+        ga('send', 'pageview');
+
+    </script>
+    <!-- Start of HubSpot Embed Code -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/2950617.js"></script>
+    <!-- End of HubSpot Embed Code -->
+</head>
+<body class="post-template-default single single-post postid-36076 single-format-standard custom-background it-background woocommerce bp-page category-214 colorbox-enabled colorbox-slideshow-off tribe-no-js">
+
+<div id="ajax-error"></div>
+
+<div id="fb-root"></div>
+
+
+
+
+	<div class="container-fluid no-padding">
+
+
+        <div id="header-bar">
+
+            <div class="row"> 
+            
+                <div class="col-md-12"> 
+                    
+                    <div id="header-inner" class="container-inner">
+                        <style>
+                            .ubermenu-main {
+                                font-size: 18px;
+                            }
+                            #header-posts {
+                                padding: 0;
+                                z-index: 600;
+                            }
+                        </style>
+                        <div id="header-posts">
+                            
+<!-- UberMenu [Configuration:main] [Theme Loc:] [Integration:api] -->
+<a class="ubermenu-responsive-toggle ubermenu-responsive-toggle-main ubermenu-skin-clean-white ubermenu-loc-" data-ubermenu-target="ubermenu-main-775"><i class="fa fa-bars"></i></a><nav id="ubermenu-main-775" class="ubermenu ubermenu-nojs ubermenu-main ubermenu-menu-775 ubermenu-responsive ubermenu-responsive-default ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-none ubermenu-trigger-hover ubermenu-skin-clean-white  ubermenu-bar-align-center ubermenu-items-align-left ubermenu-disable-submenu-scroll ubermenu-sub-indicators ubermenu-retractors-responsive ubermenu-icons-inline"><ul id="ubermenu-nav-main-775" class="ubermenu-nav"><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14878 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">.</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-29540 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">.</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-14842 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Solutions</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-14842 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-submenu-retractor-top" ><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14843 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/cloud_foundry_enablement_for_enterprises.html"><span class="ubermenu-target-title ubermenu-target-text">For Enterprises</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14848 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/cloud_foundry_enablement_for_vendors.html"><span class="ubermenu-target-title ubermenu-target-text">For Software Vendors</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-29131 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/cloud-native-transformation.html"><span class="ubermenu-target-title ubermenu-target-text">Cloud-Native Transformation</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-33485 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/artificial-intelligence-strategy-consulting.html"><span class="ubermenu-target-title ubermenu-target-text">AI Strategy Consulting</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-14849 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Services</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-14849 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-submenu-retractor-top" ><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-14850 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1 ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/cloud-foundry-enablement.html"><span class="ubermenu-target-title ubermenu-target-text">Cloud Foundry</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-14850 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-submenu-retractor-top" ><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-30231 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/evaluation-and-planning.html"><span class="ubermenu-target-title ubermenu-target-text">Evaluation and Planning</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-24043 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/cloud-foundry-enablement.html"><span class="ubermenu-target-title ubermenu-target-text">Cloud Foundry Enablement</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14852 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/cloud_foundry_support.html"><span class="ubermenu-target-title ubermenu-target-text">Cloud Foundry Support</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-26949 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/pivotal-cloud-foundry-tile-development.html"><span class="ubermenu-target-title ubermenu-target-text">Pivotal Cloud Foundry Tile Development</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-26950 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/continuous-delivery.html"><span class="ubermenu-target-title ubermenu-target-text">Continuous Delivery</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-26951 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/application-replatforming.html"><span class="ubermenu-target-title ubermenu-target-text">Application Replatforming</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-26952 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/cloud-foundry-ecosystem-contributions.html"><span class="ubermenu-target-title ubermenu-target-text">Cloud Foundry Ecosystem Contributions</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-26953 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/container-orchestration-tools-enablement.html"><span class="ubermenu-target-title ubermenu-target-text">Container Orchestration</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14855 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/scalability_tuning.html"><span class="ubermenu-target-title ubermenu-target-text">Multi-Cloud Automation</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-31613 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/artificial-intelligence.html"><span class="ubermenu-target-title ubermenu-target-text">Artificial Intelligence</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-30232 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/blockchain-for-enterprises.html"><span class="ubermenu-target-title ubermenu-target-text">Blockchain for Enterprises</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-32942 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/kubernetes-enablement.html"><span class="ubermenu-target-title ubermenu-target-text">Kubernetes Enablement</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-22463 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/training.html" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Training</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-22463 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-submenu-retractor-top" ><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-33115 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/course/cloud-foundry"><span class="ubermenu-target-title ubermenu-target-text">Cloud Foundry</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-33116 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/course/microservices"><span class="ubermenu-target-title ubermenu-target-text">Microservices</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-33117 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/course/blockchain-hyperledger"><span class="ubermenu-target-title ubermenu-target-text">Blockchain</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-33118 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/course/kubernetes"><span class="ubermenu-target-title ubermenu-target-text">Kubernetes</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-33711 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/course/ai"><span class="ubermenu-target-title ubermenu-target-text">Artificial Intelligence</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-14857 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Why Altoros</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-14857 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-submenu-retractor-top" ><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14858 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/featured_customers.html"><span class="ubermenu-target-title ubermenu-target-text">Featured Customers</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14859 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/portfolio.html"><span class="ubermenu-target-title ubermenu-target-text">Portfolio</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14860 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/customers_speak.html"><span class="ubermenu-target-title ubermenu-target-text">Customers Speak</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14861 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/partners_summary.html"><span class="ubermenu-target-title ubermenu-target-text">Partners</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-14862 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/resources/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Resources</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-14862 ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-full_width ubermenu-submenu-retractor-top" ><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14863 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-1-8" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/resources/"><span class="ubermenu-target-title ubermenu-target-text">All</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14864 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-1-8" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/blog/"><span class="ubermenu-target-title ubermenu-target-text">Blog</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14865 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-1-8" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/blog/cloud-foundry-use-cases/"><span class="ubermenu-target-title ubermenu-target-text">CF Use Cases</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14867 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-1-8" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/research-papers.html"><span class="ubermenu-target-title ubermenu-target-text">Guides</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-16399 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-1-8" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/visuals.html"><span class="ubermenu-target-title ubermenu-target-text">Visuals</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14868 ubermenu-item-auto ubermenu-item-header ubermenu-item-level-1 ubermenu-column ubermenu-column-1-8" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="/blog/events/"><span class="ubermenu-target-title ubermenu-target-text">Events</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-14870 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">About</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-14870 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-submenu-retractor-top" ><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14872 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/about_summary.html"><span class="ubermenu-target-title ubermenu-target-text">Company Summary</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14873 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/management_team.html"><span class="ubermenu-target-title ubermenu-target-text">Management Team</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-has-children ubermenu-item-14874 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1 ubermenu-has-submenu-drop ubermenu-has-submenu-flyout" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/careers.html"><span class="ubermenu-target-title ubermenu-target-text">Careers</span></a><ul class="ubermenu-submenu ubermenu-submenu-id-14874 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item ubermenu-submenu-retractor-top" ><li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14875 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/vacancy_usa.html"><span class="ubermenu-target-title ubermenu-target-text">Vacancies in the USA</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14876 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://altoros.com.ar/ruby-on-rails-jobs/"><span class="ubermenu-target-title ubermenu-target-text">Vacancies in Argentina</span></a></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14877 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://welcome.altoros.com/jobs/"><span class="ubermenu-target-title ubermenu-target-text">Vacancies in Minsk, Belarus</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-34077 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="https://www.altoros.com/press_and_media_kit.html"><span class="ubermenu-target-title ubermenu-target-text">Press Kit</span></a></li></ul></li><li class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-14871 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto" ><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.altoros.com/contact_us.html" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Contact Us</span></a></li></ul></nav>
+<!-- End UberMenu -->
+                            <div id="fontsize" class="hide">
+											<span id="fontsize0"><a id="size0" href="#" style="font-size: 12px;">A</a></span>
+											<span id="fontsize1"><a id="size1" href="#" style="font-size: 14px;">A</a></span>
+											<span id="fontsize2"><a id="size2" href="#" style="font-size: 16px;">A</a></span>
+										</div><span id="searchform-wrp"><form id="searchform" role="search" method="get" class="searchform" action="https://www.altoros.com/blog/" >
+			<!-- input type="text" value="" name="s" placeholder="" /-->
+			<input autocomplete="off" type="text" value="" name="s" placeholder="Search" />
+		    <i class="icon-search searchsubmittericon"></i>
+		</form></span>                            <div class="toglle-subscribe"><img src="https://www.altoros.com/wp-content/uploads/2016/02/subscribe-button-img.png" alt=""/></div>
+                        </div>
+                    	                    
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+
+
+
+<div class="after-header">
+
+    
+    
+    <div id="it-ad-header" class="container-fluid no-padding">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="container-inner">
+
+                    <div class="row it-ad">
+
+                        <div class="col-md-12">
+
+                                <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq)return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq)f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1468554783453652'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1468554783453652&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq)return;
+            n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq)f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1468554783453652', {
+            em: 'insert_email_variable'
+        });
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1468554783453652&ev=PageView&noscript=1"
+        /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+<script type="text/javascript">
+(function(a,l,b,c,r,s){_nQc=c,r=a.createElement(l),s=a.getElementsByTagName(l)[0];r.async=1;
+r.src=l.src=("https:"==a.location.protocol?"https://":"http://")+b;s.parentNode.insertBefore(r,s);
+})(document,"script","serve.albacross.com/track.js","89286894");
+</script>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="breadcrumbsNone" style="display: none;">
+        <div class="kama_breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.altoros.com/blog" itemprop="item"><span itemprop="name">Home page</span></a></span> » 
+<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://www.altoros.com/blog/category/tutorials/" itemprop="item"><span itemprop="name">Tutorials</span></a></span> » 
+Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances</div>
+    </div>
+<script>ga('send', { hitType: 'event', eventCategory: 'Dimensions', eventAction: 'Dimension1', dimension1: 'Category: Tutorials'});</script><script>ga('send', { hitType: 'event', eventCategory: 'Dimensions', eventAction: 'Dimension2', dimension2: 'Tag: Blockchain'});ga('send', { hitType: 'event', eventCategory: 'Dimensions', eventAction: 'Dimension2', dimension2: 'Tag: Hyperledger'});</script>
+
+<div class="container-fluid no-padding single-wrapper post-36076 post type-post status-publish format-standard has-post-thumbnail hentry category-tutorials tag-blockchain tag-hyperledger" data-location="single-page" itemscope itemtype="http://schema.org/Article">
+		
+    <div class="row">
+    
+        <div class="col-lg-12">
+        
+        	            
+                
+            <div class="container-inner">
+            
+            	            
+                <div class="row">
+                
+                	                    
+                    <div class="col-lg-9 single-post-selector scrollcontrol-main">
+                
+                        <div class="single-page   category-214">
+    
+                             
+                                              
+                                                    
+                                                                
+                                	                                    <div id="post-36076" class="post-content post-selector" data-postid="36076">
+                                    
+                                    	                                    
+                                            <div class="post-left fixed-object">
+                                            
+                                            	<div class="post-left-toggle add-active"><span class="theme-icon-bookmark"></span><span class="theme-icon-right-open"></span><span class="theme-icon-left-open"></span></div>
+                                            
+                                            	                                                
+                                                <div class="contents-menu"><div class="contents-title">Contents</div><ul class="contents-links nav"><li id="overview-anchor-wrapper"><a href="#overview-anchor">Overview</a></li><li id="rating-anchor-wrapper"><a href="#rating-anchor">Rating</a></li><li id="content-anchor-wrapper"><a href="#content-anchor">Full Article</a></li><li id="comments-anchor-wrapper"><a href="#comments">Comments</a></li></ul></div>                                                                                        
+                                            </div>
+                                            
+                                                                                
+                                        <div class="post-right content-panel">                                      
+                                    
+											                                    
+                                                                                                
+                                                    <div class="control-bar clearfix">
+                                                    
+                                                    	<div class="triangle-border"></div>
+                                                        <div class="triangle"></div>
+                                                        
+                                                        <div class="control-trending-wrapper add-active">
+	
+	                                                        <div class="control-trending-selector">
+		                                                        	                                                        </div>
+                                                            
+                                                            <div class="control-trending">
+                                                        
+<!--                                                                -->                                                                
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+                                                                                                                
+                                                        <span class="meta-comments metric" title="Comments"><a href="#comments"><span class="icon theme-icon-commented"></span><span class="numcount">0</span></a></span>                                                        
+                                                    </div>
+                                                    
+                                                                                                
+                                                	 
+                                                    
+                                                                                                                    
+                                                    <div class="padded-panel"><h1 class="main-title single-title entry-title">Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances</h1></div>	
+                                                    
+                                                                                                
+                                                                                        
+                                            <div class="image-container"><div class="featured-image-wrapper"><div class="featured-image-inner" style="padding: 0 8%"><img width="640" height="360" src="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances.gif" class="attachment-single size-single wp-post-image" alt="" title="Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances" itemprop="image" /></div></div></div><div class="authorship-row clearfix padded-panel"><div class="authorship type-both"><span class="author">by&nbsp;<a class="styled" href="https://www.altoros.com/blog/author/sophie-turol/">Hleb Iodo and Sophie Turol</a></span><span class="date">August 28, 2018</span></div></div><div class="main-subtitle padded-panel"><span>Altoros introduces a utility that allows for deploying a blockchain network to multiple instances with a configurable amount of organizations and channels.</span><div class="divider-line"></div></div><style type="text/css"> #rating-anchor-wrapper {display:none;} </style><div id="blure-effect"></div><div class="modal fade" id="modal_to_register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel"></h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Register to view the contents</p>
+                                            <!--button type="button" class="btn btn-primary" onclick="javascript:show_register_block()">Register</button-->
+                                                                                    <div class="sticky-dropdown inside-popup clearfix" style="display: block;">
+                                        <div class="clearfix">
+                                            <a id="sticky-popup-login" class="sticky-dropdown-button active">
+                                                <span class="theme-icon-password"></span>Login
+                                            </a>
+                                            <a id="sticky-popup-register" class="sticky-dropdown-button">
+                                                <span class="theme-icon-pencil"></span>Register
+                                            </a>
+                                        </div>
+
+                                        <div class="sticky-form-placeholder">
+                                            <div class="loading"><span class="theme-icon-spin2"></span></div>
+                                            <form id="popup-login" method="post" action="https://www.altoros.com/blog/wp-login.php" class="sticky-login-form clearfix">
+                                                <input type="text" name="log" value="" id="user_login" tabindex="11" placeholder="username">
+                                                <input type="password" name="pwd" value="" id="user_pass" tabindex="12" placeholder="password">
+                                                <input type="hidden" name="redirect_to" value="/blog/">
+                                                <input type="hidden" name="user-cookie" value="1">
+                                                <div id="popup-login-submit" class="sticky-submit login">LOGIN</div>
+                                            </form>
+
+                                            <form id="popup-register" method="post" action="https://www.altoros.com/blog/wp-login.php?action=register" class="sticky-register-form clearfix">
+                                                <input type="text" name="user_login" value="" id="user_register" tabindex="11" placeholder="username">
+                                                <input type="text" name="user_email" value="" id="user_email" tabindex="12" placeholder="email">
+                                                <input type="hidden" name="redirect_to" value="/blog/?register=true">
+                                                <input type="hidden" name="user-cookie" value="1">
+                                                <div id="popup-register-submit" class="sticky-submit register">REGISTER</div>
+                                            </form>
+                                        </div>
+
+
+                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><div class="the-content padded-panel"><div id="content-anchor"></div><div id="content-anchor-inner_blured" class="clearfix"><span class="cf_ttshare"><h3>The need for automation</h3>
+<p>When manually deploying Hyperledger Fabric to multiple instances, you have to take numerous actions across all the instances involved. Naturally, this is both effort- and time-consuming. Furthermore, manual installation is highly prone to human error.</p>
+<p>To save on operational costs, one needs an instrument capable of automating the deployment process. The Hyperledger ecosystem offers <a href="https://github.com/hyperledger/cello/tree/master/src/agent/ansible" rel="noopener" target="_blank">Cello Ansible agent</a> for the very purpose, however, it’s still in the incubation phase.</p>
+<p>In an attempt to simplify multi-instance deployment of Hyperledger Fabric, our blockchain team was working on a tool of its own. Today, Altoros is glad to announce the release of <b>Ansible Fabric Starter</b>—the result of the work done.</p>
+<p> </p>
+<div class="altor-services-banners" id="altor-209966009"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-0e3409b3-bcbd-40bb-b0c3-1483ebc8a953"><span class="hs-cta-node hs-cta-0e3409b3-bcbd-40bb-b0c3-1483ebc8a953" id="hs-cta-0e3409b3-bcbd-40bb-b0c3-1483ebc8a953"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/2950617/0e3409b3-bcbd-40bb-b0c3-1483ebc8a953"><img class="hs-cta-img" id="hs-cta-img-0e3409b3-bcbd-40bb-b0c3-1483ebc8a953" style="border-width:0px;" height="120" width="818" src="https://no-cache.hubspot.com/cta/default/2950617/0e3409b3-bcbd-40bb-b0c3-1483ebc8a953.png" alt="Public &amp; Private Blockchains for Business"></a></span><script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript"> hbspt.cta.load(2950617, '0e3409b3-bcbd-40bb-b0c3-1483ebc8a953', {}); </script></span><!-- end HubSpot Call-to-Action Code --></div><h3>What is it?</h3>
+<p><a href="https://github.com/Altoros/Ansible-Fabric-Starter" rel="noopener" target="_blank">Ansible Fabric Starter</a> is an infrastructure-agnostic utility to deploy Hyperledger Fabric to multiple instances. <em>Ansible Fabric Starter</em> uses Docker containers managed through Docker Compose. The utility is, actually, a collection of three Ansible-based playbooks: <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">install-dependencies.yml</code>, <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">config-network.yml</code>, and <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">start-network.yml</code>. <em>Ansible Fabric Starter</em> also includes three Ansible roles:</p>
+<ul><li><code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">common-packages</code> to install default packages, e.g., Python libs for Docker, on target hosts</li>
+<li><code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">docker</code> to install Docker and Docker Compose on target hosts</li>
+<li><code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">fabric</code> to pull all the necessary Docker images for Hyperledger Fabric</li>
+</ul><p>The <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">install-dependencies.yml</code> playbook is responsible for calling the above-mentioned Ansible roles to install all the necessary software and prepare the <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">target</code> hosts for deployment.</p>
+<p>The <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">config-network.yml</code> playbook generates configuration files for Hyperledger Fabric and Docker Compose and transfers them to the target hosts.</p>
+<p>Finally, the <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">start-network.yml</code> installs and instantiates a chaincode, as well as creates the blockchain channels according to the configuration to start the network.</p>
+<p>For production-grade purposes, <em>Ansible Fabric Starter</em> provides support for the Kafka orderer, though the Solo orderer is available, as well.</p>
+<p> </p>
+<h3>Prerequisites</h3>
+<p>To get started with <em>Ansible Fabric Starter</em>, your machine should have:</p>
+<ul><li>The GNU/Linux operating system</li>
+<li>Ansible v2.5.0 (and later)</li>
+</ul><p>The provisioned nodes by Ansible should have:</p>
+<ul><li>Ubuntu 16.04 or CentOS 7</li>
+<li>Python</li>
+<li><code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">sudo</code> access</li>
+</ul><p> </p>
+<h3>Configuring the network</h3>
+<p>If a blockchain network is pre-configured (or you may want to run the default settings), you just need to specify an IP address of each host in <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">ansible_host</code>. For a user with <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">sudo</code> access, an IP address is specified in <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">ansible_user</code>. The domain and machine names (e.g., <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">one.example.com</code>) are mainly required for the Docker network, so you can set values you need.</p>
+<p>Below, you will find three sample configuration schemas.</p>
+<p>A network configuration of <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">hosts_compact.yml</code> with the Solo orderer and three organizations. The orderer service is hosted on the first organization node. Only a common channel is enabled.</p>
+<p></p><center><a href="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-hyperledger-blockchain-hosts-compact.png"><img src="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-hyperledger-blockchain-hosts-compact.png" alt="" width="640" class="aligncenter size-full wp-image-36078"></a></center>
+<p>A network configuration of <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">hosts_dedicated_orderer.yml</code> with the Solo orderer and three organizations. In this case, the orderer service is hosted on a separate node. Three private channels are enabled across all organizations.</p>
+<p></p><center><a href="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-hyperledger-hosts-dedicated-orderer.png"><img src="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-hyperledger-hosts-dedicated-orderer.png" alt="" width="640" class="aligncenter size-full wp-image-36079"></a></center>
+<p>In the example below, a network configuration of <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">host_kafka.yml</code> uses the Kafka orderer with three organizations. Here, each organization has its own copy of the orderer service. Three private channels are enabled across all organizations.</p>
+<p></p><center><a href="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-hyperledger-hosts-kafka.png"><img src="https://www.altoros.com/blog/wp-content/uploads/2018/08/ansible-fabric-starter-hyperledger-hosts-kafka.png" alt="" width="640" class="aligncenter size-full wp-image-36080"></a></center>
+<p> </p>
+<h3>Deploying the network</h3>
+<p>First, insure that you are in the <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">project-root</code> directory by running the following command:</p>
+<pre>cd ansible-fabric-starter</pre>
+<p>By default, an Ansible inventory is located in the <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">hosts.yml</code> file. You can rename any configuration from the examples above or specify the correct inventory via the <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">-i</code> parameter. If a network is deployed from scratch, you may want to install all the dependencies:</p>
+<pre>ansible-playbook install-dependencies.yml -i hosts_kafka.yml</pre>
+<p>To keep your inventory configuration in <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">hosts.yml</code>, use the following command:</p>
+<pre>ansible-playbook install-dependencies.yml</pre>
+<p>After all the nodes are provisioned with all the necessary software, you can deploy the blockchain network to the configured instances:</p>
+<pre>ansible-playbook config-network.yml -i hosts_kafka.yml</pre>
+<p>A little hint: the <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">config-network.yml</code> playbook will include <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">start-network.yml</code> automatically.</p>
+<p>If you need to redeploy the network without reconfiguration—to drop the ledger for example—just launch the <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">start-network.yml</code> playbook, but don’t forget about the inventory configuration:</p>
+<pre>ansible-playbook start-network.yml -i hosts_kafka.yml</pre>
+<p><b>Note:</b> Each new deployment is configured to delete the existing Docker volumes and containers. It means that if you redeploy on a working system, all the data will be lost.</p>
+<p> </p>
+<h3>Summary</h3>
+<p>In a few clicks, <em>Ansible Fabric Starter</em> allows for deploying a blockchain network to multiple instances with a configurable amount of organizations and channels using either Kafka or Solo orderers. To learn more about <em>Ansible Fabric Starter</em>, please check out the <a href="https://github.com/Altoros/Ansible-Fabric-Starter" rel="noopener" target="_blank">project’s GitHub repo</a>, which contains more info on deploying and testing the network, as well as exemplifies the tricky case for the <code style="color: #222222; background-color: #e6e6e6; padding: 1px 2px;">hosts_kafka.yml</code> configuration.</p>
+<p> </p>
+<h3>About the expert</h3>
+<div>
+<div style="float: right;"><a href="https://www.altoros.com/blog/wp-content/uploads/2018/08/Gleb-Iodo-bio.png"><img src="https://www.altoros.com/blog/wp-content/uploads/2018/08/Gleb-Iodo-bio.png" alt="" width="120" height="120" class="aligncenter size-full wp-image-36131"></a></div>
+<div style="width: 650px;"><small><b>Hleb Iodo</b> is Blockchain DevOps Engineer at Altoros with 5+ years of experience with network engineering. He specializes in network configuration and maintenance, as well as continuous integration and delivery. Hleb’s interests include deployment automation, cloud-native apps, blockchain, and distributed software. He is also skilled in working with GNU/Linux and various cloud providers.</small></div>
+</div>
+<p> </p>
+<hr><center><small>This blog post was written by Hleb Iodo and <a href="https://www.altoros.com/blog/author/sophie.turol/">Sophie Turol</a>.</small></center>
+</span>
+<div class="altor-blogpost-banner2" id="altor-1438930698"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-afc99c7f-ccd6-4de2-bed1-546659501a0a"><span class="hs-cta-node hs-cta-afc99c7f-ccd6-4de2-bed1-546659501a0a" id="hs-cta-afc99c7f-ccd6-4de2-bed1-546659501a0a"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/2950617/afc99c7f-ccd6-4de2-bed1-546659501a0a" ><img class="hs-cta-img" id="hs-cta-img-afc99c7f-ccd6-4de2-bed1-546659501a0a" style="border-width:0px;" height="300" width="900" src="https://no-cache.hubspot.com/cta/default/2950617/afc99c7f-ccd6-4de2-bed1-546659501a0a.png"  alt="It&#39;s time  to power your business with Blockchain. Get real working network demo! Request an instrustor-led demo"/></a></span><script charset="utf-8" src="https://js.hscta.net/cta/current.js"></script><script type="text/javascript"> hbspt.cta.load(2950617, 'afc99c7f-ccd6-4de2-bed1-546659501a0a', {}); </script></span><!-- end HubSpot Call-to-Action Code --></div></div></div><div class="addthis_toolbox addthis_default_style addthis_32x32_style" addthis:title="Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances" addthis:url="https://www.altoros.com/blog/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances/" addthis:description="Altoros introduces a utility that allows for deploying a blockchain network to multiple instances with a configurable amount of organizations and channels."><div class="the_champ_sharing_container the_champ_horizontal_sharing" ss-offset="0" super-socializer-data-href="https://www.altoros.com/blog/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances/" super-socializer-no-counts="1" ><ul  class="the_champ_sharing_ul"><li class="theChampSharingRound"><ss class="the_champ_square_count the_champ_facebook_count" style="visibility:visible;">4</ss><i style="width:30px;height:30px;border-radius:999px;" alt="Facebook" Title="Facebook" class="theChampSharing theChampFacebookBackground" onclick='theChampPopup("https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.altoros.com%2Fblog%2Fansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances%2F")'><ss style="display:block;border-radius:999px;" class="theChampSharingSvg theChampFacebookSvg"></ss></i></li><li class="theChampSharingRound"><ss class="the_champ_square_count the_champ_twitter_count" style="visibility:visible;">12</ss><i style="width:30px;height:30px;border-radius:999px;" alt="Twitter" Title="Twitter" class="theChampSharing theChampTwitterBackground" onclick='theChampPopup("http://twitter.com/intent/tweet?text=Ansible%20Fabric%20Starter%3A%20Deploy%20Hyperledger%20Fabric%20to%20Multiple%20Instances&url=https%3A%2F%2Fwww.altoros.com%2Fblog%2Fansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances%2F")'><ss style="display:block;border-radius:999px;" class="theChampSharingSvg theChampTwitterSvg"></ss></i></li><li class="theChampSharingRound"><ss class="the_champ_square_count the_champ_linkedin_count">&nbsp;</ss><i style="width:30px;height:30px;border-radius:999px;" alt="Linkedin" Title="Linkedin" class="theChampSharing theChampLinkedinBackground" onclick='theChampPopup("http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.altoros.com%2Fblog%2Fansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances%2F&title=Ansible%20Fabric%20Starter%3A%20Deploy%20Hyperledger%20Fabric%20to%20Multiple%20Instances")'><ss style="display:block;border-radius:999px;" class="theChampSharingSvg theChampLinkedinSvg"></ss></i></li></ul><div style="clear:both"></div></div></div><div class="reactions-wrapper clearfix" data-postid="36076" data-unlimitedreactions="0"><div class="triangle-left"></div><div class="big-view"><span class="meta-views metric" title="Views"><span class="icon theme-icon-viewed"></span><span class="numcount"><span class="view-count">449</span></span></span></div></div><div class="postinfo"><div class="row"><div class="col-sm-6 post-categories"><div class="postinfo-label">Posted In</div><div class="category-list"><a href="https://www.altoros.com/blog/category/tutorials/" title="View all posts in Tutorials">Tutorials</a></div></div><div class="col-sm-6 post-tags"><div class="postinfo-label">Tags</div><div class="tag-list"><a href="https://www.altoros.com/blog/tag/blockchain/" title="Blockchain Tag" class="blockchain">Blockchain</a>, <a href="https://www.altoros.com/blog/tag/hyperledger/" title="Hyperledger Tag" class="hyperledger">Hyperledger</a></div><div class="hidden-tags"><a href="https://www.altoros.com/blog/tag/blockchain/" rel="tag">Blockchain</a>, <a href="https://www.altoros.com/blog/tag/hyperledger/" rel="tag">Hyperledger</a></div></div><div class="post-author"><div class="gravatar"><img width="96" height="96" src="https://www.altoros.com/blog/wp-content/uploads/2017/12/mutluyum-150x150.jpg" class="avatar avatar-96 photo" alt="" /></div><div class="post-author-text"><div class="h4">Posted by <a class="info author-name" title="See all posts from this author" href="https://www.altoros.com/blog/author/sophie-turol/">Sophie Turol</a></div><p>Sophie Turol is passionate about delivering well-structured articles that cater for picky technical audience. With 3+ years in technical writing and 5+ years in editorship, she enjoys collaboration with developers to create insightful, yet intelligible technical tutorials, overviews, and case studies. Sophie is enthusiastic about deep learning solutions—TensorFlow in particular—and PaaS systems, such as Cloud Foundry.</p></div></div></div></div><div id="recommended" class="magazine-panel"><div class="magazine-header" data-postid="36076" data-loop="recommended" data-location="widget_b" data-numarticles="3" data-paginated="1" data-disable-category="1" data-disable-trending="1" data-disable-sharing="1"><div class="magazine-title"><span class="theme-icon-thumbs-up"></span>You might also like</div><div class="magazine-categories"><a data-sorter="672" data-method="tags" class="active">Blockchain<span class="bottom-arrow"></span></a><a data-sorter="753" data-method="tags" class="">Hyperledger<span class="bottom-arrow"></span></a></div><div class="magazine-more"><div class="sort-wrapper"><div class="sort-toggle">MORE<span class="theme-icon-sort-down"></span></div><div class="sort-buttons"></div></div></div></div><div class="magazine-content clearfix"><div class="loading"><span class="theme-icon-spin2"></span></div><div class="loop"><div class="overlay-panel  add-active clearfix category-7"><a class="overlay-link" href="https://www.altoros.com/blog/a-panel-the-changing-token-economy-and-why-ico-regulation-is-a-must/">&nbsp;</a><div class="article-image-wrapper"><div class="overlay-hover"><span class="theme-icon-forward"></span><span class="more-text">Read More</span></div><div class="overlay-layer"><div class="color-line"></div></div><span class="meta-heat metric heat-index" title="Heat Index"><span class="icon theme-icon-flame"></span><span class="numcount">194</span></span><img width="640" height="360" src="https://www.altoros.com/blog/wp-content/uploads/2018/09/Hyperledger-HL-meetup-Los-Angeles-Darren-Marble-Nish-Patel-Naeem-Al-Obaidi-Gregory-Skerry-blockchain.gif" class="attachment-square-large size-square-large wp-post-image" alt="" title="A Panel: The Changing Token Economy and Why ICO Regulation Is a Must" /></div><div class="article-info"><div class="article-title">A Panel: The Changing Token Economy and Why ICO Regulation Is a Must</div></div></div><div class="overlay-panel  add-active clearfix category-7"><a class="overlay-link" href="https://www.altoros.com/blog/adchain-registry-blockchain-to-prevent-fraud-in-digital-advertising/">&nbsp;</a><div class="article-image-wrapper"><div class="overlay-hover"><span class="theme-icon-forward"></span><span class="more-text">Read More</span></div><div class="overlay-layer"><div class="color-line"></div></div><span class="meta-heat metric heat-index" title="Heat Index"><span class="icon theme-icon-flame"></span><span class="numcount">247</span></span><img width="640" height="360" src="https://www.altoros.com/blog/wp-content/uploads/2018/08/Hyperledger-Ethereum-Blockchain-adChain-Registry-MetaX-Digital-Advertising-Hunter-Gebron-Jon-Roethke-Eddy-Munoz-v6.gif" class="attachment-square-large size-square-large wp-post-image" alt="" title="adChain Registry: Blockchain to Prevent Fraud in Digital Advertising" /></div><div class="article-info"><div class="article-title">adChain Registry: Blockchain to Prevent Fraud in Digital Advertising</div></div></div><div class="overlay-panel  add-active clearfix category-214"><a class="overlay-link" href="https://www.altoros.com/blog/deploying-a-multi-node-hyperledger-fabric-network-in-5-steps/">&nbsp;</a><div class="article-image-wrapper"><div class="overlay-hover"><span class="theme-icon-forward"></span><span class="more-text">Read More</span></div><div class="overlay-layer"><div class="color-line"></div></div><span class="meta-heat metric heat-index" title="Heat Index"><span class="icon theme-icon-flame"></span><span class="numcount">1446</span></span><img width="640" height="360" src="https://www.altoros.com/blog/wp-content/uploads/2018/08/Hyperledger-Fabric-Amsterdam-Blockchain-Vitaliy-Chernov.gif" class="attachment-square-large size-square-large wp-post-image" alt="" title="Deploying a Multi-Node Hyperledger Fabric Network in 5 Steps" /></div><div class="article-info"><div class="article-title">Deploying a Multi-Node Hyperledger Fabric Network in 5 Steps</div></div></div><br class="clearer" /></div></div></div>
+<div id="disqus_thread"></div>
+ 
+                                            
+                                        </div>                             
+                                        
+                                    </div>                                 
+                                 
+                            
+                             
+                            
+                                
+                            <div class="popnav popnav-previous add-active"><a href="https://www.altoros.com/blog/kubernetes-networking-writing-your-own-simple-cni-plug-in-with-bash/" class="popnav-link"></a><div class="nav-label">Previous</div><img width="68" height="60" src="https://www.altoros.com/blog/wp-content/uploads/2018/08/Kubernetes-Network-Model-Configuration-Management-v5-68x60.gif" class="attachment-square-small size-square-small wp-post-image" alt="" title="Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances" /><div class="nav-title">Kubernetes Networking: How to Write Your Own CNI Plug-in with Bash</div><span class="nav-icon theme-icon-left-open"></span></div>                        
+                        </div> 
+                        
+                    </div>                 
+                    
+                    
+                    <div class="stickspacer">
+                    
+                        <div class="col-lg-3 single-sidebar-selector scrollcontrol-side clearfix">
+
+                            <div class="content-panel shadowed fixed-object single-sidebar">
+
+                                <div class="widgets-wrapper"><div class="widgets clearfix "><div id="nav_menu-3" class="widget clearfix"><div class="bar-header"><div class="bar-label"><div class="label-text">CATEGORIES</div></div></div><div class="menu-categories-container"><ul id="menu-categories" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13637"><a href="https://www.altoros.com/blog/tag/cloud-native/">Cloud-Native</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13642"><a href="https://www.altoros.com/blog/tag/blockchain/">Blockchain</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13640"><a href="https://www.altoros.com/blog/tag/machine-learning/">Machine Learning</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13641"><a href="https://blog.altoros.com/">R&#038;D</a></li>
+</ul></div></div><div id="my_tag_slider_widget-5" class="widget clearfix"><div class="bar-header"><div class="bar-label"><div class="label-text">GET ON-SITE TRAINING</div></div></div><div class="events_count_wrapper"><div style="max-width: 248px;" class="ml-slider-3-7-2 metaslider metaslider-flex metaslider-36244 ml-slider nav-hidden">
+    
+    <div id="metaslider_container_36244">
+        <div id="metaslider_36244">
+            <ul class="slides">
+                <li style="display: block; width: 100%;" class="slide-36246 ms-image"><a href="https://www.altoros.com/custom-blockchain-training.html?utm_source=blog&amp;utm_medium=banner&amp;utm_campaign=blog_sidebar" target="_blank"><img src="https://www.altoros.com/blog/wp-content/uploads/2018/08/banner-248x270-Design-your-Kubernetes-training_copy_2.jpg" height="270" width="248" alt="" class="slider-36244 slide-36246" title="banner-248x270-Design-your-Kubernetes-training_copy_2" /></a></li>
+                <li style="display: none; width: 100%;" class="slide-36248 ms-image"><a href="https://www.altoros.com/build-private-network-on-blockchain-for-finance-commodities-insurance.html?utm_source=blog&amp;utm_medium=banner&amp;utm_campaign=blog_sidebar" target="_blank"><img src="https://www.altoros.com/blog/wp-content/uploads/2018/03/Blockchain-for-Business_1.jpg" height="270" width="248" alt="Blockchain-for-Business" class="slider-36244 slide-36248" title="Blockchain-for-Business_1" /></a></li>
+                <li style="display: none; width: 100%;" class="slide-36249 ms-image"><a href="https://www.altoros.com/private-and-public-blockchains-for-business-ethereum-vs-hyperledger-fabric.html?utm_source=blog&amp;utm_medium=banner&amp;utm_campaign=blog_sidebar" target="_blank"><img src="https://www.altoros.com/blog/wp-content/uploads/2018/03/Blockchain-for-Business_2.jpg" height="270" width="248" alt="Blockchain-for-Business" class="slider-36244 slide-36249" title="Blockchain-for-Business_2" /></a></li>
+            </ul>
+        </div>
+        
+    </div>
+</div></div><div align="center" style="margin-bottom: 0px;"><a target="_blank" href="https://www.altoros.com/training.html?utm_source=blog&utm_medium=text_link&utm_campaign=blog_sidebar">Full Schedule</a></div></div><div id="wysija-3" class="widget clearfix"><div class="bar-header"><div class="bar-label"><div class="label-text">STAY UPDATED!</div></div></div><div class="widget_wysija_cont"><div id="msg-form-wysija-3" class="wysija-msg ajax"></div><form id="form-wysija-3" method="post" action="#wysija" class="widget_wysija">
+
+
+    <p class="wysija-checkbox-paragraph"><label><input class="wysija-checkbox validate[required]" name="wysija[user_list][list_id][]" type="checkbox" value="5" checked="checked" /> Cloud-Native</label></p>
+
+    <p class="wysija-checkbox-paragraph"><label><input class="wysija-checkbox validate[required]" name="wysija[user_list][list_id][]" type="checkbox" value="10" checked="checked" /> Blockchain</label></p>
+
+    <p class="wysija-checkbox-paragraph"><label><input class="wysija-checkbox validate[required]" name="wysija[user_list][list_id][]" type="checkbox" value="12" checked="checked" /> Machine Learning</label></p>
+
+<p class="wysija-paragraph">
+    
+    
+    	<input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Email*" placeholder="Email*" value="" />
+    
+    
+    
+    <span class="abs-req">
+        <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value="" />
+    </span>
+    
+</p>
+
+<input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe" />
+
+<p class="wysija-paragraph" style="display:none !important; visibility:hidden !important;">
+    
+    	<input type="text" name="wysija[user][bname]" class="wysija-input " title="First name" value="">
+    
+    <span class="abs-req">
+        <input type="text" name="wysija[user][abs][bname]" class="wysija-input validated[abs][bname]" value="">
+    </span>
+    
+</p>
+
+    <input type="hidden" name="form_id" value="2" />
+    <input type="hidden" name="action" value="save" />
+    <input type="hidden" name="controller" value="subscribers" />
+    <input type="hidden" value="1" name="wysija-page" />
+
+    
+ </form></div></div><div id="it_latest_articles-14" class="widget clearfix"><div class="post-container widget-panel compact-header widget_a"><div class="bar-header sortbar clearfix"><div class="bar-label-wrapper"><div class="bar-label"><div class="label-text">Featured Guides</div><div class="metric-text"></div></div></div></div><div class="content-inner clearfix"><div class="loop"><div class="compact-panel widget_a add-active clearfix category-"><div class="color-line"></div><a class="overlay-link" href="https://www.altoros.com/blog/architects-guide-to-implementing-the-cloud-foundry-paas/">&nbsp;</a><div class="article-image-wrapper"><div class="overlay-hover"><span class="theme-icon-forward"></span></div><img width="68" height="60" src="https://www.altoros.com/blog/wp-content/uploads/2015/05/preview-architects-1.png" class="attachment-square-small size-square-small wp-post-image" alt="" title="Architect’s Guide to Implementing the Cloud Foundry PaaS" /></div><div class="article-info"><div class="article-title">Architect’s Guide to Implementing the Cloud Foundry PaaS</div><span class="meta-heat metric heat-index" title="Heat Index"><span class="icon theme-icon-flame"></span><span class="numcount">32531</span></span></div></div><div class="compact-panel widget_a add-active clearfix category-"><div class="color-line"></div><a class="overlay-link" href="https://www.altoros.com/blog/microservices-vs-monolithic-architectures-the-pros-cons-and-cloud-foundry-examples/">&nbsp;</a><div class="article-image-wrapper"><div class="overlay-hover"><span class="theme-icon-forward"></span></div><img width="68" height="60" src="https://www.altoros.com/blog/wp-content/uploads/2014/12/preview-microservices.png" class="attachment-square-small size-square-small wp-post-image" alt="" title="Microservices vs. Monolithic Architectures: Pros, Cons + Cloud Foundry Examples" /></div><div class="article-info"><div class="article-title">Microservices vs. Monolithic Architectures: Pros, Cons + Cloud Foundry Examples</div><span class="meta-heat metric heat-index" title="Heat Index"><span class="icon theme-icon-flame"></span><span class="numcount">14975</span></span></div></div></div></div></div></div>		
+		
+	<div id="text-22" class="widget clearfix">			<div class="textwidget"><div  class="widgetready" id="widgetwidget_twitter_timeline">
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/Altoros" data-widget-id="415160285737926657"></a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div></div>
+		</div></div></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                                    
+                </div>
+                
+                            
+            </div>
+        
+        </div>
+    
+    </div>
+
+</div>
+
+
+
+	<div id="footer" class="container-fluid no-padding builder-section builder-widgets">
+
+		<div class="row">
+
+			<div class="col-md-12">
+
+				
+				<div class="container-inner">
+
+					
+						<div class="widgets-inner shadowed">
+
+							<div class="row">
+
+								<div class="widget-panel left col-md-3">
+
+									<div class="widgets-wrapper"><div class="widgets clearfix widgets"><div id="nav_menu-2" class="widget clearfix"><div class="menu-footer_left-container"><ul id="menu-footer_left" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7057"><a href="http://www.altoros.com/paas_enablement.html">Cloud Foundry Services</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13655"><a href="http://www.altoros.com/solutions.html">Cloud Foundry Solutions</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13656"><a href="/partial_customer_list.html">Featured Customers</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13714"><a href="/blog/">Resources</a></li>
+</ul></div></div></div></div>
+								</div>
+
+								<div class="widget-panel mid mid-left col-md-3">
+
+									<div class="widgets-wrapper"><div class="widgets clearfix widgets"><div id="text-10" class="widget clearfix"><div class="bar-header"><div class="bar-label"><div class="label-text">ABOUT ALTOROS</div></div></div>			<div class="textwidget">Altoros is a 300+ people strong consultancy that helps Global 2000 organizations with a methodology, training, technology building blocks, and end-to-end solution development. The company turns cloud-native app development, customer analytics, blockchain, and AI into products with a sustainable competitive advantage. Altoros assists enterprises on their way to digital transformation, standing behind some of the world's largest Cloud Foundry deployments.</div>
+		</div></div></div>
+								</div>
+
+								<br class="clearer hidden-lg hidden-md"/>
+
+								<div class="widget-panel mid mid-right col-md-3">
+
+									<div class="widgets-wrapper"><div class="widgets clearfix widgets"><div id="text-11" class="widget clearfix">			<div class="textwidget"><p><img src='https://www.altoros.com/blog/wp-content/uploads/2015/06/cloud-futer-logo.png' /></p></div>
+		</div></div></div>
+								</div>
+
+							</div>
+
+						</div>
+
+					
+					
+						<div class="subfooter shadowed">
+
+							<div class="row">
+
+								<div class="col-sm-6 copyright">
+
+									
+										<div class="col-md-3"><p>© Altoros</p></div><div class="col-md-3"><p><a href="http://www.altoros.com/privacy_policy.html">PRIVACY POLICY</a><a href="http://www.altoros.com/about_summary.html">MORE ABOUT US</a><a href="http://www.altoros.com/contact_us.html">CONTACT US</a></p></div><div class="col-md-3"><div class="social-badges clearfix"><a href="https://twitter.com/altoros" class="styled theme-icon-twitter" title="Altoros" rel="nofollow" target="_blank"></a><a href="https://www.linkedin.com/company/altoros-systems" class="styled theme-icon-linkedin" title="Altoros" rel="nofollow" target="_blank"></a><a href="https://www.youtube.com/channel/UCzVZ70hdQxYqzxavQL6x8pw" class="styled theme-icon-youtube" title="Altoros" rel="nofollow" target="_blank"></a><a href="https://plus.google.com/115839489342595633719/" class="styled theme-icon-googleplus" title="Altoros" rel="nofollow" target="_blank"></a><a href="http://www.altoros.com/cflive/feed/" class="styled theme-icon-rss" title="Altoros" rel="nofollow" target="_blank"></a><a href="http://slideshare.net/altoros" class="styled theme-icon-slideshare" title="Altoros" rel="nofollow" target="_blank"></a></div></div>
+									
+								</div>
+
+								<div class="col-sm-6 credits">
+
+									
+								</div>
+
+							</div>
+
+						</div>
+
+					
+				</div> <!--/container-inner-->
+
+			</div> <!--/col-md-12-->
+
+		</div> <!--/row-->
+
+		<div class="banner-pop-up version1">
+	<span class="banner-pop-up-top">Free</span>
+	<p class="banner-pop-up-title">Architect’s Guide to Implementing the Cloud Foundry PaaS</p>
+	<a class="banner-pop-up-button" href="http://www.altoros.com/blog/architects-guide-to-implementing-the-cloud-foundry-paas/">Download now!</a>
+	<span class="banner-pop-up-close"></span>
+</div> <!--/banner 1-->
+
+<div class="banner-pop-up version2">
+	<span class="banner-pop-up-top">Free</span>
+	<p class="banner-pop-up-title">Architect’s Guide! Microservices vs. Monolithic Architectures: Pros, Cons
+		+ CF Examples</p>
+	<a class="banner-pop-up-button" href="http://www.altoros.com/blog/microservices-vs-monolithic-architectures-the-pros-cons-and-cloud-foundry-examples/">Download now!</a>
+	<span class="banner-pop-up-close"></span>
+</div> <!--/banner 2-->
+	
+	</div> <!--/container-fluid-->
+
+
+</div> <!--/after-header-->
+
+                    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WZFT5K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZFT5K');</script>
+<!-- End Google Tag Manager -->    
+<style type="text/css">
+#sticky-bar,#section-menu.standard-menu ul ul li a.parent-item:hover,#section-menu.standard-menu ul ul li.over > a.parent-item,#section-menu.standard-menu ul ul li.current-menu-item > a.parent-item,#section-menu.standard-menu ul ul li a:hover,#section-menu.standard-menu ul ul li.over > a,#section-menu.standard-menu ul ul li.current-menu-item > a,.category-circle{background:#ffffff}.new-articles .selector.active,.new-articles .selector.over,.new-articles .post-container,#section-menu ul li a.parent-item:hover,#section-menu ul li.over > a.parent-item,#section-menu ul li.current-menu-item > a.parent-item,#section-menu .placeholder,#section-menu .term-list,.terms-more .sort-toggle,#section-menu.standard-menu ul li a.parent-item:hover,#section-menu.standard-menu ul li.over > a.parent-item,#section-menu.standard-menu ul li.current-menu-item > a.parent-item,#section-menu.standard-menu ul li a:hover,#section-menu.standard-menu ul li.over > a,#section-menu.standard-menu ul li.current-menu-item > a,#section-menu.standard-menu ul ul,.sticky-toggle:hover,.sticky-toggle.active,.sort-buttons,.sort-toggle.active,.sort-toggle.over,.topten-number,.section-toggle.active,.section-toggle.over,.section-menu-mobile.active{background:#ffffff}#section-menu>ul>li>a,.new-articles .selector,a.sticky-toggle,#sticky-bar .social-badges a,#section-menu .article-info,#section-menu .header,#section-menu .read-more,#section-menu .compact-panel .article-title,.dark-bg .trending-toggle,.dark-bg .sharing-toggle,.new-articles .compact-panel .article-title,#sticky-bar .social-badges a:hover,.sticky-toggle:hover,.sticky-toggle.active,.section-toggle,.section-menu-mobile ul li a,.sort-toggle.active,.sort-toggle.over,.sort-buttons a, .sort-buttons span.page-numbers,.topten-number{color:#ffffff} .terms-more .sort-toggle.active span,.terms-more .sort-toggle.over span{color:#ffffff!important} .section-menu-mobile ul li a:hover,.section-menu-mobile ul li.over > a,.section-menu-mobile ul li.current-menu-item > a{background-color:rgba(0,0,0,.2)}body.it-background,.after-billboard{background-color:#eeeeee !important;}	
+		
+#logo:not(.no-color),.sticky-home{background:rgba(0,119,219,1);filter:none;}
+#header-terms a:hover,#section-menu .mega-wrapper .term-list a,.review-star,.sort-buttons a.active,.sort-buttons a:hover,.center-panel.active,.widget-section a.more-link:hover,.topic-panel.active .topic-name,.trending-bar.active .title,.social-counts a:hover .social-number,.widgets .it-widget-tabs .sort-buttons a:hover,#comments-social-tab a:hover,.widgets .social-badges a:hover,.magazine-left .compact-panel.active .article-title,.terms-more .sort-toggle span,.the-content a:not(.styled),a.nav-link:hover,.contents-menu .nav>li>a:hover,.reaction.clickable.active,.reaction.selected,.reaction.selected .theme-icon-check,.postinfo a:hover,.magazine-categories a.active,#comments .comment-pagination a:hover,.utility-menu a:hover,.utility-menu li.over>a,.utility-menu li.current-menu-item a,.utility-menu li.current-menu-parent>a,.utility-menu li.current-menu-ancestor>a,.widgets #menu-utility-menu a:hover,.widgets .it-widget-tabs .ui-tabs-active a,.widgets #wp-calendar a:hover,.contents-menu .nav>li.active>a,.builder-connect .social-badges a:hover,.woocommerce.woocommerce-page ul.cart_list li a:hover, .woocommerce.woocommerce-page ul.product_list_widget li a:hover,.compare-block,#section-menu .term-link{color:#0077DB;}
+.overlay-hover{background:rgba(0,119,219,.25);filter:none;}
+.sticky-color,.color-line1,.center-panel.active .topten-number,.magazine-title,.main-category,.postnav-layer,.post-left-toggle,.woocommerce.woocommerce-page #content input.button, .woocommerce.woocommerce-page #respond input#submit, .woocommerce.woocommerce-page a.button, .woocommerce.woocommerce-page button.button, .woocommerce.woocommerce-page input.button{background:rgba(0,119,219,1);filter:none;}
+.magazine-header,.post-left,.meter-wrapper .meter,.large-meter .meter-wrapper .meter,.compare-block{border-color:#0077DB;}	
+.details-box-wrapper,.ratings .total-wrapper,.woocommerce.woocommerce-page ul.products li.product a img{border-bottom-color:#0077DB;}
+.overlay-layer{background:rgba(0,119,219,.15);filter:none;}
+.overlay-hover{text-shadow:0 0 30px rgba(0,119,219,1);}
+	
+.the-content,.the-content p{font-size:19px;}.the-content p{line-height:1.42}body.it-background {background-color:eeeeee !important;}						
+			
+.billboard-overlay {
+background: -moz-linear-gradient(top,  rgba(0,0,0,.48) 68%, rgba(238,238,238,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(68%,rgba(0,0,0,.48)), color-stop(100%,rgba(238,238,238,1)));
+background: -webkit-linear-gradient(top,  rgba(0,0,0,.48) 68%,rgba(238,238,238,1) 100%);
+background: -o-linear-gradient(top,  rgba(0,0,0,.48) 68%,rgba(238,238,238,1) 100%);
+background: -ms-linear-gradient(top,  rgba(0,0,0,.48) 68%,rgba(238,238,238,1) 100%);
+background: linear-gradient(to bottom,  rgba(0,0,0,.48) 68%,rgba(238,238,238,1) 100%);}	
+#section-menu ul li.menu-item-214 .mega-wrapper .term-list a,#section-menu ul li.menu-item-214 .terms-more .sort-toggle span,.widget-section.category-214 .center-panel.active,.widget-section.category-214 a:hover,.overlay-panel.category-214 .review-star,.magazine-panel.category-214 a:hover,.magazine-panel.category-214 .magazine-left .compact-panel.active .article-title,.single-page.category-214 a.nav-link:hover,.single-page.category-214 .contents-menu .nav>li.active>a,.single-page.category-214 .contents-menu .nav>li>a:hover.category-214 .reaction.clickable.active,.category-214 .reaction.selected,.category-214 .reaction.selected .theme-icon-check,.category-214 .postinfo .category-list a:hover,.single-page.category-214 .magazine-categories a.active,.single-page.category-214 #comments .comment-pagination a:hover,#section-menu li.menu-item-214 .term-link{color:#006f75;}
+
+.category-214 #logo:not(.no-color),.category-214 .sticky-home,.category-214 .sticky-color,.loop-panel.category-214 .color-line1,.widget .category-214 .color-line1,.menu-item-214 .color-line1,.overlay-panel.category-214 .overlay-layer .color-line1,.overlay-panel.category-214 .overlay-hover .color-line1,.menu-item-214 .color-line1,.compact-panel.category-214 .color-line1,.sort-buttons.sort-sections a.category-214.active,.widget-section.category-214 .category-circle,.category-tile.category-214.active .tile-layer,.magazine-panel.category-214 .magazine-title,.single-page.category-214 .main-category,.single-page.category-214 .postnav-layer,.single-page.category-214 .post-left-toggle{background:#006f75 !important;filter:none;}
+
+.overlay-panel.category-214 .overlay-layer{background:rgba(0,111,117,.15);filter:none;}
+
+.overlay-panel.category-214 .overlay-hover,.compact-panel.category-214 .overlay-hover{text-shadow:0 0 30px rgba(0,111,117,1);}
+.overlay-panel.category-214 .overlay-hover,.compact-panel.category-214 .overlay-hover{background:rgba(0,111,117,.25);filter:none;}
+
+.sort-buttons.sort-sections a.category-214,.magazine-panel.category-214 .magazine-header,.single-page.category-214 .details-box-wrapper,.single-page.category-214 .ratings .total-wrapper {border-bottom-color:#006f75}
+
+.single-page.category-214 .post-left{border-color:#006f75}
+
+.overlay-panel.category-214 .overlay-hover,.compact-panel.category-214 .overlay-hover,
+
+.category-214 .large-meter .meter-wrapper .meter {border-color:#006f75;}
+
+@media screen {
+.category-icon-214-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-16x16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.category-icon-214-16.white, .sort-sections a.active .category-icon-214-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-white-16x16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}	
+.category-icon-214-28 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-28x28.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}
+.category-icon-214-28.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-white-28x28.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}	
+.category-icon-214-64 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-64x64.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+.category-icon-214-64.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-white-64x64.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+}
+/*use this to get rid of chrome console warning, but doesn't work yet in firefox*/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+.category-icon-214-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-32x32.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.category-icon-214-16.white, .sort-sections a.active .category-icon-214-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-white-32x32.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}	
+.category-icon-214-28 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-56x56.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}
+.category-icon-214-28.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-white-56x56.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}	
+.category-icon-214-64 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+.category-icon-214-64.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/gaming-white.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}	
+}
+			#section-menu ul li.menu-item-7 .mega-wrapper .term-list a,#section-menu ul li.menu-item-7 .terms-more .sort-toggle span,.widget-section.category-7 .center-panel.active,.widget-section.category-7 a:hover,.overlay-panel.category-7 .review-star,.magazine-panel.category-7 a:hover,.magazine-panel.category-7 .magazine-left .compact-panel.active .article-title,.single-page.category-7 a.nav-link:hover,.single-page.category-7 .contents-menu .nav>li.active>a,.single-page.category-7 .contents-menu .nav>li>a:hover.category-7 .reaction.clickable.active,.category-7 .reaction.selected,.category-7 .reaction.selected .theme-icon-check,.category-7 .postinfo .category-list a:hover,.single-page.category-7 .magazine-categories a.active,.single-page.category-7 #comments .comment-pagination a:hover,#section-menu li.menu-item-7 .term-link{color:#00575b;}
+
+.category-7 #logo:not(.no-color),.category-7 .sticky-home,.category-7 .sticky-color,.loop-panel.category-7 .color-line1,.widget .category-7 .color-line1,.menu-item-7 .color-line1,.overlay-panel.category-7 .overlay-layer .color-line1,.overlay-panel.category-7 .overlay-hover .color-line1,.menu-item-7 .color-line1,.compact-panel.category-7 .color-line1,.sort-buttons.sort-sections a.category-7.active,.widget-section.category-7 .category-circle,.category-tile.category-7.active .tile-layer,.magazine-panel.category-7 .magazine-title,.single-page.category-7 .main-category,.single-page.category-7 .postnav-layer,.single-page.category-7 .post-left-toggle{background:#00575b !important;filter:none;}
+
+.overlay-panel.category-7 .overlay-layer{background:rgba(0,87,91,.15);filter:none;}
+
+.overlay-panel.category-7 .overlay-hover,.compact-panel.category-7 .overlay-hover{text-shadow:0 0 30px rgba(0,87,91,1);}
+.overlay-panel.category-7 .overlay-hover,.compact-panel.category-7 .overlay-hover{background:rgba(0,87,91,.25);filter:none;}
+
+.sort-buttons.sort-sections a.category-7,.magazine-panel.category-7 .magazine-header,.single-page.category-7 .details-box-wrapper,.single-page.category-7 .ratings .total-wrapper {border-bottom-color:#00575b}
+
+.single-page.category-7 .post-left{border-color:#00575b}
+
+.overlay-panel.category-7 .overlay-hover,.compact-panel.category-7 .overlay-hover,
+
+.category-7 .large-meter .meter-wrapper .meter {border-color:#00575b;}
+
+@media screen {
+.category-icon-7-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-16x16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.category-icon-7-16.white, .sort-sections a.active .category-icon-7-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-white-16x16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}	
+.category-icon-7-28 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-28x28.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}
+.category-icon-7-28.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-white-28x28.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}	
+.category-icon-7-64 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-64x64.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+.category-icon-7-64.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-white-64x64.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+}
+/*use this to get rid of chrome console warning, but doesn't work yet in firefox*/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+.category-icon-7-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-32x32.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.category-icon-7-16.white, .sort-sections a.active .category-icon-7-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-white-32x32.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}	
+.category-icon-7-28 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-56x56.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}
+.category-icon-7-28.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-white-56x56.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}	
+.category-icon-7-64 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+.category-icon-7-64.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/bulb-white.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}	
+}
+			#section-menu ul li.menu-item-26 .mega-wrapper .term-list a,#section-menu ul li.menu-item-26 .terms-more .sort-toggle span,.widget-section.category-26 .center-panel.active,.widget-section.category-26 a:hover,.overlay-panel.category-26 .review-star,.magazine-panel.category-26 a:hover,.magazine-panel.category-26 .magazine-left .compact-panel.active .article-title,.single-page.category-26 a.nav-link:hover,.single-page.category-26 .contents-menu .nav>li.active>a,.single-page.category-26 .contents-menu .nav>li>a:hover.category-26 .reaction.clickable.active,.category-26 .reaction.selected,.category-26 .reaction.selected .theme-icon-check,.category-26 .postinfo .category-list a:hover,.single-page.category-26 .magazine-categories a.active,.single-page.category-26 #comments .comment-pagination a:hover,#section-menu li.menu-item-26 .term-link{color:;}
+
+.category-26 #logo:not(.no-color),.category-26 .sticky-home,.category-26 .sticky-color,.loop-panel.category-26 .color-line1,.widget .category-26 .color-line1,.menu-item-26 .color-line1,.overlay-panel.category-26 .overlay-layer .color-line1,.overlay-panel.category-26 .overlay-hover .color-line1,.menu-item-26 .color-line1,.compact-panel.category-26 .color-line1,.sort-buttons.sort-sections a.category-26.active,.widget-section.category-26 .category-circle,.category-tile.category-26.active .tile-layer,.magazine-panel.category-26 .magazine-title,.single-page.category-26 .main-category,.single-page.category-26 .postnav-layer,.single-page.category-26 .post-left-toggle{background: !important;filter:none;}
+
+.overlay-panel.category-26 .overlay-layer{background:rgba(,.15);filter:none;}
+
+.overlay-panel.category-26 .overlay-hover,.compact-panel.category-26 .overlay-hover{text-shadow:0 0 30px rgba(,1);}
+.overlay-panel.category-26 .overlay-hover,.compact-panel.category-26 .overlay-hover{background:rgba(,.25);filter:none;}
+
+.sort-buttons.sort-sections a.category-26,.magazine-panel.category-26 .magazine-header,.single-page.category-26 .details-box-wrapper,.single-page.category-26 .ratings .total-wrapper {border-bottom-color:}
+
+.single-page.category-26 .post-left{border-color:}
+
+.overlay-panel.category-26 .overlay-hover,.compact-panel.category-26 .overlay-hover,
+
+.category-26 .large-meter .meter-wrapper .meter {border-color:;}
+
+@media screen {
+.category-icon-26-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-16x16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.category-icon-26-16.white, .sort-sections a.active .category-icon-26-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-white-16x16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}	
+.category-icon-26-28 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-28x28.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}
+.category-icon-26-28.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-white-28x28.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}	
+.category-icon-26-64 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-64x64.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+.category-icon-26-64.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-white-64x64.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+}
+/*use this to get rid of chrome console warning, but doesn't work yet in firefox*/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+.category-icon-26-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-32x32.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.category-icon-26-16.white, .sort-sections a.active .category-icon-26-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-white-32x32.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}	
+.category-icon-26-28 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-56x56.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}
+.category-icon-26-28.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-white-56x56.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}	
+.category-icon-26-64 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+.category-icon-26-64.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/reviews-white.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}	
+}
+			#section-menu ul li.menu-item-151 .mega-wrapper .term-list a,#section-menu ul li.menu-item-151 .terms-more .sort-toggle span,.widget-section.category-151 .center-panel.active,.widget-section.category-151 a:hover,.overlay-panel.category-151 .review-star,.magazine-panel.category-151 a:hover,.magazine-panel.category-151 .magazine-left .compact-panel.active .article-title,.single-page.category-151 a.nav-link:hover,.single-page.category-151 .contents-menu .nav>li.active>a,.single-page.category-151 .contents-menu .nav>li>a:hover.category-151 .reaction.clickable.active,.category-151 .reaction.selected,.category-151 .reaction.selected .theme-icon-check,.category-151 .postinfo .category-list a:hover,.single-page.category-151 .magazine-categories a.active,.single-page.category-151 #comments .comment-pagination a:hover,#section-menu li.menu-item-151 .term-link{color:;}
+
+.category-151 #logo:not(.no-color),.category-151 .sticky-home,.category-151 .sticky-color,.loop-panel.category-151 .color-line1,.widget .category-151 .color-line1,.menu-item-151 .color-line1,.overlay-panel.category-151 .overlay-layer .color-line1,.overlay-panel.category-151 .overlay-hover .color-line1,.menu-item-151 .color-line1,.compact-panel.category-151 .color-line1,.sort-buttons.sort-sections a.category-151.active,.widget-section.category-151 .category-circle,.category-tile.category-151.active .tile-layer,.magazine-panel.category-151 .magazine-title,.single-page.category-151 .main-category,.single-page.category-151 .postnav-layer,.single-page.category-151 .post-left-toggle{background: !important;filter:none;}
+
+.overlay-panel.category-151 .overlay-layer{background:rgba(,.15);filter:none;}
+
+.overlay-panel.category-151 .overlay-hover,.compact-panel.category-151 .overlay-hover{text-shadow:0 0 30px rgba(,1);}
+.overlay-panel.category-151 .overlay-hover,.compact-panel.category-151 .overlay-hover{background:rgba(,.25);filter:none;}
+
+.sort-buttons.sort-sections a.category-151,.magazine-panel.category-151 .magazine-header,.single-page.category-151 .details-box-wrapper,.single-page.category-151 .ratings .total-wrapper {border-bottom-color:}
+
+.single-page.category-151 .post-left{border-color:}
+
+.overlay-panel.category-151 .overlay-hover,.compact-panel.category-151 .overlay-hover,
+
+.category-151 .large-meter .meter-wrapper .meter {border-color:;}
+
+@media screen {
+.category-icon-151-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-16x16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.category-icon-151-16.white, .sort-sections a.active .category-icon-151-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-white-16x16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}	
+.category-icon-151-28 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-28x28.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}
+.category-icon-151-28.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-white-28x28.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}	
+.category-icon-151-64 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-64x64.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+.category-icon-151-64.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-white-64x64.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+}
+/*use this to get rid of chrome console warning, but doesn't work yet in firefox*/
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+.category-icon-151-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-32x32.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.category-icon-151-16.white, .sort-sections a.active .category-icon-151-16 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-white-32x32.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}	
+.category-icon-151-28 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-56x56.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}
+.category-icon-151-28.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-white-56x56.png) no-repeat 0px 0px;background-size:28px 28px !important;width:28px;height:28px;float:left;}	
+.category-icon-151-64 {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}
+.category-icon-151-64.white {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/headphones-white.png) no-repeat 0px 0px;background-size:64px 64px !important;width:64px;height:64px;float:left;}	
+}
+			.award-icon-forcloudfoundryopensource {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/award-light.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-forcloudfoundryopensource {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/award-light-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-forpivotalcf {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-ball.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-forpivotalcf {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-ball-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-foribmbluemix {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-coins.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-foribmbluemix {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-coins-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-foractivestatestackato {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-crown.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-foractivestatestackato {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-crown-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-forcfonopenstack {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-gift.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-forcfonopenstack {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-gift-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-forcfonamazonwebservices {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-hand.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-forcfonamazonwebservices {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-hand-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-forcfongooglecompute {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-hazard.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-forcfongooglecompute {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-hazard-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-forcfonazure {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-plane.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-forcfonazure {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-plane-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-growingcfcommunity {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/award-light.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-growingcfcommunity {background:url(http://www.altoros.com/cflive/wp-content/uploads/2014/11/award-light-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-unicornbadge {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-unicorn.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-unicornbadge {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-unicorn-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-githubsourcecodeincluded {background:url(http://www.turshija.com/signature/github.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-githubsourcecodeincluded {background:url(http://www.industrialthemes.com/engine/wp-content/uploads/2014/11/award-usa-white.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon-cfespressoissue {background:url(http://www.altoros.com/cflive/wp-content/uploads/2015/01/coffee-16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon-cfespressoissue {background:url(http://www.altoros.com/cflive/wp-content/uploads/2015/01/coffee-16.png) no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		.award-icon- {background:url() no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+.white .award-icon- {background:url() no-repeat 0px 0px;background-size:16px 16px !important;width:16px;height:16px;float:left;}
+		</style>
+<link rel="stylesheet" type="text/css" href="/blog/wp-content/themes/engine/gdpr-cookie-notice/dist/style.css" />
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<script type="text/javascript" src="/blog/wp-content/themes/engine/gdpr-cookie-notice/dist/script.js"></script>
+
+    <script>
+        gdprCookieNotice({
+            locale: 'en', //This is the default value
+            timeout: 500, //Time until the cookie bar appears
+            expiration: 60, //This is the default value, in days
+            domain: '.altoros.com', //If you run the same cookie notice on all subdomains, define the main domain starting with a .
+            implicit: false, //Accept cookies on page scroll automatically
+            statement: 'https://www.altoros.com/privacy_policy.html', //Link to your cookie statement page
+            performance: ['JSESSIONID', '_hjIncludedInSample', 'nQ_visitId', 'nQ_cookieId', 'locale', 'lang', '__atuvc', '__hstc', '__hssrc', '__hssc', 'hsfirstvisit','hubspotutk'], //Cookies in the performance category.
+            analytics: ['ga', '_ga', '_gid', '_gat', 'collect', '_ga_user_id', '__utmz', '__utma', 'gwcc'], //Cookies in the analytics category.
+            marketing: ['SSID', 'IDE','test_cookie', 'fr','tr', '1P_JAR','id', 'NID', 'APISID', 'SAPISID', 'guest_id', 'personalization_id', 'bcookie','bscookie','lidc', 'MUID', 'MUIDB', 'GPS'] //Cookies in the marketing category.
+        });
+    </script>
+
+
+<script>
+    jQuery(function () {
+        var limit = 60 * 24 * 3600 * 1000;
+        var localStorageInitTime = localStorage.getItem('gdprcookienotice');
+        if (+new Date() - localStorageInitTime > limit) {
+            localStorage.clear();
+        }
+        if (localStorageInitTime === null) {
+            jQuery('body').addClass('second-footer');
+            jQuery('.gdpr-cookie-notice-nav-item-btn').on('click', function () {
+                jQuery('body').removeClass('second-footer');
+                localStorage.setItem('gdprcookienotice', +new Date());
+            });
+        }
+    });
+</script>
+<script>
+    window.onload = function() {
+        Gifffer();
+    }
+</script>
+
+<!--<div id="agreement_popup" class="agreement">
+        <div class="agreement-text">
+            <div class="agreement-text-child" style="padding-top:5px">This site uses cookies for analytics, personalized
+                content and ads. By continuing to browse this site, you agree to this use. <a
+                        href="" class="popup-links-action"
+                        target="_blank"> Learn more.</a>
+            </div>
+            <div class="agreement-text-child agree-with-privacy">I agree</div>
+        </div>
+    </div>-->
+<!--<script>
+    jQuery(function() {
+        var limit = 60 * 24 * 3600 * 1000;
+        var localStorageInitTime = localStorage.getItem('priv_agr');
+        if(+new Date() - localStorageInitTime > limit) {
+            localStorage.clear();
+        }
+        if (localStorageInitTime === null && jQuery('#agreement_popup').length) {
+            jQuery('#agreement_popup').show('slow');
+            jQuery('body').addClass('second-footer');
+            jQuery('.agree-with-privacy').on('click', function () {
+                jQuery('#agreement_popup').hide('slow');
+                jQuery('body').removeClass('second-footer');
+                localStorage.setItem('priv_agr', +new Date());
+            });
+        }
+    });
+</script>-->
+
+
+<script>
+		var advanced_ads_ga_UID = '';
+		var advanced_ads_ga_anonymIP = true;
+advanced_ads_check_adblocker=function(t){function e(t){(window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||function(t){return setTimeout(t,16)}).call(window,t)}var n=[],a=null;return e(function(){var t=document.createElement("div");t.innerHTML="&nbsp;",t.setAttribute("class","ad_unit ad-unit text-ad text_ad pub_300x250"),t.setAttribute("style","width: 1px !important; height: 1px !important; position: absolute !important; left: 0px !important; top: 0px !important; overflow: hidden !important;"),document.body.appendChild(t),e(function(){var e=window.getComputedStyle&&window.getComputedStyle(t),o=e&&e.getPropertyValue("-moz-binding");a=e&&"none"===e.getPropertyValue("display")||"string"==typeof o&&-1!==o.indexOf("about:");for(var i=0;i<n.length;i++)n[i](a);n=[]})}),function(t){if(null===a)return void n.push(t);t(a)}}(),function(){var t=function(t,e){this.name=t,this.UID=e,this.analyticsObject=null;var n=this,a={hitType:"event",eventCategory:"Advanced Ads",eventAction:"AdBlock",eventLabel:"Yes",nonInteraction:!0,transport:"beacon"};this.analyticsObject="string"==typeof GoogleAnalyticsObject&&"function"==typeof window[GoogleAnalyticsObject]&&window[GoogleAnalyticsObject],!1===this.analyticsObject?(!function(t,e,n,a,o,i,d){t.GoogleAnalyticsObject=o,t[o]=t[o]||function(){(t[o].q=t[o].q||[]).push(arguments)},t[o].l=1*new Date,i=e.createElement(n),d=e.getElementsByTagName(n)[0],i.async=1,i.src="https://www.google-analytics.com/analytics.js",d.parentNode.insertBefore(i,d)}(window,document,"script",0,"_advads_ga"),_advads_ga("create",n.UID,"auto",this.name),advanced_ads_ga_anonymIP&&_advads_ga("set","anonymizeIp",!0),_advads_ga(n.name+".send",a)):(window.console&&window.console.log("Advanced Ads Analytics >> using other's variable named `"+GoogleAnalyticsObject+"`"),window[GoogleAnalyticsObject]("create",n.UID,"auto",this.name),window[GoogleAnalyticsObject]("set","anonymizeIp",!0),window[GoogleAnalyticsObject](n.name+".send",a))};advanced_ads_check_adblocker(function(e){e&&"string"==typeof advanced_ads_ga_UID&&advanced_ads_ga_UID&&new t("advadsTracker",advanced_ads_ga_UID)})}();		
+		</script>
+			<script type="text/javascript">	
+			  var orbtr_account = "ORBTR-282";
+			
+			  (function() {
+				var trk = document.createElement("script"); trk.type = "text/javascript"; trk.async = true;
+				trk.src = ("https:" == document.location.protocol ? "https://" : "http://") + "api.orbtr.net/v2/trk.v2.js?r=1538984954";
+				var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(trk, s);
+			  })();
+			</script>
+		    <style>
+    .qed_stt_tslink {
+        cursor: pointer;
+    }
+    </style>
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script type='text/javascript'> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done"}};/* ]]> */ </script><link rel='stylesheet' id='metaslider-flex-slider-css'  href='https://www.altoros.com/blog/wp-content/plugins/ml-slider/assets/sliders/flexslider/flexslider.css?ver=3.7.2' type='text/css' media='all' property='stylesheet' />
+<link rel='stylesheet' id='metaslider-public-css'  href='https://www.altoros.com/blog/wp-content/plugins/ml-slider/assets/metaslider/public.css?ver=3.7.2' type='text/css' media='all' property='stylesheet' />
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/comment-reply.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/altoros-custom-area/includes/js/altoros_custom_area.js?ver=4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/cflive-slider-recent-posts/cflive-slider-posts.js?ver=4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/cflive-slider-recent-posts/jquery.glide.js?ver=4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"https:\/\/www.altoros.com\/blog\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"blogaltoroscom"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/disqus-comment-system/public/js/comment_count.js?ver=3.0.15'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"integration":"wordpress 3.0.15"},"disqusIdentifier":"36076 https:\/\/www.altoros.com\/blog\/?p=36076","disqusShortname":"blogaltoroscom","disqusTitle":"Ansible Fabric Starter: Deploy Hyperledger Fabric to Multiple Instances","disqusUrl":"https:\/\/www.altoros.com\/blog\/ansible-fabric-starter-deploy-hyperledger-fabric-to-multiple-instances\/","postId":"36076"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/disqus-comment-system/public/js/comment_embed.js?ver=3.0.15'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var leadin_wordpress = {"userRole":"visitor","pageType":"post","leadinPluginVersion":"6.1.4"};
+/* ]]> */
+</script>
+<script type='text/javascript' async defer src='//js.hs-scripts.com/2950617.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/ui/tabs.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/ui/slider.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/jquery/jquery.ui.touch-punch.js?ver=0.2.2'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/hoverIntent.min.js?ver=1.8.1'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/js/sticky-kit.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/freezeframe/js/vendor/imagesloaded.pkgd.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/freezeframe/js/freezeframe.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/js/plugins.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://s7.addthis.com/js/300/addthis_widget.js?ver=4.9.5#async=1'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/js/scripts.js?93&#038;ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/page-links-to/js/new-tab.min.js?ver=2.9.8'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/super-socializer/js/front/social_login/general.js?ver=7.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/super-socializer/js/front/social_login/common.js?ver=7.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/www.altoros.com\/blog\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/super-socializer/js/front/social_login/linkedin.js?ver=7.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/super-socializer/js/front/sharing/sharing.js?ver=7.9.5'></script>
+<script type='text/javascript' src='//maps.googleapis.com/maps/api/js?sensor=false&#038;ver=4.9.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"959","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","v":"3.2.0.2","ajax_url":"https:\/\/www.altoros.com\/blog\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js?ver=3.2.0.2'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.full.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/themes/engine/js/cf-landing-page.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-includes/js/wp-embed.min.js?ver=4.9.5'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/ml-slider/assets/sliders/flexslider/jquery.flexslider.min.js?ver=3.7.2'></script>
+<script type='text/javascript'>
+var metaslider_36244 = function($) {
+            $('#metaslider_36244').addClass('flexslider'); /* theme/plugin conflict avoidance */
+            $('#metaslider_36244').flexslider({ 
+                slideshowSpeed:3000,
+                animation:"fade",
+                controlNav:false,
+                directionNav:true,
+                pauseOnHover:true,
+                direction:"horizontal",
+                reverse:false,
+                animationSpeed:600,
+                prevText:"Previous",
+                nextText:"Next",
+                slideshow:true
+            });
+        };
+        var timer_metaslider_36244 = function() {
+            var slider = !window.jQuery ? window.setTimeout(timer_metaslider_36244, 100) : !jQuery.isReady ? window.setTimeout(timer_metaslider_36244, 1) : metaslider_36244(window.jQuery);
+        };
+        timer_metaslider_36244();
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/wysija-newsletters/js/validate/languages/jquery.validationEngine-en.js?ver=2.8.1'></script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/wysija-newsletters/js/validate/jquery.validationEngine.js?ver=2.8.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wysijaAJAX = {"action":"wysija_ajax","controller":"subscribers","ajaxurl":"https:\/\/www.altoros.com\/blog\/wp-admin\/admin-ajax.php","loadingTrans":"Loading...","is_rtl":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.altoros.com/blog/wp-content/plugins/wysija-newsletters/js/front-subscribers.js?ver=2.8.1'></script>
+                <script type="text/javascript" src="https://www.altoros.com/blog/wp-content/themes/engine/js/custom-scripts.js?543"></script>
+<!--<script src="//honey.altoros.com/js/visitors-new-min.js" type="text/javascript"></script>-->
+<!--<script type="text/javascript">-->
+<!--	HoneyVisitors.init("d9d51346900ac6a7f735f6434ba0d6b9");-->
+<!--</script>-->
+</body>
+
+</html>
