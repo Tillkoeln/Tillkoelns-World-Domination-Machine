@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2013 The Blakecoin developers
 // Copyright (c) 2013 The Litecoin developers
-// Copyright (c) 2014 Fuguecoin developers http://fuguecoin.org
+// Copyright (c) 2018 FugueCore developers http://www,Titter.com/Tillkoeln
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -69,7 +69,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Fuguecoin Signed Message:\n";
+const string strMessageMagic = "FugueCore Signed Message:\n";
 
 double dHashesPerSec = 0.0;
 int64 nHPSTimerStart = 0;
@@ -4546,7 +4546,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return false;
 
     //// debug print
-    printf("FuguecoinMiner:\n");
+    printf("FugueCoreMiner:\n");
     printf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -4555,7 +4555,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("FuguecoinMiner : generated block is stale");
+            return error("FugueCoreMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4569,7 +4569,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("FuguecoinMiner : ProcessBlock, block not accepted");
+            return error("FugueCoreMiner : ProcessBlock, block not accepted");
     }
 
     return true;
@@ -4577,9 +4577,9 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
 void static BitcoinMiner(CWallet *pwallet)
 {
-    printf("FuguecoinMiner started\n");
+    printf("FugueCoreMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("fuguecoin-miner");
+    RenameThread("FugueCore-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
@@ -4601,7 +4601,7 @@ void static BitcoinMiner(CWallet *pwallet)
         CBlock *pblock = &pblocktemplate->block;
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-        printf("Running FuguecoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running FugueCoreMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -4704,7 +4704,7 @@ void static BitcoinMiner(CWallet *pwallet)
     } }
     catch (boost::thread_interrupted)
     {
-        printf("FuguecoinMiner terminated\n");
+        printf("FugueCoreMiner terminated\n");
         throw;
     }
 }

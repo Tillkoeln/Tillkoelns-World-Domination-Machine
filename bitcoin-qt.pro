@@ -1,6 +1,6 @@
 TEMPLATE = app
-TARGET = fuguecoin-qt
-macx:TARGET = "Fuguecoin-Qt"
+TARGET = FugueCore-qt
+macx:TARGET = "FugueCore-Qt"
 VERSION = 0.8.9
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE

@@ -1236,7 +1236,7 @@ bool CWallet::CreateTransaction(const vector<pair<CScript, int64> >& vecSend,
 
                     // Fill a vout to ourself
                     // TODO: pass in scriptChange instead of reservekey so
-                    // change transaction isn't always pay-to-fuguecoin-address
+                    // change transaction isn't always pay-to-FugueCore-address
                     CScript scriptChange;
                     scriptChange.SetDestination(vchPubKey.GetID());
 
@@ -1401,7 +1401,7 @@ string CWallet::SendMoneyToDestination(const CTxDestination& address, int64 nVal
     if (nValue + nTransactionFee > GetBalance())
         return _("Insufficient funds");
 
-    // Parse Fuguecoin address
+    // Parse FugueCore address
     CScript scriptPubKey;
     scriptPubKey.SetDestination(address);
 
