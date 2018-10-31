@@ -1,6 +1,8 @@
 # Tillkoelns-World-Domination-Machine
 unleash some Troll with a C:A.T and meet the Hydra while dancing to IBM`s Fugue algo on the Blockchain Platform 
 
+# upload for final code change on 1.November 
+
 # Shematic Overview Core Functions
 https://imgur.com/qb26N3m
 
