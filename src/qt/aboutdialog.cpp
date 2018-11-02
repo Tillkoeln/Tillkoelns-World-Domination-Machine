@@ -1,19 +1,14 @@
 #include "aboutdialog.h"
 #include "ui_aboutdialog.h"
-
 #include "clientmodel.h"
-#include "clientversion.h"
+
+#include "version.h"
 
 AboutDialog::AboutDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::AboutDialog)
 {
     ui->setupUi(this);
-
-    // Set current copyright year
-    ui->copyrightLabel->setText(
-        tr("Copyright") + QString(" &copy; 2009-%1 ").arg(COPYRIGHT_YEAR) + tr("The Bitcoin developers") + QString(",<br>") +
-        tr("Copyright") + QString(" &copy; 2018 ") + tr("Your inner Pinky&Brain daemon"));
 }
 
 void AboutDialog::setModel(ClientModel *model)

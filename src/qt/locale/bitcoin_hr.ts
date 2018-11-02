@@ -1,19 +1,25 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="hr" version="2.0">
-<defaultcodec>UTF-8</defaultcodec>
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="hr" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About FugueCore</source>
-        <translation>O FugueCore-u</translation>
+        <source>About TillkWDMcoin</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;FugueCore&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;FugueCore&lt;/b&gt; verzija</translation>
+        <source>&lt;b&gt;TillkWDMcoin&lt;/b&gt; version</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+41"/>
+        <source>Copyright © 2009-2014 The Bitcoin developers
+Copyright © 2012-2014 The NovaCoin developers
+Copyright © 2014 The TillkWDMcoin developers</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>
 This is experimental software.
 
@@ -22,26 +28,16 @@ Distributed under the MIT/X11 software license, see the accompanying file COPYIN
 This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</source>
         <translation type="unfinished"/>
     </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="+14"/>
-        <source>Copyright</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>The FugueCore developers</source>
-        <translation type="unfinished"/>
-    </message>
 </context>
 <context>
     <name>AddressBookPage</name>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
         <source>Address Book</source>
-        <translation>Adresar</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Double-click to edit address or label</source>
         <translation>Dvostruki klik za uređivanje adrese ili oznake</translation>
     </message>
@@ -58,26 +54,26 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-11"/>
         <source>&amp;New Address</source>
-        <translation>&amp;Nova adresa</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your FugueCore addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Ovo su vaše FugueCore adrese za primanje isplate. Možda želite dati drukčiju adresu svakom primatelju tako da možete pratiti tko je platio.</translation>
+        <location line="-46"/>
+        <source>These are your TillkWDMcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../forms/addressbookpage.ui" line="+14"/>
+        <location line="+60"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Kopirati adresu</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Show &amp;QR Code</source>
-        <translation>Prikaži &amp;QR Kôd</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a FugueCore address</source>
+        <source>Sign a message to prove you own a TillkWDMcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -91,18 +87,8 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+27"/>
-        <source>Export the data in the current tab to a file</source>
-        <translation>Izvoz podataka iz trenutnog taba u datoteku</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Export</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified FugueCore address</source>
+        <location line="-14"/>
+        <source>Verify a message to ensure it was signed with a specified TillkWDMcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -116,29 +102,19 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Brisanje</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your FugueCore addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location filename="../addressbookpage.cpp" line="+65"/>
         <source>Copy &amp;Label</source>
         <translation>Kopirati &amp;oznaku</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>&amp;Edit</source>
         <translation>&amp;Izmjeniti</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Send &amp;Coins</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+260"/>
+        <location line="+250"/>
         <source>Export Address Book Data</source>
-        <translation>Izvoz podataka adresara</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -148,12 +124,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+13"/>
         <source>Error exporting</source>
-        <translation>Pogreška kod izvoza</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>Ne mogu pisati u datoteku %1.</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -197,7 +173,17 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Ponovite novu lozinku</translation>
     </message>
     <message>
-        <location filename="../askpassphrasedialog.cpp" line="+33"/>
+        <location line="+33"/>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>For staking only</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../askpassphrasedialog.cpp" line="+35"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
         <translation>Unesite novi lozinku za novčanik. &lt;br/&gt; Molimo Vas da koristite zaporku od &lt;b&gt;10 ili više slučajnih znakova,&lt;/b&gt; ili &lt;b&gt;osam ili više riječi.&lt;/b&gt;</translation>
     </message>
@@ -207,7 +193,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Šifriranje novčanika</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+7"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>Ova operacija treba lozinku vašeg novčanika kako bi se novčanik otključao.</translation>
     </message>
@@ -243,8 +229,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Upozorenje: Ako šifrirate vaš novčanik i izgubite lozinku, &lt;b&gt;IZGUBIT ĆETE SVE SVOJE BITCOINSE!&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
@@ -257,49 +243,49 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <location line="+24"/>
         <source>Warning: The Caps Lock key is on!</source>
-        <translation type="unfinished"/>
+        <translation>Upozorenje: Tipka Caps Lock je uključena!</translation>
     </message>
     <message>
-        <location line="-130"/>
-        <location line="+58"/>
+        <location line="-133"/>
+        <location line="+60"/>
         <source>Wallet encrypted</source>
         <translation>Novčanik šifriran</translation>
     </message>
     <message>
-        <location line="-56"/>
-        <source>FugueCore will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>FugueCore će se sada zatvoriti kako bi dovršio postupak šifriranja. Zapamtite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše bitcoine od krađe preko zloćudnog softvera koji bi bio na vašem računalu.</translation>
+        <location line="-58"/>
+        <source>TillkWDMcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+13"/>
         <location line="+7"/>
-        <location line="+42"/>
+        <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
         <translation>Šifriranje novčanika nije uspjelo</translation>
     </message>
     <message>
-        <location line="-54"/>
+        <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
         <translation>Šifriranje novčanika nije uspjelo zbog interne pogreške. Vaš novčanik nije šifriran.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+48"/>
+        <location line="+50"/>
         <source>The supplied passphrases do not match.</source>
         <translation>Priložene lozinke se ne podudaraju.</translation>
     </message>
     <message>
-        <location line="-37"/>
+        <location line="-38"/>
         <source>Wallet unlock failed</source>
         <translation>Otključavanje novčanika nije uspjelo</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+11"/>
+        <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
         <translation>Lozinka za dešifriranje novčanika nije točna.</translation>
@@ -318,17 +304,17 @@ This product includes software developed by the OpenSSL Project for use in the O
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+233"/>
+        <location filename="../bitcoingui.cpp" line="+282"/>
         <source>Sign &amp;message...</source>
         <translation>&amp;Potpišite poruku...</translation>
     </message>
     <message>
-        <location line="+280"/>
+        <location line="+251"/>
         <source>Synchronizing with network...</source>
         <translation>Usklađivanje s mrežom ...</translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-319"/>
         <source>&amp;Overview</source>
         <translation>&amp;Pregled</translation>
     </message>
@@ -338,7 +324,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Prikaži opći pregled novčanika</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Transakcije</translation>
     </message>
@@ -348,17 +334,32 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Pretraži povijest transakcija</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>&amp;Address Book</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Edit the list of stored addresses and labels</source>
-        <translation>Uređivanje popisa pohranjenih adresa i oznaka</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="-13"/>
+        <source>&amp;Receive coins</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation>Prikaži popis adresa za primanje isplate</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="-7"/>
+        <source>&amp;Send coins</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>E&amp;xit</source>
         <translation>&amp;Izlaz</translation>
     </message>
@@ -368,9 +369,9 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Izlazak iz programa</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Show information about FugueCore</source>
-        <translation>Prikaži informacije o Bitcoinu</translation>
+        <location line="+6"/>
+        <source>Show information about TillkWDMcoin</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
@@ -388,7 +389,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Postavke</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Encrypt Wallet...</source>
         <translation>&amp;Šifriraj novčanik...</translation>
     </message>
@@ -402,28 +403,43 @@ This product includes software developed by the OpenSSL Project for use in the O
         <source>&amp;Change Passphrase...</source>
         <translation>&amp;Promijena lozinke...</translation>
     </message>
+    <message numerus="yes">
+        <location line="+259"/>
+        <source>~%n block(s) remaining</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
     <message>
-        <location line="+285"/>
-        <source>Importing blocks from disk...</source>
-        <translation>Importiranje blokova sa diska...</translation>
+        <location line="+6"/>
+        <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-256"/>
+        <source>&amp;Export...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Send coins to a TillkWDMcoin address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Modify configuration options for TillkWDMcoin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Export the data in the current tab to a file</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Encrypt or decrypt wallet</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Re-indeksiranje blokova na disku...</translation>
-    </message>
-    <message>
-        <location line="-347"/>
-        <source>Send coins to a FugueCore address</source>
-        <translation>Slanje novca na bitcoin adresu</translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Modify configuration options for FugueCore</source>
-        <translation>Promijeni postavke konfiguracije za bitcoin</translation>
-    </message>
-    <message>
-        <location line="+9"/>
         <source>Backup wallet to another location</source>
         <translation>Napravite sigurnosnu kopiju novčanika na drugoj lokaciji</translation>
     </message>
@@ -433,7 +449,7 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>Promijenite lozinku za šifriranje novčanika</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+10"/>
         <source>&amp;Debug window</source>
         <translation type="unfinished"/>
     </message>
@@ -443,40 +459,24 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-4"/>
+        <location line="-5"/>
         <source>&amp;Verify message...</source>
+        <translation>&amp;Potvrdite poruku...</translation>
+    </message>
+    <message>
+        <location line="-202"/>
+        <source>TillkWDMcoin</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-165"/>
-        <location line="+530"/>
-        <source>FugueCore</source>
-        <translation>FugueCore</translation>
-    </message>
-    <message>
-        <location line="-530"/>
+        <location line="+0"/>
         <source>Wallet</source>
         <translation>Novčanik</translation>
     </message>
     <message>
-        <location line="+101"/>
-        <source>&amp;Send</source>
+        <location line="+180"/>
+        <source>&amp;About TillkWDMcoin</source>
         <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>&amp;Receive</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>&amp;Addresses</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>&amp;About FugueCore</source>
-        <translation>&amp;O Bitcoinu</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -484,148 +484,159 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation type="unfinished"/>
     </message>
     <message>
+        <location line="+9"/>
+        <source>Unlock wallet</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location line="+1"/>
-        <source>Show or hide the main Window</source>
+        <source>&amp;Lock Wallet</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Encrypt the private keys that belong to your wallet</source>
+        <location line="+1"/>
+        <source>Lock wallet</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Sign messages with your FugueCore addresses to prove you own them</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified FugueCore addresses</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>&amp;File</source>
         <translation>&amp;Datoteka</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>&amp;Settings</source>
         <translation>&amp;Konfiguracija</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>&amp;Help</source>
         <translation>&amp;Pomoć</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Tabs toolbar</source>
         <translation>Traka kartica</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <location line="+10"/>
+        <location line="+8"/>
+        <source>Actions toolbar</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
-        <location line="+47"/>
-        <source>FugueCore client</source>
-        <translation>FugueCore klijent</translation>
-    </message>
-    <message numerus="yes">
-        <location line="+141"/>
-        <source>%n active connection(s) to FugueCore network</source>
-        <translation><numerusform>%n aktivna veza na FugueCore mrežu</numerusform><numerusform>%n aktivne veze na FugueCore mrežu</numerusform><numerusform>%n aktivnih veza na FugueCore mrežu</numerusform></translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>No block source available...</source>
+        <location line="+0"/>
+        <location line="+60"/>
+        <source>TillkWDMcoin client</source>
         <translation type="unfinished"/>
     </message>
-    <message>
-        <location line="+12"/>
-        <source>Processed %1 of %2 (estimated) blocks of transaction history.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Processed %1 blocks of transaction history.</source>
-        <translation>Obrađeno %1 blokova povijesti transakcije.</translation>
-    </message>
     <message numerus="yes">
-        <location line="+20"/>
-        <source>%n hour(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <location line="+4"/>
-        <source>%n day(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <location line="+4"/>
-        <source>%n week(s)</source>
+        <location line="+75"/>
+        <source>%n active connection(s) to TillkWDMcoin network</source>
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>%1 behind</source>
+        <location line="+40"/>
+        <source>Downloaded %1 blocks of transaction history.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+14"/>
-        <source>Last received block was generated %1 ago.</source>
+        <location line="+413"/>
+        <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2&lt;br&gt;Expected time to earn reward is %3</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Not staking because wallet is locked</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Transactions after this will not yet be visible.</source>
+        <source>Not staking because wallet is offline</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+22"/>
-        <source>Error</source>
-        <translation>Greška</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Warning</source>
+        <location line="+2"/>
+        <source>Not staking because wallet is syncing</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Information</source>
+        <location line="+2"/>
+        <source>Not staking because you don&apos;t have mature coins</source>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="-403"/>
+        <source>%n second(s) ago</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="-312"/>
+        <source>About TillkWDMcoin card</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+70"/>
-        <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
+        <location line="+1"/>
+        <source>Show information about TillkWDMcoin card</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-140"/>
+        <location line="+18"/>
+        <source>&amp;Unlock Wallet...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="+297"/>
+        <source>%n minute(s) ago</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s) ago</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s) ago</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Up to date</source>
         <translation>Ažurno</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+7"/>
         <source>Catching up...</source>
         <translation>Ažuriranje...</translation>
     </message>
     <message>
-        <location line="+113"/>
+        <location line="+10"/>
+        <source>Last received block was generated %1.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+59"/>
+        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Confirm transaction fee</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+27"/>
         <source>Sent transaction</source>
         <translation>Poslana transakcija</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="+1"/>
         <source>Incoming transaction</source>
         <translation>Dolazna transakcija</translation>
     </message>
@@ -643,38 +654,337 @@ Adresa:%4
 </translation>
     </message>
     <message>
-        <location line="+33"/>
-        <location line="+23"/>
+        <location line="+100"/>
+        <location line="+15"/>
         <source>URI handling</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-23"/>
-        <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid FugueCore address or malformed URI parameters.</source>
+        <location line="-15"/>
+        <location line="+15"/>
+        <source>URI can not be parsed! This can be caused by an invalid TillkWDMcoin address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Novčanik je &lt;b&gt;šifriran&lt;/b&gt; i trenutno &lt;b&gt;otključan&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>Novčanik je &lt;b&gt;šifriran&lt;/b&gt; i trenutno &lt;b&gt;zaključan&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. FugueCore can no longer continue safely and will quit.</source>
+        <location line="+25"/>
+        <source>Backup Wallet</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wallet Data (*.dat)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Backup Failed</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>There was an error trying to save the wallet data to the new location.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message numerus="yes">
+        <location line="+76"/>
+        <source>%n second(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n minute(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Not staking</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../bitcoin.cpp" line="+109"/>
+        <source>A fatal error occurred. TillkWDMcoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+104"/>
+        <location filename="../clientmodel.cpp" line="+90"/>
         <source>Network Alert</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>CoinControlDialog</name>
+    <message>
+        <location filename="../forms/coincontroldialog.ui" line="+14"/>
+        <source>Coin Control</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Quantity:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Bytes:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Amount:</source>
+        <translation>Iznos:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Priority:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Fee:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Low Output:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../coincontroldialog.cpp" line="+551"/>
+        <source>no</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../forms/coincontroldialog.ui" line="+51"/>
+        <source>After Fee:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Change:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>(un)select all</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Tree mode</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>List mode</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Amount</source>
+        <translation>Iznos</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Label</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Address</source>
+        <translation>Adresa</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Date</source>
+        <translation>Datum</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Confirmations</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirmed</source>
+        <translation>Potvrđeno</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Priority</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../coincontroldialog.cpp" line="-515"/>
+        <source>Copy address</source>
+        <translation>Kopirati adresu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy label</source>
+        <translation>Kopirati oznaku</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+26"/>
+        <source>Copy amount</source>
+        <translation>Kopiraj iznos</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Copy transaction ID</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy quantity</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy fee</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+317"/>
+        <source>highest</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>high</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium-high</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>low-medium</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>low</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>lowest</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+155"/>
+        <source>DUST</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>yes</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>This label turns red, if the transaction size is bigger than 10000 bytes.
+
+ This means a fee of at least %1 per kb is required.
+
+ Can vary +/- 1 Byte per input.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transactions with higher priority get more likely into a block.
+
+This label turns red, if the priority is smaller than &quot;medium&quot;.
+
+ This means a fee of at least %1 per kb is required.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if any recipient receives an amount smaller than %1.
+
+ This means a fee of at least %2 is required. 
+
+ Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if the change is smaller than %1.
+
+ This means a fee of at least %2 is required.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+37"/>
+        <location line="+66"/>
+        <source>(no label)</source>
+        <translation>(bez oznake)</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>change from %1 (%2)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(change)</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -693,7 +1003,7 @@ Adresa:%4
     <message>
         <location line="+10"/>
         <source>The label associated with this address book entry</source>
-        <translation>Oznaka ovog upisa u adresar</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -703,10 +1013,10 @@ Adresa:%4
     <message>
         <location line="+10"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
-        <translation>Adresa ovog upisa u adresar. Može se mjenjati samo kod adresa za slanje.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+21"/>
+        <location filename="../editaddressdialog.cpp" line="+20"/>
         <source>New receiving address</source>
         <translation>Nova adresa za primanje</translation>
     </message>
@@ -732,8 +1042,8 @@ Adresa:%4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid FugueCore address.</source>
-        <translation>Upisana adresa &quot;%1&quot; nije valjana bitcoin adresa.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid TillkWDMcoin address.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -749,20 +1059,20 @@ Adresa:%4
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+424"/>
+        <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>FugueCore-Qt</source>
+        <source>TillkWDMcoin-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="-12"/>
         <source>version</source>
-        <translation>verzija</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
         <source>Usage:</source>
-        <translation>Upotreba:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -772,7 +1082,7 @@ Adresa:%4
     <message>
         <location line="+4"/>
         <source>UI options</source>
-        <translation>UI postavke</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -782,7 +1092,7 @@ Adresa:%4
     <message>
         <location line="+1"/>
         <source>Start minimized</source>
-        <translation>Pokreni minimiziran</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -804,7 +1114,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+6"/>
-        <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB.</source>
+        <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -814,33 +1124,43 @@ Adresa:%4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start FugueCore after logging in to the system.</source>
-        <translation>Automatski pokreni FugueCore kad se uključi računalo</translation>
+        <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>&amp;Start FugueCore on system login</source>
-        <translation>&amp;Pokreni FugueCore kod pokretanja sustava</translation>
+        <location line="+15"/>
+        <source>Reserve</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Reset all client options to default.</source>
+        <location line="+31"/>
+        <source>Automatically start TillkWDMcoin after logging in to the system.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Reset Options</source>
+        <source>&amp;Start TillkWDMcoin on system login</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+7"/>
+        <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>&amp;Detach databases at shutdown</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+21"/>
         <source>&amp;Network</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Mreža</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the FugueCore client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatski otvori port FugueCore klijenta na ruteru. To radi samo ako ruter podržava UPnP i ako je omogućen.</translation>
+        <source>Automatically open the TillkWDMcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -849,23 +1169,23 @@ Adresa:%4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the FugueCore network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Spojite se na Bitcon mrežu putem SOCKS proxy-a (npr. kod povezivanja kroz Tor)</translation>
+        <source>Connect to the TillkWDMcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Connect through SOCKS proxy:</source>
-        <translation>&amp;Povezivanje putem SOCKS proxy-a:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+9"/>
         <source>Proxy &amp;IP:</source>
-        <translation type="unfinished"/>
+        <translation>Proxy &amp;IP:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>IP address of the proxy (e.g. 127.0.0.1)</source>
-        <translation>IP adresa proxy-a (npr. 127.0.0.1)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -880,7 +1200,7 @@ Adresa:%4
     <message>
         <location line="+7"/>
         <source>SOCKS &amp;Version:</source>
-        <translation type="unfinished"/>
+        <translation>SOCKS &amp;Verzija:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -890,7 +1210,7 @@ Adresa:%4
     <message>
         <location line="+36"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Prozor</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -924,7 +1244,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting FugueCore.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting TillkWDMcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -939,7 +1259,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show FugueCore addresses in the transaction list or not.</source>
+        <source>Whether to show TillkWDMcoin addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -948,14 +1268,24 @@ Adresa:%4
         <translation>&amp;Prikaži adrese u popisu transakcija</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Whether to show coin control features or not.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Display coin &amp;control features (experts only!)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location line="+71"/>
         <source>&amp;OK</source>
-        <translation type="unfinished"/>
+        <translation>&amp;U redu</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Odustani</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -963,35 +1293,20 @@ Adresa:%4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+53"/>
+        <location filename="../optionsdialog.cpp" line="+55"/>
         <source>default</source>
-        <translation type="unfinished"/>
+        <translation>standardne vrijednosti</translation>
     </message>
     <message>
-        <location line="+130"/>
-        <source>Confirm options reset</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Some settings may require a client restart to take effect.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Do you want to proceed?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+42"/>
+        <location line="+149"/>
         <location line="+9"/>
         <source>Warning</source>
-        <translation>Upozorenje</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting FugueCore.</source>
+        <source>This setting will take effect after restarting TillkWDMcoin.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1008,28 +1323,38 @@ Adresa:%4
         <translation>Oblik</translation>
     </message>
     <message>
-        <location line="+50"/>
-        <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FugueCore network after a connection is established, but this process has not completed yet.</source>
+        <location line="+33"/>
+        <location line="+231"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TillkWDMcoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-124"/>
-        <source>Balance:</source>
-        <translation>Stanje:</translation>
+        <location line="-160"/>
+        <source>Stake:</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+29"/>
         <source>Unconfirmed:</source>
-        <translation>Nepotvrđene:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="-107"/>
         <source>Wallet</source>
         <translation>Novčanik</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+49"/>
+        <source>Spendable:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current spendable balance</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Immature:</source>
         <translation type="unfinished"/>
     </message>
@@ -1039,32 +1364,34 @@ Adresa:%4
         <translation type="unfinished"/>
     </message>
     <message>
+        <location line="+20"/>
+        <source>Total:</source>
+        <translation>Ukupno:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current total balance</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location line="+46"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Nedavne transakcije&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-101"/>
-        <source>Your current balance</source>
-        <translation>Vaše trenutno stanje računa</translation>
-    </message>
-    <message>
-        <location line="+29"/>
+        <location line="-108"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Ukupni iznos transakcija koje tek trebaju biti potvrđene, i još uvijek nisu uračunate u trenutni saldo</translation>
-    </message>
-    <message>
-        <location filename="../overviewpage.cpp" line="+116"/>
-        <location line="+1"/>
-        <source>out of sync</source>
         <translation type="unfinished"/>
     </message>
-</context>
-<context>
-    <name>PaymentServer</name>
     <message>
-        <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <location line="-29"/>
+        <source>Total of coins that was staked, and do not yet count toward the current balance</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../overviewpage.cpp" line="+113"/>
+        <location line="+1"/>
+        <source>out of sync</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1073,32 +1400,32 @@ Adresa:%4
     <message>
         <location filename="../forms/qrcodedialog.ui" line="+14"/>
         <source>QR Code Dialog</source>
-        <translation>QR Code Dijalog</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+59"/>
         <source>Request Payment</source>
-        <translation>Zatraži plaćanje</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+56"/>
         <source>Amount:</source>
-        <translation>Iznos:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-44"/>
         <source>Label:</source>
-        <translation>Oznaka</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+19"/>
         <source>Message:</source>
-        <translation>Poruka:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+71"/>
         <source>&amp;Save As...</source>
-        <translation>&amp;Spremi kao...</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../qrcodedialog.cpp" line="+62"/>
@@ -1113,7 +1440,7 @@ Adresa:%4
     <message>
         <location line="+23"/>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>Rezultirajući URI je predug, probajte umanjiti tekst za naslov / poruku.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
@@ -1123,7 +1450,7 @@ Adresa:%4
     <message>
         <location line="+0"/>
         <source>PNG Images (*.png)</source>
-        <translation>PNG slike (*.png)</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1131,7 +1458,7 @@ Adresa:%4
     <message>
         <location filename="../forms/rpcconsole.ui" line="+46"/>
         <source>Client name</source>
-        <translation type="unfinished"/>
+        <translation>Ime klijenta</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1143,24 +1470,24 @@ Adresa:%4
         <location line="+53"/>
         <location line="+23"/>
         <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+339"/>
+        <location filename="../rpcconsole.cpp" line="+348"/>
         <source>N/A</source>
-        <translation type="unfinished"/>
+        <translation>N/A</translation>
     </message>
     <message>
         <location line="-217"/>
         <source>Client version</source>
-        <translation type="unfinished"/>
+        <translation>Verzija klijenta</translation>
     </message>
     <message>
         <location line="-45"/>
         <source>&amp;Information</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Informacija</translation>
     </message>
     <message>
         <location line="+68"/>
         <source>Using OpenSSL version</source>
-        <translation type="unfinished"/>
+        <translation>Koristim OpenSSL verziju</translation>
     </message>
     <message>
         <location line="+49"/>
@@ -1170,12 +1497,12 @@ Adresa:%4
     <message>
         <location line="+29"/>
         <source>Network</source>
-        <translation type="unfinished"/>
+        <translation>Mreža</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of connections</source>
-        <translation type="unfinished"/>
+        <translation>Broj konekcija</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1205,7 +1532,7 @@ Adresa:%4
     <message>
         <location line="+52"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Otvori</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -1214,7 +1541,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the FugueCore-Qt help message to get a list with possible FugueCore command-line options.</source>
+        <source>Show the TillkWDMcoin-Qt help message to get a list with possible TillkWDMcoin command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1225,7 +1552,7 @@ Adresa:%4
     <message>
         <location line="+24"/>
         <source>&amp;Console</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Konzola</translation>
     </message>
     <message>
         <location line="-260"/>
@@ -1234,12 +1561,12 @@ Adresa:%4
     </message>
     <message>
         <location line="-104"/>
-        <source>FugueCore - Debug window</source>
+        <source>TillkWDMcoin - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>FugueCore Core</source>
+        <source>TillkWDMcoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1249,17 +1576,17 @@ Adresa:%4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the FugueCore debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the TillkWDMcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+102"/>
         <source>Clear console</source>
-        <translation type="unfinished"/>
+        <translation>Očisti konzolu</translation>
     </message>
     <message>
-        <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the FugueCore RPC console.</source>
+        <location filename="../rpcconsole.cpp" line="-33"/>
+        <source>Welcome to the TillkWDMcoin RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1277,7 +1604,7 @@ Adresa:%4
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+124"/>
+        <location filename="../sendcoinsdialog.cpp" line="+182"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1288,7 +1615,96 @@ Adresa:%4
         <translation>Slanje novca</translation>
     </message>
     <message>
+        <location line="+76"/>
+        <source>Coin Control Features</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Inputs...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>automatically selected</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Insufficient funds!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Quantity:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+35"/>
+        <source>0</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Bytes:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Amount:</source>
+        <translation>Iznos:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+86"/>
+        <location line="+86"/>
+        <location line="+32"/>
+        <source>0.00 BC</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-191"/>
+        <source>Priority:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>medium</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Fee:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Low Output:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>no</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>After Fee:</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Change</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location line="+50"/>
+        <source>custom change address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+106"/>
         <source>Send to multiple recipients at once</source>
         <translation>Pošalji k nekoliko primatelja odjednom</translation>
     </message>
@@ -1300,7 +1716,7 @@ Adresa:%4
     <message>
         <location line="+20"/>
         <source>Remove all transaction fields</source>
-        <translation>Obriši sva polja transakcija</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+3"/>
@@ -1308,14 +1724,14 @@ Adresa:%4
         <translation>Obriši &amp;sve</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+28"/>
         <source>Balance:</source>
         <translation>Stanje:</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123,456 BTC</translation>
+        <location line="+16"/>
+        <source>123.456 BC</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+31"/>
@@ -1328,9 +1744,54 @@ Adresa:%4
         <translation>&amp;Pošalji</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-59"/>
+        <location filename="../sendcoinsdialog.cpp" line="-173"/>
+        <source>Enter a TillkWDMcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Copy quantity</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy amount</source>
+        <translation>Kopiraj iznos</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy fee</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+86"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; do %2 (%3)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
@@ -1340,15 +1801,15 @@ Adresa:%4
     <message>
         <location line="+1"/>
         <source>Are you sure you want to send %1?</source>
-        <translation>Jeste li sigurni da želite poslati %1?</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source> and </source>
-        <translation>i</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+29"/>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>Adresa primatelja je nevaljala, molimo provjerite je ponovo.</translation>
     </message>
@@ -1374,13 +1835,28 @@ Adresa:%4
     </message>
     <message>
         <location line="+5"/>
-        <source>Error: Transaction creation failed!</source>
+        <source>Error: Transaction creation failed.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Generirani novčići moraju pričekati nastanak 120 blokova prije nego što ih je moguće potrošiti. Kad ste generirali taj blok, on je bio emitiran u mrežu kako bi bio dodan postojećim lancima blokova. Ako ne uspije biti dodan, njegov status bit će promijenjen u &quot;nije prihvatljiv&quot; i on neće biti potrošiv. S vremena na vrijeme tako nešto se može desiti ako neki drugi nod približno istovremeno generira blok.</translation>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+251"/>
+        <source>WARNING: Invalid TillkWDMcoin address</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>(no label)</source>
+        <translation>(bez oznake)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>WARNING: unknown change address</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1388,7 +1864,7 @@ Adresa:%4
     <message>
         <location filename="../forms/sendcoinsentry.ui" line="+14"/>
         <source>Form</source>
-        <translation>Oblik</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+15"/>
@@ -1401,25 +1877,25 @@ Adresa:%4
         <translation>&amp;Primatelj plaćanja:</translation>
     </message>
     <message>
-        <location line="+34"/>
-        <source>The address to send the payment to (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+60"/>
-        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <location line="+24"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Unesite oznaku za ovu adresu kako bi ju dodali u vaš adresar</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+9"/>
         <source>&amp;Label:</source>
         <translation>&amp;Oznaka:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+18"/>
+        <source>The address to send the payment to  (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Choose address from address book</source>
-        <translation>Odaberite adresu iz adresara</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
@@ -1439,12 +1915,12 @@ Adresa:%4
     <message>
         <location line="+7"/>
         <source>Remove this recipient</source>
-        <translation>Ukloni ovog primatelja</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a FugueCore address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Unesite FugueCore adresu (npr. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a TillkWDMcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1456,33 +1932,34 @@ Adresa:%4
     </message>
     <message>
         <location line="+13"/>
+        <location line="+124"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;Potpišite poruku</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Možete potpisati poruke sa svojom adresom kako bi dokazali da ih posjedujete. Budite oprezni da ne potpisujete ništa mutno, jer bi vas phishing napadi mogli na prevaru natjerati da prepišete svoj identitet njima. Potpisujte samo detaljno objašnjene izjave sa kojima se slažete.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Unesite FugueCore adresu (npr. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+213"/>
+        <location line="+203"/>
         <source>Choose an address from the address book</source>
-        <translation>Odaberite adresu iz adresara</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-203"/>
-        <location line="+213"/>
+        <location line="-193"/>
+        <location line="+203"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="-203"/>
+        <location line="-193"/>
         <source>Paste address from clipboard</source>
         <translation>Zalijepi adresu iz međuspremnika</translation>
     </message>
@@ -1497,27 +1974,17 @@ Adresa:%4
         <translation>Upišite poruku koju želite potpisati ovdje</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Signature</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+24"/>
         <source>Copy the current signature to the system clipboard</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this FugueCore address</source>
+        <source>Sign the message to prove you own this TillkWDMcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Sign &amp;Message</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Reset all sign message fields</source>
         <translation type="unfinished"/>
     </message>
@@ -1529,39 +1996,35 @@ Adresa:%4
     </message>
     <message>
         <location line="-87"/>
+        <location line="+70"/>
         <source>&amp;Verify Message</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Potvrdite poruku</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-64"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Unesite FugueCore adresu (npr. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified FugueCore address</source>
+        <source>Verify the message to ensure it was signed with the specified TillkWDMcoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Verify &amp;Message</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Reset all verify message fields</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a FugueCore address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Unesite FugueCore adresu (npr. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a TillkWDMcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-2"/>
@@ -1570,7 +2033,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter FugueCore signature</source>
+        <source>Enter TillkWDMcoin signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1596,7 +2059,7 @@ Adresa:%4
     <message>
         <location line="-73"/>
         <source>Wallet unlock was cancelled.</source>
-        <translation type="unfinished"/>
+        <translation>Otključavanje novčanika je otkazano.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -1611,7 +2074,7 @@ Adresa:%4
     <message>
         <location line="+5"/>
         <source>Message signed.</source>
-        <translation type="unfinished"/>
+        <translation>Poruka je potpisana.</translation>
     </message>
     <message>
         <location line="+59"/>
@@ -1641,27 +2104,24 @@ Adresa:%4
     </message>
 </context>
 <context>
-    <name>SplashScreen</name>
-    <message>
-        <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The FugueCore developers</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
-    </message>
-</context>
-<context>
     <name>TransactionDesc</name>
     <message>
-        <location filename="../transactiondesc.cpp" line="+20"/>
+        <location filename="../transactiondesc.cpp" line="+19"/>
         <source>Open until %1</source>
         <translation>Otvoren do %1</translation>
     </message>
+    <message numerus="yes">
+        <location line="-2"/>
+        <source>Open for %n block(s)</source>
+        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
+        <source>conflicted</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>%1/offline</source>
         <translation>%1 nije dostupan</translation>
     </message>
@@ -1693,7 +2153,7 @@ Adresa:%4
     <message>
         <location line="+7"/>
         <source>Source</source>
-        <translation type="unfinished"/>
+        <translation>Izvor</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1717,7 +2177,7 @@ Adresa:%4
         <location line="-77"/>
         <location line="+2"/>
         <source>own address</source>
-        <translation type="unfinished"/>
+        <translation>vlastita adresa</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1774,12 +2234,12 @@ Adresa:%4
     <message>
         <location line="+2"/>
         <source>Transaction ID</source>
-        <translation type="unfinished"/>
+        <translation>ID transakcije</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Generirani novčići moraju pričekati nastanak 120 blokova prije nego što ih je moguće potrošiti. Kad ste generirali taj blok, on je bio emitiran u mrežu kako bi bio dodan postojećim lancima blokova. Ako ne uspije biti dodan, njegov status bit će promijenjen u &quot;nije prihvaćen&quot; i on neće biti potrošiv. S vremena na vrijeme tako nešto se može desiti ako neki drugi nod generira blok u približno isto vrijeme.</translation>
+        <source>Generated coins must mature 210 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+7"/>
@@ -1789,12 +2249,12 @@ Adresa:%4
     <message>
         <location line="+8"/>
         <source>Transaction</source>
-        <translation type="unfinished"/>
+        <translation>Transakcija</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>Inputs</source>
-        <translation type="unfinished"/>
+        <translation>Unosi</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1812,17 +2272,12 @@ Adresa:%4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-209"/>
+        <location line="-211"/>
         <source>, has not been successfully broadcast yet</source>
         <translation>, još nije bio uspješno emitiran</translation>
     </message>
-    <message numerus="yes">
-        <location line="-35"/>
-        <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
     <message>
-        <location line="+70"/>
+        <location line="+35"/>
         <source>unknown</source>
         <translation>nepoznato</translation>
     </message>
@@ -1843,7 +2298,7 @@ Adresa:%4
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+225"/>
+        <location filename="../transactiontablemodel.cpp" line="+226"/>
         <source>Date</source>
         <translation>Datum</translation>
     </message>
@@ -1862,38 +2317,48 @@ Adresa:%4
         <source>Amount</source>
         <translation>Iznos</translation>
     </message>
-    <message numerus="yes">
-        <location line="+57"/>
-        <source>Open for %n more block(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
-    </message>
     <message>
-        <location line="+3"/>
+        <location line="+60"/>
         <source>Open until %1</source>
         <translation>Otvoren do %1</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Offline (%1 confirmations)</source>
-        <translation>Nije na mreži (%1 potvrda)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Unconfirmed (%1 of %2 confirmations)</source>
-        <translation>Nepotvrđen (%1 od %2 potvrda)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+12"/>
         <source>Confirmed (%1 confirmations)</source>
         <translation>Potvrđen (%1 potvrda)</translation>
     </message>
     <message numerus="yes">
-        <location line="+8"/>
-        <source>Mined balance will be available when it matures in %n more block(s)</source>
+        <location line="-15"/>
+        <source>Open for %n more block(s)</source>
         <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform><numerusform></numerusform></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <source>Offline</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unconfirmed</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirming (%1 of %2 recommended confirmations)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Conflicted</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
         <translation>Generirano - Upozorenje: ovaj blok nije bio primljen od strane bilo kojeg drugog noda i vjerojatno neće biti prihvaćen!</translation>
     </message>
@@ -1903,7 +2368,7 @@ Adresa:%4
         <translation>Generirano, ali nije prihvaćeno</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+42"/>
         <source>Received with</source>
         <translation>Primljeno s</translation>
     </message>
@@ -1933,7 +2398,7 @@ Adresa:%4
         <translation>(n/d)</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+190"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Status transakcije</translation>
     </message>
@@ -1961,7 +2426,7 @@ Adresa:%4
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+52"/>
+        <location filename="../transactionview.cpp" line="+55"/>
         <location line="+16"/>
         <source>All</source>
         <translation>Sve</translation>
@@ -2062,9 +2527,9 @@ Adresa:%4
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+144"/>
         <source>Export Transaction Data</source>
-        <translation>Izvoz podataka transakcija</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
@@ -2109,12 +2574,12 @@ Adresa:%4
     <message>
         <location line="+4"/>
         <source>Error exporting</source>
-        <translation>Izvoz pogreške</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>Ne mogu pisati u datoteku %1.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="+100"/>
@@ -2130,95 +2595,57 @@ Adresa:%4
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+193"/>
-        <source>Send Coins</source>
-        <translation>Slanje novca</translation>
-    </message>
-</context>
-<context>
-    <name>WalletView</name>
-    <message>
-        <location filename="../walletview.cpp" line="+42"/>
-        <source>&amp;Export</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Export the data in the current tab to a file</source>
-        <translation>Izvoz podataka iz trenutnog taba u datoteku</translation>
-    </message>
-    <message>
-        <location line="+193"/>
-        <source>Backup Wallet</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Wallet Data (*.dat)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Backup Failed</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>There was an error trying to save the wallet data to the new location.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Backup Successful</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>The wallet data was successfully saved to the new location.</source>
+        <location filename="../walletmodel.cpp" line="+206"/>
+        <source>Sending...</source>
         <translation type="unfinished"/>
     </message>
 </context>
 <context>
     <name>bitcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>FugueCore version</source>
-        <translation>FugueCore verzija</translation>
+        <location filename="../bitcoinstrings.cpp" line="+33"/>
+        <source>TillkWDMcoin version</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+1"/>
         <source>Usage:</source>
         <translation>Upotreba:</translation>
     </message>
     <message>
-        <location line="-29"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Pošalji komandu usluzi -server ili bitcoind</translation>
+        <location line="+1"/>
+        <source>Send command to -server or TillkWDMcoind</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="+1"/>
         <source>List commands</source>
         <translation>Prikaži komande</translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="+1"/>
         <source>Get help for a command</source>
         <translation>Potraži pomoć za komandu</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+2"/>
         <source>Options:</source>
         <translation>Postavke:</translation>
     </message>
     <message>
-        <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Odredi konfiguracijsku datoteku (ugrađeni izbor: bitcoin.conf)</translation>
+        <location line="+2"/>
+        <source>Specify configuration file (default: TillkWDMcoin.conf)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Odredi proces ID datoteku (ugrađeni izbor: bitcoin.pid)</translation>
+        <location line="+1"/>
+        <source>Specify pid file (default: TillkWDMcoind.pid)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Specify wallet file (within data directory)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location line="-1"/>
@@ -2226,357 +2653,202 @@ Adresa:%4
         <translation>Odredi direktorij za datoteke</translation>
     </message>
     <message>
-        <location line="-9"/>
+        <location line="+2"/>
         <source>Set database cache size in megabytes (default: 25)</source>
         <translation>Postavi cache za bazu podataka u MB (zadano:25)</translation>
     </message>
     <message>
-        <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 8333 or testnet: 18333)</source>
-        <translation>Slušaj na &lt;port&gt;u (default: 8333 ili testnet: 18333)</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
-        <translation>Održavaj najviše &lt;n&gt; veza sa članovima (default: 125)</translation>
-    </message>
-    <message>
-        <location line="-48"/>
-        <source>Connect to a node to retrieve peer addresses, and disconnect</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+82"/>
-        <source>Specify your own public address</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
-        <translation>Prag za odspajanje članova koji se čudno ponašaju (default: 100)</translation>
-    </message>
-    <message>
-        <location line="-134"/>
-        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
-        <translation>Broj sekundi koliko se članovima koji se čudno ponašaju neće dopustiti da se opet spoje (default: 86400)</translation>
-    </message>
-    <message>
-        <location line="-29"/>
-        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Prihvaćaj JSON-RPC povezivanje na portu broj &lt;port&gt; (ugrađeni izbor: 8332 or testnet: 18332)</translation>
-    </message>
-    <message>
-        <location line="+37"/>
-        <source>Accept command line and JSON-RPC commands</source>
-        <translation>Prihvati komande iz tekst moda i JSON-RPC</translation>
-    </message>
-    <message>
-        <location line="+76"/>
-        <source>Run in the background as a daemon and accept commands</source>
-        <translation>Izvršavaj u pozadini kao uslužnik i prihvaćaj komande</translation>
-    </message>
-    <message>
-        <location line="+37"/>
-        <source>Use the test network</source>
-        <translation>Koristi test mrežu</translation>
-    </message>
-    <message>
-        <location line="-112"/>
-        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-80"/>
-        <source>%s, you must set a rpcpassword in the configuration file:
-%s
-It is recommended you use the following random password:
-rpcuser=bitcoinrpc
-rpcpassword=%s
-(you do not need to remember this password)
-The username and password MUST NOT be the same.
-If the file does not exist, create it with owner-readable-only file permissions.
-It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@foo.com
-</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. FugueCore is probably already running.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
+        <location line="+1"/>
+        <source>Set database disk log size in megabytes (default: 100)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+6"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
+        <source>Listen for connections on &lt;port&gt; (default: 15714 or testnet: 25714)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
+        <translation>Održavaj najviše &lt;n&gt; veza sa članovima (default: 125)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Connect to a node to retrieve peer addresses, and disconnect</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Specify your own public address</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+5"/>
+        <source>Bind to given address. Use [host]:port notation for IPv6</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Stake your coins to support network and gain reward (default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
+        <translation>Prag za odspajanje članova koji se čudno ponašaju (default: 100)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
+        <translation>Broj sekundi koliko se članovima koji se čudno ponašaju neće dopustiti da se opet spoje (default: 86400)</translation>
+    </message>
+    <message>
+        <location line="-44"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+109"/>
+        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-87"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-11"/>
+        <source>Accept command line and JSON-RPC commands</source>
+        <translation>Prihvati komande iz tekst moda i JSON-RPC</translation>
+    </message>
+    <message>
+        <location line="+101"/>
+        <source>Error: Transaction creation failed  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Importing blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Importing bootstrap blockchain data file.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-88"/>
+        <source>Run in the background as a daemon and accept commands</source>
+        <translation>Izvršavaj u pozadini kao uslužnik i prihvaćaj komande</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Use the test network</source>
+        <translation>Koristi test mrežu</translation>
+    </message>
+    <message>
+        <location line="-24"/>
+        <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-38"/>
+        <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+117"/>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-20"/>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Upozorenje: -paytxfee je podešen na preveliki iznos.  To je iznos koji ćete platiti za obradu transakcije.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Warning: Displayed transactions may not be correct! You may need to upgrade, or other nodes may need to upgrade.</source>
+        <location line="+61"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong TillkWDMcoin will not work properly.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong FugueCore will not work properly.</source>
-        <translation>Upozorenje: Molimo provjerite jesu li datum i vrijeme na vašem računalu točni. Ako vaš sat ide krivo, FugueCore neće raditi ispravno.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="-31"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-18"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-30"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Block creation options:</source>
         <translation>Opcije za kreiranje bloka:</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-62"/>
         <source>Connect only to the specified node(s)</source>
         <translation>Poveži se samo sa određenim nodom</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Corrupted block database detected</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Do you want to rebuild the block database now?</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error initializing block database</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error initializing wallet database environment %s!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error loading block database</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error opening block database</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: Disk space is low!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error: Wallet locked, unable to create transaction!</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error: system error: </source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+94"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Failed to read block info</source>
+        <location line="-90"/>
+        <source>Find peers using DNS lookup (default: 1)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Failed to read block</source>
+        <location line="+5"/>
+        <source>Sync checkpoints policy (default: strict)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Failed to sync block index</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write block index</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write block info</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write block</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write file info</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write to coin database</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write transaction index</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write undo data</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Find peers using DNS lookup (default: 1 unless -connect)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Generate coins (default: 0)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>How many blocks to check at startup (default: 288, 0 = all)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>How thorough the block verification is (0-4, default: 3)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Not enough file descriptors available.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Rebuild block chain index from current blk000??.dat files</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Set the number of threads to service RPC calls (default: 4)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Verifying blocks...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Verifying wallet...</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="-69"/>
-        <source>Imports blocks from external blk000??.dat file</source>
-        <translation>Importiraj blokove sa vanjskog blk000??.dat fajla</translation>
-    </message>
-    <message>
-        <location line="-76"/>
-        <source>Set the number of script verification threads (up to 16, 0 = auto, &lt;0 = leave that many cores free, default: 0)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+77"/>
-        <source>Information</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+83"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
-        <translation>Nevaljala -tor adresa: &apos;%s&apos;</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: &apos;%s&apos;</source>
+        <location line="+4"/>
+        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Maintain a full transaction index (default: 0)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="-82"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
         <translation type="unfinished"/>
     </message>
@@ -2586,17 +2858,12 @@ for example: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@fo
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Only accept block chain matching built-in checkpoints (default: 1)</source>
-        <translation>Prihvati samo lance blokova koji se podudaraju sa ugrađenim checkpoint-ovima (default: 1)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="-16"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+28"/>
         <source>Output extra debugging information. Implies all other -debug* options</source>
         <translation type="unfinished"/>
     </message>
@@ -2606,157 +2873,208 @@ for example: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@fo
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Prepend debug output with timestamp</source>
-        <translation>Dodaj izlaz debuga na početak sa vremenskom oznakom</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>SSL options: (see the FugueCore Wiki for SSL setup instructions)</source>
-        <translation>SSL postavke: (za detalje o podešavanju SSL opcija vidi FugueCore Wiki)</translation>
-    </message>
-    <message>
         <location line="+1"/>
+        <source>Prepend debug output with timestamp</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation>SSL postavke: (za detalje o podešavanju SSL opcija vidi Bitcoin Wiki)</translation>
+    </message>
+    <message>
+        <location line="-74"/>
         <source>Select the version of socks proxy to use (4-5, default: 5)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+41"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Šalji trace/debug informacije na konzolu umjesto u debug.log datoteku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Send trace/debug info to debugger</source>
-        <translation>Pošalji trace/debug informacije u debugger</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+28"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
-        <translation>Podesite maksimalnu veličinu bloka u bajtovima (default: 250000)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Set minimum block size in bytes (default: 0)</source>
         <translation>Podesite minimalnu veličinu bloka u bajtovima (default: 0)</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-29"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Signing transaction failed</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="-42"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Odredi vremenski prozor za spajanje na mrežu u milisekundama (ugrađeni izbor: 5000)</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>System error: </source>
+        <location line="+109"/>
+        <source>Unable to sign checkpoint, wrong checkpointkey?
+</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Transaction amount too small</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Transaction amounts must be positive</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Transaction too large</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="-80"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
         <translation>Pokušaj koristiti UPnP da otvoriš port za uslugu (default: 0)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
         <translation>Pokušaj koristiti UPnP da otvoriš port za uslugu (default: 1 when listening)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-25"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+42"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Korisničko ime za JSON-RPC veze</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Warning</source>
+        <location line="+47"/>
+        <source>Verifying database integrity...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
+        <source>Warning: Disk space is low!</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-2"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
-        <source>You need to rebuild the databases using -reindex to change -txindex</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="-48"/>
         <source>wallet.dat corrupt, salvage failed</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-50"/>
+        <location line="-54"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Lozinka za JSON-RPC veze</translation>
     </message>
     <message>
-        <location line="-67"/>
+        <location line="-84"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=TillkWDMcoinrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;TillkWDMcoin Alert&quot; admin@foo.com
+</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Find peers using internet relay chat (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Dozvoli JSON-RPC povezivanje s određene IP adrese</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+1"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Pošalji komande nodu na adresi &lt;ip&gt; (ugrađeni izbor: 127.0.0.1)</translation>
     </message>
     <message>
-        <location line="-120"/>
+        <location line="+1"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Izvršite naredbu kada se najbolji blok promjeni (%s u cmd je zamjenjen sa block hash)</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+3"/>
+        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Require a confirmations for change (default: 0)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enforce transaction scripts to use canonical PUSH operators (default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Upgrade wallet to latest format</source>
         <translation>Nadogradite novčanik u posljednji format.</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="+1"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
         <translation>Podesi memorijski prostor za ključeve na &lt;n&gt; (ugrađeni izbor: 100)</translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="+1"/>
         <source>Rescan the block chain for missing wallet transactions</source>
         <translation>Ponovno pretraži lanac blokova za transakcije koje nedostaju</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+2"/>
+        <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>How thorough the block verification is (0-6, default: 1)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports blocks from external blk000?.dat file</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Koristi OpenSSL (https) za JSON-RPC povezivanje</translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="+1"/>
         <source>Server certificate file (default: server.cert)</source>
         <translation>Uslužnikov SSL certifikat (ugrađeni izbor: server.cert)</translation>
     </message>
@@ -2766,62 +3084,92 @@ for example: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@fo
         <translation>Uslužnikov privatni ključ (ugrađeni izbor: server.pem)</translation>
     </message>
     <message>
-        <location line="-151"/>
+        <location line="+1"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
-        <translation>Prihvaljivi načini šifriranja (ugrađeni izbor: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+165"/>
+        <location line="+53"/>
+        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-158"/>
         <source>This help message</source>
         <translation>Ova poruka za pomoć</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+95"/>
+        <source>Wallet %s resides outside data directory %s.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot obtain a lock on data directory %s.  TillkWDMcoin is probably already running.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="-98"/>
+        <source>TillkWDMcoin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+140"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>Program ne može koristiti %s na ovom računalu (bind returned error %d, %s)</translation>
     </message>
     <message>
-        <location line="-91"/>
+        <location line="-130"/>
         <source>Connect through socks proxy</source>
-        <translation>Poveži se kroz socks proxy</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+3"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
         <translation>Dozvoli DNS upite za dodavanje nodova i povezivanje</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+122"/>
         <source>Loading addresses...</source>
         <translation>Učitavanje adresa...</translation>
     </message>
     <message>
-        <location line="-35"/>
+        <location line="-15"/>
+        <source>Error loading blkindex.dat</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Greška kod učitavanja wallet.dat: Novčanik pokvaren</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of TillkWDMcoin</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of FugueCore</source>
-        <translation>Greška kod učitavanja wallet.dat: Novčanik zahtjeva noviju verziju Bitcoina</translation>
+        <source>Wallet needed to be rewritten: restart TillkWDMcoin to complete</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart FugueCore to complete</source>
-        <translation>Novčanik je trebao prepravak: ponovo pokrenite FugueCore</translation>
-    </message>
-    <message>
-        <location line="-95"/>
+        <location line="+1"/>
         <source>Error loading wallet.dat</source>
         <translation>Greška kod učitavanja wallet.dat</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-16"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
         <translation>Nevaljala -proxy adresa: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="-1"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
         <translation type="unfinished"/>
     </message>
@@ -2831,87 +3179,107 @@ for example: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@fo
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="+4"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="-24"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Nevaljali iznos za opciju -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Sending...</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Invalid amount</source>
         <translation>Nevaljali iznos za opciju</translation>
     </message>
     <message>
-        <location line="-6"/>
+        <location line="+1"/>
         <source>Insufficient funds</source>
         <translation>Nedovoljna sredstva</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-34"/>
         <source>Loading block index...</source>
         <translation>Učitavanje indeksa blokova...</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Unesite nod s kojim se želite spojiti and attempt to keep the connection open</translation>
     </message>
     <message>
-        <location line="-25"/>
-        <source>Unable to bind to %s on this computer. FugueCore is probably already running.</source>
-        <translation>Program ne može koristiti %s na ovom računalu.  FugueCore program je vjerojatno već pokrenut.</translation>
+        <location line="+122"/>
+        <source>Unable to bind to %s on this computer. TillkWDMcoin is probably already running.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="-97"/>
         <source>Fee per KB to add to transactions you send</source>
-        <translation>Naknada posredniku po KB-u koja će biti dodana svakoj transakciji koju pošalješ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+55"/>
+        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Loading wallet...</source>
         <translation>Učitavanje novčanika...</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="+8"/>
         <source>Cannot downgrade wallet</source>
         <translation>Nije moguće novčanik vratiti na prijašnju verziju.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
+        <source>Cannot initialize keypool</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Cannot write default address</source>
         <translation>Nije moguće upisati zadanu adresu.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+1"/>
         <source>Rescanning...</source>
         <translation>Rescaniranje</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="+5"/>
         <source>Done loading</source>
         <translation>Učitavanje gotovo</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="-167"/>
         <source>To use the %s option</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="+14"/>
         <source>Error</source>
         <translation>Greška</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+6"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>

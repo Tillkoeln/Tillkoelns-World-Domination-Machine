@@ -11,7 +11,7 @@
 #include "allocators.h"
 #include "serialize.h"
 #include "uint256.h"
-#include "hash.h"
+#include "util.h"
 
 #include <openssl/ec.h> // for EC_KEY definition
 
@@ -82,7 +82,7 @@ public:
     }
 
     uint256 GetHash() const {
-        return Hashfugue(vchPubKey.begin(), vchPubKey.end());
+        return Hash(vchPubKey.begin(), vchPubKey.end());
     }
 
     bool IsValid() const {
@@ -113,8 +113,9 @@ protected:
     bool fSet;
     bool fCompressedPubKey;
 
+    void SetCompressedPubKey();
+
 public:
-    void SetCompressedPubKey(bool fCompressed = true);
 
     void Reset();
 

@@ -1,5 +1,5 @@
-#ifndef BITCOINAMOUNTFIELD_H
-#define BITCOINAMOUNTFIELD_H
+#ifndef BITCOINFIELD_H
+#define BITCOINFIELD_H
 
 #include <QWidget>
 
@@ -8,14 +8,12 @@ class QDoubleSpinBox;
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering FugueCore amounts.
+/** Widget for entering bitcoin amounts.
   */
 class BitcoinAmountField: public QWidget
 {
     Q_OBJECT
-
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY textChanged USER true)
-
 public:
     explicit BitcoinAmountField(QWidget *parent = 0);
 
@@ -58,4 +56,5 @@ private slots:
 
 };
 
-#endif // BITCOINAMOUNTFIELD_H
+
+#endif // BITCOINFIELD_H

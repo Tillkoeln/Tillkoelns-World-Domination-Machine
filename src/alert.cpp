@@ -3,9 +3,7 @@
 //
 
 #include <algorithm>
-#include <boost/algorithm/string/classification.hpp>
-#include <boost/algorithm/string/replace.hpp>
-#include <boost/foreach.hpp>
+
 #include <map>
 
 #include "alert.h"
@@ -13,14 +11,21 @@
 #include "net.h"
 #include "sync.h"
 #include "ui_interface.h"
-
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/replace.hpp>
+#include <boost/foreach.hpp>
 using namespace std;
 
 map<uint256, CAlert> mapAlerts;
 CCriticalSection cs_mapAlerts;
 
-static const char* pszMainKey = "04fc9702847840aaf195de8442ebecedf5b095cdbb9bc716bda9110971b28a49e0ead8564ff0db22209e0374782c093bb899692d524e9d6a6956e7c5ecbcd68284";
-static const char* pszTestKey = "04302390343f91cc401d56d68b123028bf52e5fca1939df127f63c6467cdf9c8e2c14b61104cf817d0b780da337893ecc4aaff1309e536162dabbdb45200ca2b0a";
+static const char* pszMainKey = "0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284";
+
+// TestNet alerts pubKey
+static const char* pszTestKey = "0471dc165db490094d35cde15b1f5d755fa6ad6f2b5ed0f340e3f17f57389c3c2af113a8cbcc885bde73305a553b5640c83021128008ddf882e856336269080496";
+
+// TestNet alerts private key
+// "308201130201010420b665cff1884e53da26376fd1b433812c9a5a8a4d5221533b15b9629789bb7e42a081a53081a2020101302c06072a8648ce3d0101022100fffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f300604010004010704410479be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798483ada7726a3c4655da4fbfc0e1108a8fd17b448a68554199c47d08ffb10d4b8022100fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141020101a1440342000471dc165db490094d35cde15b1f5d755fa6ad6f2b5ed0f340e3f17f57389c3c2af113a8cbcc885bde73305a553b5640c83021128008ddf882e856336269080496"
 
 void CUnsignedAlert::SetNull()
 {
@@ -51,8 +56,8 @@ std::string CUnsignedAlert::ToString() const
     return strprintf(
         "CAlert(\n"
         "    nVersion     = %d\n"
-        "    nRelayUntil  = %"PRI64d"\n"
-        "    nExpiration  = %"PRI64d"\n"
+        "    nRelayUntil  = %"PRId64"\n"
+        "    nExpiration  = %"PRId64"\n"
         "    nID          = %d\n"
         "    nCancel      = %d\n"
         "    setCancel    = %s\n"
@@ -96,7 +101,7 @@ bool CAlert::IsNull() const
 
 uint256 CAlert::GetHash() const
 {
-    return Hashfugue(this->vchMsg.begin(), this->vchMsg.end());
+    return Hash(this->vchMsg.begin(), this->vchMsg.end());
 }
 
 bool CAlert::IsInEffect() const
@@ -147,7 +152,7 @@ bool CAlert::CheckSignature() const
     CKey key;
     if (!key.SetPubKey(ParseHex(fTestNet ? pszTestKey : pszMainKey)))
         return error("CAlert::CheckSignature() : SetPubKey failed");
-    if (!key.Verify(Hashfugue(vchMsg.begin(), vchMsg.end()), vchSig))
+    if (!key.Verify(Hash(vchMsg.begin(), vchMsg.end()), vchSig))
         return error("CAlert::CheckSignature() : verify signature failed");
 
     // Now unserialize the data
@@ -243,7 +248,15 @@ bool CAlert::ProcessAlert(bool fThread)
                 // be safe we first strip anything not in safeChars, then add single quotes around
                 // the whole string before passing it to the shell:
                 std::string singleQuote("'");
-                std::string safeStatus = SanitizeString(strStatusBar);
+                // safeChars chosen to allow simple messages/URLs/email addresses, but avoid anything
+                // even possibly remotely dangerous like & or >
+                std::string safeChars("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890 .,;_/:?@");
+                std::string safeStatus;
+                for (std::string::size_type i = 0; i < strStatusBar.size(); i++)
+                {
+                    if (safeChars.find(strStatusBar[i]) != std::string::npos)
+                        safeStatus.push_back(strStatusBar[i]);
+                }
                 safeStatus = singleQuote+safeStatus+singleQuote;
                 boost::replace_all(strCmd, "%s", safeStatus);
 

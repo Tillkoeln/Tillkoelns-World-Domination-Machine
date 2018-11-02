@@ -1,19 +1,27 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.0">
-<defaultcodec>UTF-8</defaultcodec>
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="es" version="2.1">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About FugueCore</source>
-        <translation>Acerca de FugueCore</translation>
+        <source>About TillkWDMcoin</source>
+        <translation>Acerca de TillkWDMcoin</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;FugueCore&lt;/b&gt; version</source>
-        <translation>Versión de &lt;b&gt;FugueCore&lt;/b&gt;</translation>
+        <source>&lt;b&gt;TillkWDMcoin&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;TillkWDMcoin&lt;/b&gt; versión</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+41"/>
+        <source>Copyright © 2009-2014 The Bitcoin developers
+Copyright © 2012-2014 The NovaCoin developers
+Copyright © 2014 The TillkWDMcoin developers</source>
+        <translation>Copyright © 2009-2014 The Bitcoin developers
+Copyright © 2012-2014 The NovaCoin developers
+Copyright © 2014 The TillkWDMcoin developers</translation>
+    </message>
+    <message>
+        <location line="+15"/>
         <source>
 This is experimental software.
 
@@ -30,28 +38,18 @@ Este producto incluye software desarrollado por OpenSSL Project para su uso en
 el OpenSSL Toolkit (http://www.openssl.org/) y software criptográfico escrito por
 Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</translation>
     </message>
-    <message>
-        <location filename="../aboutdialog.cpp" line="+14"/>
-        <source>Copyright</source>
-        <translation>Copyright</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>The FugueCore developers</source>
-        <translation>Los programadores FugueCore</translation>
-    </message>
 </context>
 <context>
     <name>AddressBookPage</name>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
         <source>Address Book</source>
-        <translation>Libreta de direcciones</translation>
+        <translation>Libreta de Direcciones</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>Double-click to edit address or label</source>
-        <translation>Haga doble clic para editar una dirección o etiqueta</translation>
+        <translation>Haga doble clic para editar una etiqueta o dirección </translation>
     </message>
     <message>
         <location line="+27"/>
@@ -66,32 +64,32 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     <message>
         <location line="-11"/>
         <source>&amp;New Address</source>
-        <translation>&amp;Añadir dirección</translation>
+        <translation>&amp;Nueva Dirección</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your FugueCore addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Estas son sus direcciones FugueCore para recibir pagos. Puede utilizar una diferente por cada persona emisora para saber quién le está pagando.</translation>
+        <location line="-46"/>
+        <source>These are your TillkWDMcoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Estas son las direcciones de TillkWDMcoin para recibir pagos. Es posible que desee dar una diferente a cada remitente para que pueda realizar un seguimiento de quien te está pagando.</translation>
     </message>
     <message>
-        <location filename="../forms/addressbookpage.ui" line="+14"/>
+        <location line="+60"/>
         <source>&amp;Copy Address</source>
         <translation>&amp;Copiar dirección</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Show &amp;QR Code</source>
-        <translation>Mostrar código &amp;QR </translation>
+        <translation>Enseñar &amp;QR Code</translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a FugueCore address</source>
-        <translation>Firmar un mensaje para demostrar que se posee una dirección FugueCore</translation>
+        <source>Sign a message to prove you own a TillkWDMcoin address</source>
+        <translation>Firmar un mensaje para demostrar que es dueño de su dirección de TillkWDMcoin</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Sign &amp;Message</source>
-        <translation>&amp;Firmar mensaje</translation>
+        <translation>Firmar &amp;Mensaje</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -99,24 +97,14 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Borrar de la lista la dirección seleccionada</translation>
     </message>
     <message>
-        <location line="+27"/>
-        <source>Export the data in the current tab to a file</source>
-        <translation>Exportar a un archivo los datos de esta pestaña</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>&amp;Export</source>
-        <translation>&amp;Exportar</translation>
-    </message>
-    <message>
-        <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified FugueCore address</source>
-        <translation>Verificar un mensaje para comprobar que fue firmado con la dirección FugueCore indicada</translation>
+        <location line="-14"/>
+        <source>Verify a message to ensure it was signed with a specified TillkWDMcoin address</source>
+        <translation>Verifique el mensaje para asegurarse que fue firmado por una dirección específica de TillkWDMcoin</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Verify Message</source>
-        <translation>&amp;Verificar mensaje</translation>
+        <translation>&amp;Verifique Mensaje</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -124,29 +112,19 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>&amp;Eliminar</translation>
     </message>
     <message>
-        <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your FugueCore addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones FugueCore para enviar pagos. Compruebe siempre la cantidad y la dirección receptora antes de transferir monedas.</translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location filename="../addressbookpage.cpp" line="+65"/>
         <source>Copy &amp;Label</source>
         <translation>Copiar &amp;etiqueta</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>&amp;Edit</source>
         <translation>&amp;Editar</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Send &amp;Coins</source>
-        <translation>Enviar &amp;monedas</translation>
-    </message>
-    <message>
-        <location line="+260"/>
+        <location line="+250"/>
         <source>Export Address Book Data</source>
-        <translation>Exportar datos de la libreta de direcciones</translation>
+        <translation>Exportar Data de Libro de Direcciones</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -156,12 +134,12 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     <message>
         <location line="+13"/>
         <source>Error exporting</source>
-        <translation>Error al exportar</translation>
+        <translation>Error exportando</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>No se pudo escribir en el archivo %1.</translation>
+        <translation>No se pudo escribir en el archivo %1</translation>
     </message>
 </context>
 <context>
@@ -205,9 +183,19 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Repita la nueva contraseña</translation>
     </message>
     <message>
-        <location filename="../askpassphrasedialog.cpp" line="+33"/>
+        <location line="+33"/>
+        <source>Serves to disable the trivial sendmoney when OS account compromised. Provides no real security.</source>
+        <translation>Sirve para desactivar SendMoney cuando la cuenta del Sistema Operativo está comprometida. No ofrece seguridad real.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>For staking only</source>
+        <translation>Para &quot;Staking&quot; solamente</translation>
+    </message>
+    <message>
+        <location filename="../askpassphrasedialog.cpp" line="+35"/>
         <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;10 or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
-        <translation>Introduzca la nueva contraseña del monedero.&lt;br/&gt;Por favor elija una con &lt;b&gt;10 o más caracteres aleatorios&lt;/b&gt; u &lt;b&gt;ocho o más palabras&lt;/b&gt;.</translation>
+        <translation>Introduzca la nueva contraseña del monedero.&lt;br/&gt;Por favor elija una con &lt;b&gt;10 o más caracteres aleatorios&lt;/b&gt;, u &lt;b&gt;ocho o más palabras&lt;/b&gt;.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -215,7 +203,7 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Cifrar el monedero</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+7"/>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
         <translation>Esta operación requiere su contraseña para desbloquear el monedero.</translation>
     </message>
@@ -251,8 +239,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Atencion: ¡Si cifra su monedero y pierde la contraseña perderá &lt;b&gt;TODOS SUS BITCOINS&lt;/b&gt;!&quot;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
+        <translation>Advertencia: Si encripta su cartera y pierde su frase de contraseña, puede &lt;b&gt;PERDER TODAS SUS MONEDAS&lt;/ b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -265,49 +253,49 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>IMPORTANTE: Cualquier copia de seguridad que haya realizado previamente de su archivo de monedero debe reemplazarse con el nuevo archivo de monedero cifrado. Por razones de seguridad, las copias de seguridad previas del archivo de monedero no cifradas serán inservibles en cuanto comience a usar el nuevo monedero cifrado.</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+103"/>
         <location line="+24"/>
         <source>Warning: The Caps Lock key is on!</source>
         <translation>Aviso: ¡La tecla de bloqueo de mayúsculas está activada!</translation>
     </message>
     <message>
-        <location line="-130"/>
-        <location line="+58"/>
+        <location line="-133"/>
+        <location line="+60"/>
         <source>Wallet encrypted</source>
         <translation>Monedero cifrado</translation>
     </message>
     <message>
-        <location line="-56"/>
-        <source>FugueCore will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>FugueCore se cerrará para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger totalmente sus bitcoins de robo por malware que infecte su sistema.</translation>
+        <location line="-58"/>
+        <source>TillkWDMcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>TillkWDMcoin cerrará para terminar el proceso de encriptación. Recuerde que la encriptación de su monedero no puede proteger completamente que sus monedas sean robadas por malware infectando su computadora.</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+7"/>
-        <location line="+42"/>
+        <location line="+44"/>
         <location line="+6"/>
         <source>Wallet encryption failed</source>
         <translation>Ha fallado el cifrado del monedero</translation>
     </message>
     <message>
-        <location line="-54"/>
+        <location line="-56"/>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
         <translation>Ha fallado el cifrado del monedero debido a un error interno. El monedero no ha sido cifrado.</translation>
     </message>
     <message>
         <location line="+7"/>
-        <location line="+48"/>
+        <location line="+50"/>
         <source>The supplied passphrases do not match.</source>
         <translation>Las contraseñas no coinciden.</translation>
     </message>
     <message>
-        <location line="-37"/>
+        <location line="-38"/>
         <source>Wallet unlock failed</source>
         <translation>Ha fallado el desbloqueo del monedero</translation>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+11"/>
+        <location line="+12"/>
         <location line="+19"/>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
         <translation>La contraseña introducida para descifrar el monedero es incorrecta.</translation>
@@ -326,17 +314,17 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
 <context>
     <name>BitcoinGUI</name>
     <message>
-        <location filename="../bitcoingui.cpp" line="+233"/>
+        <location filename="../bitcoingui.cpp" line="+282"/>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
     </message>
     <message>
-        <location line="+280"/>
+        <location line="+251"/>
         <source>Synchronizing with network...</source>
         <translation>Sincronizando con la red…</translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-319"/>
         <source>&amp;Overview</source>
         <translation>&amp;Vista general</translation>
     </message>
@@ -346,7 +334,7 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Mostrar vista general del monedero</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+17"/>
         <source>&amp;Transactions</source>
         <translation>&amp;Transacciones</translation>
     </message>
@@ -356,17 +344,32 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Examinar el historial de transacciones</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+5"/>
+        <source>&amp;Address Book</source>
+        <translation>&amp;Libreta de Direcciones</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Edit the list of stored addresses and labels</source>
-        <translation>Editar la lista de las direcciones y etiquetas almacenadas</translation>
+        <translation>Editar la lista de direcciones y etiquetas almacenadas</translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="-13"/>
+        <source>&amp;Receive coins</source>
+        <translation>&amp;Recibir monedas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Show the list of addresses for receiving payments</source>
-        <translation>Mostrar la lista de direcciones utilizadas para recibir pagos</translation>
+        <translation>Mostrar la lista de direcciones para recibir pagos</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="-7"/>
+        <source>&amp;Send coins</source>
+        <translation>&amp;Enviar monedas</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>E&amp;xit</source>
         <translation>&amp;Salir</translation>
     </message>
@@ -376,9 +379,9 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Salir de la aplicación</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Show information about FugueCore</source>
-        <translation>Mostrar información acerca de FugueCore</translation>
+        <location line="+6"/>
+        <source>Show information about TillkWDMcoin</source>
+        <translation>Mostrar información sobre TillkWDMcoin</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -396,42 +399,57 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>&amp;Opciones...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Encrypt Wallet...</source>
         <translation>&amp;Cifrar monedero…</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Backup Wallet...</source>
-        <translation>Copia de &amp;respaldo del monedero...</translation>
+        <translation>%Guardar copia del monedero...</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Change Passphrase...</source>
         <translation>&amp;Cambiar la contraseña…</translation>
     </message>
+    <message numerus="yes">
+        <location line="+259"/>
+        <source>~%n block(s) remaining</source>
+        <translation><numerusform>~%n bloque restante</numerusform><numerusform>~%n bloques restantes</numerusform></translation>
+    </message>
     <message>
-        <location line="+285"/>
-        <source>Importing blocks from disk...</source>
-        <translation>Importando bloques de disco...</translation>
+        <location line="+6"/>
+        <source>Downloaded %1 of %2 blocks of transaction history (%3% done).</source>
+        <translation>Descargado %1 de %2 bloques de historial de transacciones (%3% completado).</translation>
+    </message>
+    <message>
+        <location line="-256"/>
+        <source>&amp;Export...</source>
+        <translation>&amp;Exportando...</translation>
+    </message>
+    <message>
+        <location line="-64"/>
+        <source>Send coins to a TillkWDMcoin address</source>
+        <translation>Enviar monedas a una dirección de TillkWDMcoin</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Modify configuration options for TillkWDMcoin</source>
+        <translation>Modificar las opciones de configuración para TillkWDMcoin</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Export the data in the current tab to a file</source>
+        <translation>Exportar los datos en la ficha actual a un archivo</translation>
+    </message>
+    <message>
+        <location line="-14"/>
+        <source>Encrypt or decrypt wallet</source>
+        <translation>Cifrar o descifrar el monedero</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Reindexing blocks on disk...</source>
-        <translation>Reindexando bloques en disco...</translation>
-    </message>
-    <message>
-        <location line="-347"/>
-        <source>Send coins to a FugueCore address</source>
-        <translation>Enviar monedas a una dirección FugueCore</translation>
-    </message>
-    <message>
-        <location line="+49"/>
-        <source>Modify configuration options for FugueCore</source>
-        <translation>Modificar las opciones de configuración de FugueCore</translation>
-    </message>
-    <message>
-        <location line="+9"/>
         <source>Backup wallet to another location</source>
         <translation>Copia de seguridad del monedero en otra ubicación</translation>
     </message>
@@ -441,7 +459,7 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Cambiar la contraseña utilizada para el cifrado del monedero</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+10"/>
         <source>&amp;Debug window</source>
         <translation>Ventana de &amp;depuración</translation>
     </message>
@@ -451,189 +469,184 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
         <translation>Abrir la consola de depuración y diagnóstico</translation>
     </message>
     <message>
-        <location line="-4"/>
+        <location line="-5"/>
         <source>&amp;Verify message...</source>
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <location line="-165"/>
-        <location line="+530"/>
-        <source>FugueCore</source>
-        <translation>FugueCore</translation>
+        <location line="-202"/>
+        <source>TillkWDMcoin</source>
+        <translation>TillkWDMcoin</translation>
     </message>
     <message>
-        <location line="-530"/>
+        <location line="+0"/>
         <source>Wallet</source>
         <translation>Monedero</translation>
     </message>
     <message>
-        <location line="+101"/>
-        <source>&amp;Send</source>
-        <translation>&amp;Enviar</translation>
-    </message>
-    <message>
-        <location line="+7"/>
-        <source>&amp;Receive</source>
-        <translation>&amp;Recibir</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>&amp;Addresses</source>
-        <translation>&amp;Direcciones</translation>
-    </message>
-    <message>
-        <location line="+22"/>
-        <source>&amp;About FugueCore</source>
-        <translation>&amp;Acerca de FugueCore</translation>
+        <location line="+180"/>
+        <source>&amp;About TillkWDMcoin</source>
+        <translation>Acerca de TillkWDMcoin</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Show / Hide</source>
-        <translation>Mo&amp;strar/ocultar</translation>
+        <translation>&amp;Mostrar / Ocultar</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Unlock wallet</source>
+        <translation>Desbloquear el monedero</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Show or hide the main Window</source>
-        <translation>Mostrar u ocultar la ventana principal</translation>
+        <source>&amp;Lock Wallet</source>
+        <translation>&amp;Bloquear monedero</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Encrypt the private keys that belong to your wallet</source>
-        <translation>Cifrar las claves privadas de su monedero</translation>
+        <location line="+1"/>
+        <source>Lock wallet</source>
+        <translation>Bloquear monedero</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Sign messages with your FugueCore addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones FugueCore para demostrar la propiedad</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified FugueCore addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones FugueCore concretas</translation>
-    </message>
-    <message>
-        <location line="+28"/>
+        <location line="+35"/>
         <source>&amp;File</source>
         <translation>&amp;Archivo</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>&amp;Settings</source>
         <translation>&amp;Configuración</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>&amp;Help</source>
         <translation>A&amp;yuda</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+12"/>
         <source>Tabs toolbar</source>
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <location line="+10"/>
+        <location line="+8"/>
+        <source>Actions toolbar</source>
+        <translation>Barra de herramientas de acciones</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <location line="+9"/>
         <source>[testnet]</source>
         <translation>[testnet]</translation>
     </message>
     <message>
-        <location line="+47"/>
-        <source>FugueCore client</source>
-        <translation>Cliente FugueCore</translation>
+        <location line="+0"/>
+        <location line="+60"/>
+        <source>TillkWDMcoin client</source>
+        <translation>Cliente TillkWDMcoin</translation>
     </message>
     <message numerus="yes">
-        <location line="+141"/>
-        <source>%n active connection(s) to FugueCore network</source>
-        <translation><numerusform>%n conexión activa hacia la red FugueCore</numerusform><numerusform>%n conexiones activas hacia la red FugueCore</numerusform></translation>
+        <location line="+75"/>
+        <source>%n active connection(s) to TillkWDMcoin network</source>
+        <translation><numerusform>%n conexión activa a la red TillkWDMcoin</numerusform><numerusform>%n conexiones activas a la red TillkWDMcoin</numerusform></translation>
     </message>
     <message>
-        <location line="+22"/>
-        <source>No block source available...</source>
-        <translation>Ninguna fuente de bloques disponible ...</translation>
+        <location line="+40"/>
+        <source>Downloaded %1 blocks of transaction history.</source>
+        <translation>Descargado %1 bloques de historial de transacciones.</translation>
     </message>
     <message>
-        <location line="+12"/>
-        <source>Processed %1 of %2 (estimated) blocks of transaction history.</source>
-        <translation>Se han procesado %1 de %2 bloques (estimados) del historial de transacciones.</translation>
+        <location line="+413"/>
+        <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2&lt;br&gt;Expected time to earn reward is %3</source>
+        <translation>Staking.&lt;br&gt;Su contribución es %1&lt;br&gt;Contribución de la red es %2&lt;br&gt;Tiempo esperado para ganar la recompensa es %3</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Processed %1 blocks of transaction history.</source>
-        <translation>Procesados %1 bloques del historial de transacciones.</translation>
-    </message>
-    <message numerus="yes">
-        <location line="+20"/>
-        <source>%n hour(s)</source>
-        <translation><numerusform>%n hora</numerusform><numerusform>%n horas</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <location line="+4"/>
-        <source>%n day(s)</source>
-        <translation><numerusform>%n día</numerusform><numerusform>%n días</numerusform></translation>
-    </message>
-    <message numerus="yes">
-        <location line="+4"/>
-        <source>%n week(s)</source>
-        <translation><numerusform>%n semana</numerusform><numerusform>%n semanas</numerusform></translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>%1 behind</source>
-        <translation>%1 atrás</translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <source>Last received block was generated %1 ago.</source>
-        <translation>El último bloque recibido fue generado hace %1.</translation>
+        <location line="+6"/>
+        <source>Not staking because wallet is locked</source>
+        <translation>No esta &quot;Staking&quot; porque monedera está bloqueada</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Transactions after this will not yet be visible.</source>
-        <translation>Las transacciones posteriores a esta aún no están visibles.</translation>
+        <source>Not staking because wallet is offline</source>
+        <translation>No esta &quot;Staking&quot; porque monedera está desconectada</translation>
     </message>
     <message>
-        <location line="+22"/>
-        <source>Error</source>
-        <translation>Error</translation>
+        <location line="+2"/>
+        <source>Not staking because wallet is syncing</source>
+        <translation>No esta &quot;Staking&quot; porque monedera está sincronizando</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Warning</source>
-        <translation>Aviso</translation>
+        <location line="+2"/>
+        <source>Not staking because you don&apos;t have mature coins</source>
+        <translation>No esta &quot;Staking&quot; ya que no tiene monedas maduras</translation>
+    </message>
+    <message numerus="yes">
+        <location line="-403"/>
+        <source>%n second(s) ago</source>
+        <translation><numerusform>hace %n segundo</numerusform><numerusform>hace %n segundos</numerusform></translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Information</source>
-        <translation>Información</translation>
+        <location line="-312"/>
+        <source>About TillkWDMcoin card</source>
+        <translation>Sobre la tarjeta TillkWDMcoin</translation>
     </message>
     <message>
-        <location line="+70"/>
-        <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation>Esta transacción supera el límite de tamaño. Puede enviarla con una comisión de %1, destinada a los nodos que procesen su transacción para contribuir al mantenimiento de la red. ¿Desea pagar esta comisión?</translation>
+        <location line="+1"/>
+        <source>Show information about TillkWDMcoin card</source>
+        <translation>Mostrar información sobre la tarjeta TillkWDMcoin</translation>
     </message>
     <message>
-        <location line="-140"/>
+        <location line="+18"/>
+        <source>&amp;Unlock Wallet...</source>
+        <translation>&amp;Desbloquear Monedero...</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+297"/>
+        <source>%n minute(s) ago</source>
+        <translation><numerusform>hace %n minuto</numerusform><numerusform>hace %n minutos</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s) ago</source>
+        <translation><numerusform>hace %n hora</numerusform><numerusform>hace %n horas</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s) ago</source>
+        <translation><numerusform>hace %n dia</numerusform><numerusform>hace %n dias</numerusform></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Up to date</source>
         <translation>Actualizado</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+7"/>
         <source>Catching up...</source>
         <translation>Actualizando...</translation>
     </message>
     <message>
-        <location line="+113"/>
-        <source>Confirm transaction fee</source>
-        <translation>Confirme la tarifa de la transacción</translation>
+        <location line="+10"/>
+        <source>Last received block was generated %1.</source>
+        <translation>Último bloque recibido se generó en %1.</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+59"/>
+        <source>This transaction is over the size limit.  You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network.  Do you want to pay the fee?</source>
+        <translation>Esta transacción se encuentra sobre el límite de tamaño. Usted todavía puede enviarlo a un costo de %1, lo que va a los nodos que procesan sus transacciones y ayuda a apoyar la red. ¿Quieres pagar la cuota?</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Confirm transaction fee</source>
+        <translation>Confirme tarifa de transacción</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Sent transaction</source>
         <translation>Transacción enviada</translation>
     </message>
     <message>
-        <location line="+0"/>
+        <location line="+1"/>
         <source>Incoming transaction</source>
         <translation>Transacción entrante</translation>
     </message>
@@ -651,39 +664,352 @@ Dirección: %4
 </translation>
     </message>
     <message>
-        <location line="+33"/>
-        <location line="+23"/>
+        <location line="+100"/>
+        <location line="+15"/>
         <source>URI handling</source>
-        <translation>Gestión de URI</translation>
+        <translation>Manejar URI</translation>
     </message>
     <message>
-        <location line="-23"/>
-        <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid FugueCore address or malformed URI parameters.</source>
-        <translation>¡No se puede interpretar la URI! Esto puede deberse a una dirección FugueCore inválida o a parámetros de URI mal formados.</translation>
+        <location line="-15"/>
+        <location line="+15"/>
+        <source>URI can not be parsed! This can be caused by an invalid TillkWDMcoin address or malformed URI parameters.</source>
+        <translation>URI no se puede analizar! Esto puede ser causado por una dirección de TillkWDMcoin no válida o parámetros de URI malformados.</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+18"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>El monedero está &lt;b&gt;cifrado&lt;/b&gt; y actualmente &lt;b&gt;desbloqueado&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+10"/>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;locked&lt;/b&gt;</source>
         <translation>El monedero está &lt;b&gt;cifrado&lt;/b&gt; y actualmente &lt;b&gt;bloqueado&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. FugueCore can no longer continue safely and will quit.</source>
-        <translation>Ha ocurrido un error crítico. FugueCore ya no puede continuar con seguridad y se cerrará.</translation>
+        <location line="+25"/>
+        <source>Backup Wallet</source>
+        <translation>Copia de Seguridad de Monedero</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Wallet Data (*.dat)</source>
+        <translation>Data de Monedero (*.dat)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Backup Failed</source>
+        <translation>Copia de Seguridad a fracasado</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>There was an error trying to save the wallet data to the new location.</source>
+        <translation>Hubo un error al tratar de salvar los datos de su monedero a la nueva ubicación.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+76"/>
+        <source>%n second(s)</source>
+        <translation><numerusform>%n segundo</numerusform><numerusform>%n segundos</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n minuto</numerusform><numerusform>%n minutos</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n hora</numerusform><numerusform>%n horas</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <location line="+4"/>
+        <source>%n day(s)</source>
+        <translation><numerusform>%n día</numerusform><numerusform>%n días</numerusform></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>Not staking</source>
+        <translation>No estás &quot;Staking&quot;</translation>
+    </message>
+    <message>
+        <location filename="../bitcoin.cpp" line="+109"/>
+        <source>A fatal error occurred. TillkWDMcoin can no longer continue safely and will quit.</source>
+        <translation>Se ha producido un error fatal. TillkWDMcoin ya no puede continuar de forma segura y cerrará.</translation>
     </message>
 </context>
 <context>
     <name>ClientModel</name>
     <message>
-        <location filename="../clientmodel.cpp" line="+104"/>
+        <location filename="../clientmodel.cpp" line="+90"/>
         <source>Network Alert</source>
         <translation>Alerta de red</translation>
+    </message>
+</context>
+<context>
+    <name>CoinControlDialog</name>
+    <message>
+        <location filename="../forms/coincontroldialog.ui" line="+14"/>
+        <source>Coin Control</source>
+        <translation>Control de Moneda</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Quantity:</source>
+        <translation>Cantidad:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Bytes:</source>
+        <translation>Bytes:</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Amount:</source>
+        <translation>Cantidad:</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Priority:</source>
+        <translation>Prioridad:</translation>
+    </message>
+    <message>
+        <location line="+48"/>
+        <source>Fee:</source>
+        <translation>Tasa:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Low Output:</source>
+        <translation>Envío pequeño:</translation>
+    </message>
+    <message>
+        <location filename="../coincontroldialog.cpp" line="+551"/>
+        <source>no</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <location filename="../forms/coincontroldialog.ui" line="+51"/>
+        <source>After Fee:</source>
+        <translation>Después de tasas:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Change:</source>
+        <translation>Cambio:</translation>
+    </message>
+    <message>
+        <location line="+69"/>
+        <source>(un)select all</source>
+        <translation>(des)marcar todos</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Tree mode</source>
+        <translation>Modo árbol</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>List mode</source>
+        <translation>Modo lista</translation>
+    </message>
+    <message>
+        <location line="+45"/>
+        <source>Amount</source>
+        <translation>Cuantía</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Label</source>
+        <translation>Etiqueta</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Address</source>
+        <translation>Dirección</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Date</source>
+        <translation>Fecha</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Confirmations</source>
+        <translation>Confirmaciones</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirmed</source>
+        <translation>Confirmado</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Priority</source>
+        <translation>Prioridad</translation>
+    </message>
+    <message>
+        <location filename="../coincontroldialog.cpp" line="-515"/>
+        <source>Copy address</source>
+        <translation>Copiar dirección</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy label</source>
+        <translation>Copiar etiqueta</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+26"/>
+        <source>Copy amount</source>
+        <translation>Copiar cuantía</translation>
+    </message>
+    <message>
+        <location line="-25"/>
+        <source>Copy transaction ID</source>
+        <translation>Copiar identificador de transacción</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Copy quantity</source>
+        <translation>Copiar cantidad</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Copy fee</source>
+        <translation>Copiar donación</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation>Copiar después de aplicar donación</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation>Copiar bytes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+        <translation>Copiar prioridad</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation>Copiar envío pequeño</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation>Copiar cambio</translation>
+    </message>
+    <message>
+        <location line="+317"/>
+        <source>highest</source>
+        <translation>lo más alto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>high</source>
+        <translation>alto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium-high</source>
+        <translation>medio-alto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>medium</source>
+        <translation>medio</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>low-medium</source>
+        <translation>bajo-medio</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>low</source>
+        <translation>bajo</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>lowest</source>
+        <translation>lo más bajo</translation>
+    </message>
+    <message>
+        <location line="+155"/>
+        <source>DUST</source>
+        <translation>DUST</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>yes</source>
+        <translation>si</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>This label turns red, if the transaction size is bigger than 10000 bytes.
+
+ This means a fee of at least %1 per kb is required.
+
+ Can vary +/- 1 Byte per input.</source>
+        <translation>Esta etiqueta se convierte en rojo, si el tamaño de la transacción es mayor que 10000 bytes.
+
+Esto significa que se requiere una cuota de al menos el %1 por kb.
+
+Puede variar + / - 1 Byte por entrada.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Transactions with higher priority get more likely into a block.
+
+This label turns red, if the priority is smaller than &quot;medium&quot;.
+
+ This means a fee of at least %1 per kb is required.</source>
+        <translation>Las transacciones con mayor prioridad son más probables en entrar hacia un bloque. 
+
+Esta etiqueta se convierte en rojo, si la prioridad es menor que &quot;medium&quot;.
+
+Esto significa que se requiere una cuota de al menos el %1 por kb.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if any recipient receives an amount smaller than %1.
+
+ This means a fee of at least %2 is required. 
+
+ Amounts below 0.546 times the minimum relay fee are shown as DUST.</source>
+        <translation>Esta etiqueta se convierte en rojo, si cualquier recipiente recibe una cantidad menor que %1.
+
+Esto significa que se requiere una cuota de al menos %2.
+
+Las cantidades inferiores a 0.546 veces la cuota mínima del relé se muestran en forma de DUST.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>This label turns red, if the change is smaller than %1.
+
+ This means a fee of at least %2 is required.</source>
+        <translation>Esta etiqueta se convierte en rojo, si el cambio es menor que %1.
+
+Esto significa que se requiere una cuota de al menos %2.</translation>
+    </message>
+    <message>
+        <location line="+37"/>
+        <location line="+66"/>
+        <source>(no label)</source>
+        <translation>(sin etiqueta)</translation>
+    </message>
+    <message>
+        <location line="-9"/>
+        <source>change from %1 (%2)</source>
+        <translation>Enviar desde %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>(change)</source>
+        <translation>(cambio)</translation>
     </message>
 </context>
 <context>
@@ -701,7 +1027,7 @@ Dirección: %4
     <message>
         <location line="+10"/>
         <source>The label associated with this address book entry</source>
-        <translation>La etiqueta asociada con esta entrada en la libreta</translation>
+        <translation>La etiqueta asociada con esta entrada de la libreta de direcciones</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -711,17 +1037,17 @@ Dirección: %4
     <message>
         <location line="+10"/>
         <source>The address associated with this address book entry. This can only be modified for sending addresses.</source>
-        <translation>La dirección asociada con esta entrada en la guía. Solo puede ser modificada para direcciones de envío.</translation>
+        <translation>La dirección asociada con esta entrada de la libreta de direcciones. Esto sólo puede ser modificada para direcciones de envío.</translation>
     </message>
     <message>
-        <location filename="../editaddressdialog.cpp" line="+21"/>
+        <location filename="../editaddressdialog.cpp" line="+20"/>
         <source>New receiving address</source>
-        <translation>Nueva dirección para recibir</translation>
+        <translation>Nueva dirección de recepción</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>New sending address</source>
-        <translation>Nueva dirección para enviar</translation>
+        <translation>Nueva dirección de envío</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -740,8 +1066,8 @@ Dirección: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid FugueCore address.</source>
-        <translation>La dirección introducida &quot;%1&quot; no es una dirección FugueCore válida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid TillkWDMcoin address.</source>
+        <translation>La dirección introducida &quot;%1&quot; no es una dirección válida de TillkWDMcoin.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -757,15 +1083,15 @@ Dirección: %4
 <context>
     <name>GUIUtil::HelpMessageBox</name>
     <message>
-        <location filename="../guiutil.cpp" line="+424"/>
+        <location filename="../guiutil.cpp" line="+420"/>
         <location line="+12"/>
-        <source>FugueCore-Qt</source>
-        <translation>FugueCore-Qt</translation>
+        <source>TillkWDMcoin-Qt</source>
+        <translation>TillkWDMcoin-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
         <source>version</source>
-        <translation>versión</translation>
+        <translation>Versión</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -775,27 +1101,27 @@ Dirección: %4
     <message>
         <location line="+1"/>
         <source>command-line options</source>
-        <translation>opciones de la línea de órdenes</translation>
+        <translation>opciones de líneas de comandos</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>UI options</source>
-        <translation>Opciones GUI</translation>
+        <translation>opciones del interfaz de usuario</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Set language, for example &quot;de_DE&quot; (default: system locale)</source>
-        <translation>Establecer el idioma, por ejemplo, &quot;es_ES&quot; (predeterminado: configuración regional del sistema)</translation>
+        <translation>Defina el idioma, por ejemplo &quot;de_DE&quot; (predeterminado: región del sistema)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Start minimized</source>
-        <translation>Arrancar minimizado</translation>
+        <translation>Iniciar minimizado</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Show splash screen on startup (default: 1)</source>
-        <translation>Mostrar pantalla de bienvenida en el inicio (predeterminado: 1)</translation>
+        <translation>Mostrar pantalla de bienvenida al iniciar (predeterminado: 1)</translation>
     </message>
 </context>
 <context>
@@ -812,8 +1138,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB.</source>
-        <translation>Tarifa de transacción opcional por kB que ayuda a asegurar que sus transacciones sean procesadas rápidamente. La mayoría de transacciones son de 1kB.</translation>
+        <source>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</source>
+        <translation>Tarifa de transacción opcional por kB que ayuda a asegurarse de que sus transacciones se procesan rápidamente. La mayoría de las transacciones son 1 kB. Cuota de 0.01 recomendada.</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -822,33 +1148,43 @@ Dirección: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start FugueCore after logging in to the system.</source>
-        <translation>Iniciar FugueCore automáticamente al encender el sistema.</translation>
+        <source>Reserved amount does not participate in staking and is therefore spendable at any time.</source>
+        <translation>Cantidad reservada no participa en el &quot;Staking&quot; y por lo tanto se puede gastar en cualquier momento.</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Reserve</source>
+        <translation>Reserva</translation>
+    </message>
+    <message>
+        <location line="+31"/>
+        <source>Automatically start TillkWDMcoin after logging in to the system.</source>
+        <translation>Iniciar TillkWDMcoin automáticamente después de entrar en el sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start FugueCore on system login</source>
-        <translation>&amp;Iniciar FugueCore al iniciar el sistema</translation>
+        <source>&amp;Start TillkWDMcoin on system login</source>
+        <translation>&amp;Iniciar TillkWDMcoin al inicio del sistema</translation>
     </message>
     <message>
-        <location line="+35"/>
-        <source>Reset all client options to default.</source>
-        <translation>Restablecer todas las opciones del cliente a las predeterminadas.</translation>
+        <location line="+7"/>
+        <source>Detach block and address databases at shutdown. This means they can be moved to another data directory, but it slows down shutdown. The wallet is always detached.</source>
+        <translation>Separe el bloque y las bases de datos de direcciones al apagar el equipo. Esto significa que se puede mover a otro directorio de datos, pero desacelera el apagado. El monedero siempre está separado.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Reset Options</source>
-        <translation>&amp;Restablecer opciones</translation>
+        <source>&amp;Detach databases at shutdown</source>
+        <translation>&amp;Separe la bases de datos al apagar el equipo</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+21"/>
         <source>&amp;Network</source>
         <translation>&amp;Red</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the FugueCore client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente FugueCore en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the TillkWDMcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto de cliente TillkWDMcoin en el router. Esto sólo funciona cuando el router es compatible con UPnP y está habilitado.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -857,13 +1193,13 @@ Dirección: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the FugueCore network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Conectar a la red FugueCore a través de un proxy SOCKS (ej. para conectar con la red Tor)</translation>
+        <source>Connect to the TillkWDMcoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Conéctese a la red de TillkWDMcoin a través de un SOCKS proxy (e.g. cuando se conecta a través de Tor)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Connect through SOCKS proxy:</source>
-        <translation>&amp;Conectar a través de un proxy SOCKS:</translation>
+        <translation>&amp;Conéctese a través de un SOCKS proxy</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -873,7 +1209,7 @@ Dirección: %4
     <message>
         <location line="+19"/>
         <source>IP address of the proxy (e.g. 127.0.0.1)</source>
-        <translation>Dirección IP del proxy (ej. 127.0.0.1)</translation>
+        <translation>Dirección IP del proxy (e.g. 127.0.0.1)</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -893,7 +1229,7 @@ Dirección: %4
     <message>
         <location line="+13"/>
         <source>SOCKS version of the proxy (e.g. 5)</source>
-        <translation>Versión del proxy SOCKS (ej. 5)</translation>
+        <translation>Versión SOCKS del proxy (ej. 5)</translation>
     </message>
     <message>
         <location line="+36"/>
@@ -913,7 +1249,7 @@ Dirección: %4
     <message>
         <location line="+7"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>Minimizar en lugar de salir de la aplicación al cerrar la ventana.Cuando esta opción está activa, la aplicación solo se puede cerrar seleccionando Salir desde el menú.</translation>
+        <translation>Minimizar en lugar de salir de la aplicación al cerrar la ventana. Cuando esta opción está activa, la aplicación solo se puede cerrar seleccionando Salir desde el menú.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -932,8 +1268,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting FugueCore.</source>
-        <translation>El idioma de la interfaz de usuario puede establecerse aquí. Este ajuste se aplicará cuando se reinicie FugueCore.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting TillkWDMcoin.</source>
+        <translation>El idioma del interfaz de usuario se puede configurar aquí. Esta configuración se aplicará después de reiniciar TillkWDMcoin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,17 +1279,27 @@ Dirección: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Elegir la subdivisión predeterminada para mostrar cantidades en la interfaz y cuando se envían monedas.</translation>
+        <translation>Elegir la subdivisión predeterminada para mostrar cantidades en la interfaz y cuando se envían bitcoins.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show FugueCore addresses in the transaction list or not.</source>
-        <translation>Mostrar o no las direcciones FugueCore en la lista de transacciones.</translation>
+        <source>Whether to show TillkWDMcoin addresses in the transaction list or not.</source>
+        <translation>Tanto para mostrar direcciones de TillkWDMcoin en la lista de transacciones o no.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Display addresses in transaction list</source>
         <translation>&amp;Mostrar las direcciones en la lista de transacciones</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Whether to show coin control features or not.</source>
+        <translation>Mostrar o no funcionalidad de Coin Control</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Display coin &amp;control features (experts only!)</source>
+        <translation>Mostrar moneda y Coin Control (expertos solamente!)</translation>
     </message>
     <message>
         <location line="+71"/>
@@ -971,36 +1317,21 @@ Dirección: %4
         <translation>&amp;Aplicar</translation>
     </message>
     <message>
-        <location filename="../optionsdialog.cpp" line="+53"/>
+        <location filename="../optionsdialog.cpp" line="+55"/>
         <source>default</source>
         <translation>predeterminado</translation>
     </message>
     <message>
-        <location line="+130"/>
-        <source>Confirm options reset</source>
-        <translation>Confirme el restablecimiento de las opciones</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Some settings may require a client restart to take effect.</source>
-        <translation>Algunas configuraciones pueden requerir un reinicio del cliente para que sean efectivas.</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Do you want to proceed?</source>
-        <translation>¿Quiere proceder?</translation>
-    </message>
-    <message>
-        <location line="+42"/>
+        <location line="+149"/>
         <location line="+9"/>
         <source>Warning</source>
-        <translation>Aviso</translation>
+        <translation>Advertencia</translation>
     </message>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting FugueCore.</source>
-        <translation>Esta configuración tendrá efecto tras reiniciar FugueCore.</translation>
+        <source>This setting will take effect after restarting TillkWDMcoin.</source>
+        <translation>Esta configuración se aplicará después de reiniciar TillkWDMcoin.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1016,28 +1347,38 @@ Dirección: %4
         <translation>Desde</translation>
     </message>
     <message>
-        <location line="+50"/>
-        <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FugueCore network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red FugueCore después de que se haya establecido una conexión , pero este proceso aún no se ha completado.</translation>
+        <location line="+33"/>
+        <location line="+231"/>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TillkWDMcoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar fuera de fecha. Su monedera se sincroniza automáticamente con la red TillkWDMcoin después de que se establece una conexión, pero este proceso no se ha completado todavía.</translation>
     </message>
     <message>
-        <location line="-124"/>
-        <source>Balance:</source>
-        <translation>Saldo:</translation>
+        <location line="-160"/>
+        <source>Stake:</source>
+        <translation>Stake:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Unconfirmed:</source>
-        <translation>No confirmado(s):</translation>
+        <translation>Sin confirmar:</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="-107"/>
         <source>Wallet</source>
         <translation>Monedero</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+49"/>
+        <source>Spendable:</source>
+        <translation>Gastable:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current spendable balance</source>
+        <translation>Su balance actual gastable</translation>
+    </message>
+    <message>
+        <location line="+71"/>
         <source>Immature:</source>
         <translation>No disponible:</translation>
     </message>
@@ -1047,33 +1388,35 @@ Dirección: %4
         <translation>Saldo recién minado que aún no está disponible.</translation>
     </message>
     <message>
+        <location line="+20"/>
+        <source>Total:</source>
+        <translation>Total:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Your current total balance</source>
+        <translation>Su balance actual total</translation>
+    </message>
+    <message>
         <location line="+46"/>
         <source>&lt;b&gt;Recent transactions&lt;/b&gt;</source>
         <translation>&lt;b&gt;Movimientos recientes&lt;/b&gt;</translation>
     </message>
     <message>
-        <location line="-101"/>
-        <source>Your current balance</source>
-        <translation>Su saldo actual</translation>
-    </message>
-    <message>
-        <location line="+29"/>
+        <location line="-108"/>
         <source>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</source>
-        <translation>Total de las transacciones que faltan por confirmar y que no contribuyen al saldo actual</translation>
+        <translation>Total de transacciones que aún no se han confirmado, y aún no cuentan para el balance actual</translation>
     </message>
     <message>
-        <location filename="../overviewpage.cpp" line="+116"/>
+        <location line="-29"/>
+        <source>Total of coins that was staked, and do not yet count toward the current balance</source>
+        <translation>Total de las monedas que fueron &quot;Staked&quot;, y aún no cuentan para el balance actual</translation>
+    </message>
+    <message>
+        <location filename="../overviewpage.cpp" line="+113"/>
         <location line="+1"/>
         <source>out of sync</source>
         <translation>desincronizado</translation>
-    </message>
-</context>
-<context>
-    <name>PaymentServer</name>
-    <message>
-        <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>No se pudo iniciar bitcoin: manejador de pago-al-clic</translation>
     </message>
 </context>
 <context>
@@ -1081,12 +1424,12 @@ Dirección: %4
     <message>
         <location filename="../forms/qrcodedialog.ui" line="+14"/>
         <source>QR Code Dialog</source>
-        <translation>Diálogo de códigos QR</translation>
+        <translation>Código Diálogo QR</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>Request Payment</source>
-        <translation>Solicitud de pago</translation>
+        <translation>Solicitar Pago</translation>
     </message>
     <message>
         <location line="+56"/>
@@ -1106,22 +1449,22 @@ Dirección: %4
     <message>
         <location line="+71"/>
         <source>&amp;Save As...</source>
-        <translation>&amp;Guardar como...</translation>
+        <translation>&amp;Guardar como....</translation>
     </message>
     <message>
         <location filename="../qrcodedialog.cpp" line="+62"/>
         <source>Error encoding URI into QR Code.</source>
-        <translation>Error al codificar la URI en el código QR.</translation>
+        <translation>Error codificando URI en código QR​​.</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>The entered amount is invalid, please check.</source>
-        <translation>La cantidad introducida es inválida. Compruébela, por favor.</translation>
+        <translation>La cantidad introducida es inválida, compruebe por favor.</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI esultante demasiado larga. Intente reducir el texto de la etiqueta / mensaje.</translation>
+        <translation>La URI es demasiado larga, pruebe a acortar el texto para la etiqueta / mensaje</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -1131,7 +1474,7 @@ Dirección: %4
     <message>
         <location line="+0"/>
         <source>PNG Images (*.png)</source>
-        <translation>Imágenes PNG (*.png)</translation>
+        <translation>Imagenes PNG (*.png)</translation>
     </message>
 </context>
 <context>
@@ -1151,7 +1494,7 @@ Dirección: %4
         <location line="+53"/>
         <location line="+23"/>
         <location line="+23"/>
-        <location filename="../rpcconsole.cpp" line="+339"/>
+        <location filename="../rpcconsole.cpp" line="+348"/>
         <source>N/A</source>
         <translation>N/D</translation>
     </message>
@@ -1188,7 +1531,7 @@ Dirección: %4
     <message>
         <location line="+23"/>
         <source>On testnet</source>
-        <translation>En la red de pruebas</translation>
+        <translation>En testnet</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -1218,12 +1561,12 @@ Dirección: %4
     <message>
         <location line="+16"/>
         <source>Command-line options</source>
-        <translation>Opciones de la línea de órdenes</translation>
+        <translation>Opciones de línea de comandos</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the FugueCore-Qt help message to get a list with possible FugueCore command-line options.</source>
-        <translation>Mostrar el mensaje de ayuda de FugueCore-Qt que enumera las opciones disponibles de línea de órdenes para FugueCore.</translation>
+        <source>Show the TillkWDMcoin-Qt help message to get a list with possible TillkWDMcoin command-line options.</source>
+        <translation>Mostrar el mensaje de ayuda de TillkWDMcoin-Qt para obtener una lista con las posibles opciones de línea de comandos para TillkWDMcoin.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1242,13 +1585,13 @@ Dirección: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>FugueCore - Debug window</source>
-        <translation>FugueCore - Ventana de depuración</translation>
+        <source>TillkWDMcoin - Debug window</source>
+        <translation>TillkWDMcoin - Ventana de depuración</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>FugueCore Core</source>
-        <translation>Núcleo de FugueCore</translation>
+        <source>TillkWDMcoin Core</source>
+        <translation>Núcleo TillkWDMcoin</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1257,8 +1600,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the FugueCore debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Abrir el archivo de registro de depuración en el directorio actual de datos. Esto puede llevar varios segundos para archivos de registro grandes.</translation>
+        <source>Open the TillkWDMcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Abre el archivo de registro de TillkWDMcoin del directorio de datos actual. Esto puede tardar algunos segundos para archivos grandes.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1266,14 +1609,14 @@ Dirección: %4
         <translation>Borrar consola</translation>
     </message>
     <message>
-        <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the FugueCore RPC console.</source>
-        <translation>Bienvenido a la consola RPC de FugueCore</translation>
+        <location filename="../rpcconsole.cpp" line="-33"/>
+        <source>Welcome to the TillkWDMcoin RPC console.</source>
+        <translation>Bienvenido a la consola RPC de TillkWDMcoin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Use las flechas arriba y abajo para navegar por el historial y &lt;b&gt;Control+L&lt;/b&gt; para limpiar la pantalla.</translation>
+        <translation>Use las flechas arriba y abajo para navegar por el historial y &lt;b&gt;Control+L&lt;/b&gt; para vaciar la pantalla.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1285,7 +1628,7 @@ Dirección: %4
     <name>SendCoinsDialog</name>
     <message>
         <location filename="../forms/sendcoinsdialog.ui" line="+14"/>
-        <location filename="../sendcoinsdialog.cpp" line="+124"/>
+        <location filename="../sendcoinsdialog.cpp" line="+182"/>
         <location line="+5"/>
         <location line="+5"/>
         <location line="+5"/>
@@ -1293,12 +1636,101 @@ Dirección: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Enviar monedas</translation>
+        <translation>Enviar bitcoins</translation>
+    </message>
+    <message>
+        <location line="+76"/>
+        <source>Coin Control Features</source>
+        <translation>Características de Coin Control</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Inputs...</source>
+        <translation>Entradas...</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>automatically selected</source>
+        <translation>Seleccionado automáticamente</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>Insufficient funds!</source>
+        <translation>Fondos insuficientes!</translation>
+    </message>
+    <message>
+        <location line="+77"/>
+        <source>Quantity:</source>
+        <translation>Cantidad:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+35"/>
+        <source>0</source>
+        <translation>0</translation>
+    </message>
+    <message>
+        <location line="-19"/>
+        <source>Bytes:</source>
+        <translation>Bytes:</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Amount:</source>
+        <translation>Cuantía:</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <location line="+86"/>
+        <location line="+86"/>
+        <location line="+32"/>
+        <source>0.00 BC</source>
+        <translation>123.456 BC {0.00 ?}</translation>
+    </message>
+    <message>
+        <location line="-191"/>
+        <source>Priority:</source>
+        <translation>Prioridad:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>medium</source>
+        <translation>medio</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Fee:</source>
+        <translation>Tasa:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Low Output:</source>
+        <translation>Envío pequeño:</translation>
+    </message>
+    <message>
+        <location line="+19"/>
+        <source>no</source>
+        <translation>no</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>After Fee:</source>
+        <translation>Después de tasas:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
+        <source>Change</source>
+        <translation>Cambio</translation>
     </message>
     <message>
         <location line="+50"/>
+        <source>custom change address</source>
+        <translation>dirección de cambio personalizada</translation>
+    </message>
+    <message>
+        <location line="+106"/>
         <source>Send to multiple recipients at once</source>
-        <translation>Enviar a multiples destinatarios de una vez</translation>
+        <translation>Enviar a múltiples destinatarios de una vez</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1308,22 +1740,22 @@ Dirección: %4
     <message>
         <location line="+20"/>
         <source>Remove all transaction fields</source>
-        <translation>Eliminar todos los campos de las transacciones</translation>
+        <translation>Elimina todos los campos de transacciones</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Clear &amp;All</source>
-        <translation>Limpiar &amp;todo</translation>
+        <translation>Vaciar &amp;todo</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+28"/>
         <source>Balance:</source>
         <translation>Saldo:</translation>
     </message>
     <message>
-        <location line="+10"/>
-        <source>123.456 BTC</source>
-        <translation>123.456 BTC</translation>
+        <location line="+16"/>
+        <source>123.456 BC</source>
+        <translation>123.456 BC</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -1336,19 +1768,64 @@ Dirección: %4
         <translation>&amp;Enviar</translation>
     </message>
     <message>
-        <location filename="../sendcoinsdialog.cpp" line="-59"/>
+        <location filename="../sendcoinsdialog.cpp" line="-173"/>
+        <source>Enter a TillkWDMcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introduce una dirección TillkWDMcoin (p.ej. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>Copy quantity</source>
+        <translation>Copiar cantidad</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy amount</source>
+        <translation>Copiar cuantía</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy fee</source>
+        <translation>Copiar donación</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy after fee</source>
+        <translation>Copiar después de aplicar donación</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy bytes</source>
+        <translation>Copiar bytes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy priority</source>
+        <translation>Copiar prioridad</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy low output</source>
+        <translation>Copiar envío pequeño</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Copy change</source>
+        <translation>Copiar Cambio</translation>
+    </message>
+    <message>
+        <location line="+86"/>
         <source>&lt;b&gt;%1&lt;/b&gt; to %2 (%3)</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; a %2 (%3)</translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt; para %2 (%3)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Confirmar el envío de monedas</translation>
+        <translation>Confirmar el envío de bitcoins</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Are you sure you want to send %1?</source>
-        <translation>¿Está seguro de que desea enviar %1?</translation>
+        <translation>Estás seguro que quieres enviar %1?</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1356,7 +1833,7 @@ Dirección: %4
         <translation>y</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="+29"/>
         <source>The recipient address is not valid, please recheck.</source>
         <translation>La dirección de recepción no es válida, compruébela de nuevo.</translation>
     </message>
@@ -1382,13 +1859,28 @@ Dirección: %4
     </message>
     <message>
         <location line="+5"/>
-        <source>Error: Transaction creation failed!</source>
-        <translation>Error: ¡Ha fallado la creación de la transacción!</translation>
+        <source>Error: Transaction creation failed.</source>
+        <translation>Error: Falla al crear la transacción.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Error: transacción rechazada. Puede haber ocurrido si alguna de las monedas ya estaba gastada o si ha usado una copia de wallet.dat y las monedas se gastaron en la copia pero no se han marcado así aquí.</translation>
+        <translation>Error: La transacción ha sido rechazada. Esto puede ocurrir si algunas de sus monedas en el monedero ya se gastaron, por ejemplo, si se usa una copia del wallet.dat y se gastaron las monedas de la copia pero no se han marcado como gastadas aquí.</translation>
+    </message>
+    <message>
+        <location line="+251"/>
+        <source>WARNING: Invalid TillkWDMcoin address</source>
+        <translation>ADVERTENCIA: Dirección TillkWDMcoin inválida</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>(no label)</source>
+        <translation>(sin etiqueta)</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>WARNING: unknown change address</source>
+        <translation>ADVERTENCIA: dirección de cambio desconocida</translation>
     </message>
 </context>
 <context>
@@ -1396,7 +1888,7 @@ Dirección: %4
     <message>
         <location filename="../forms/sendcoinsentry.ui" line="+14"/>
         <source>Form</source>
-        <translation>Envío</translation>
+        <translation>Formulario</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -1409,25 +1901,25 @@ Dirección: %4
         <translation>&amp;Pagar a:</translation>
     </message>
     <message>
-        <location line="+34"/>
-        <source>The address to send the payment to (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>La dirección a la que enviar el pago (p. ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
-    </message>
-    <message>
-        <location line="+60"/>
-        <location filename="../sendcoinsentry.cpp" line="+26"/>
+        <location line="+24"/>
+        <location filename="../sendcoinsentry.cpp" line="+25"/>
         <source>Enter a label for this address to add it to your address book</source>
         <translation>Etiquete esta dirección para añadirla a la libreta</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+9"/>
         <source>&amp;Label:</source>
         <translation>&amp;Etiqueta:</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+18"/>
+        <source>The address to send the payment to  (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>La dirección a la que se quiere enviar el pago (p.ej. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Choose address from address book</source>
-        <translation>Elija una dirección de la libreta de direcciones</translation>
+        <translation>Elije dirección de la libreta de direcciones</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1447,12 +1939,12 @@ Dirección: %4
     <message>
         <location line="+7"/>
         <source>Remove this recipient</source>
-        <translation>Eliminar destinatario</translation>
+        <translation>Elimina este beneficiario</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a FugueCore address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Introduzca una dirección FugueCore (ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a TillkWDMcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introduce una dirección TillkWDMcoin (p.ej. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
 </context>
 <context>
@@ -1464,33 +1956,34 @@ Dirección: %4
     </message>
     <message>
         <location line="+13"/>
+        <location line="+124"/>
         <source>&amp;Sign Message</source>
         <translation>&amp;Firmar mensaje</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-118"/>
         <source>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Puede firmar mensajes con sus direcciones para demostrar que las posee. Tenga cuidado de no firmar cualquier cosa vaga, ya que los ataques de phishing pueden tratar de engañarle para suplantar su identidad. Firme solo declaraciones totalmente detalladas con las que usted esté de acuerdo.</translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The address to sign the message with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>La dirección con la que firmar el mensaje (ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address to sign the message with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>La dirección a firmar con un mensaje (p.ej. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+10"/>
-        <location line="+213"/>
+        <location line="+203"/>
         <source>Choose an address from the address book</source>
-        <translation>Elija una dirección de la libreta de direcciones</translation>
+        <translation>Elije una dirección de la libreta de direcciones</translation>
     </message>
     <message>
-        <location line="-203"/>
-        <location line="+213"/>
+        <location line="-193"/>
+        <location line="+203"/>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
-        <location line="-203"/>
+        <location line="-193"/>
         <source>Paste address from clipboard</source>
         <translation>Pegar dirección desde portapapeles</translation>
     </message>
@@ -1505,71 +1998,57 @@ Dirección: %4
         <translation>Introduzca el mensaje que desea firmar aquí</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Signature</source>
-        <translation>Firma</translation>
-    </message>
-    <message>
-        <location line="+27"/>
+        <location line="+24"/>
         <source>Copy the current signature to the system clipboard</source>
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this FugueCore address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección FugueCore</translation>
+        <source>Sign the message to prove you own this TillkWDMcoin address</source>
+        <translation>Firma el mensaje para demostrar que posees esta dirección TillkWDMcoin.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Sign &amp;Message</source>
-        <translation>Firmar &amp;mensaje</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Reset all sign message fields</source>
-        <translation>Limpiar todos los campos de la firma de mensaje</translation>
+        <translation>Vaciar todos los campos de la firma de mensaje</translation>
     </message>
     <message>
         <location line="+3"/>
         <location line="+146"/>
         <source>Clear &amp;All</source>
-        <translation>Limpiar &amp;todo</translation>
+        <translation>Vaciar &amp;todo</translation>
     </message>
     <message>
         <location line="-87"/>
+        <location line="+70"/>
         <source>&amp;Verify Message</source>
         <translation>&amp;Verificar mensaje</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="-64"/>
         <source>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</source>
         <translation>Introduzca la dirección para la firma, el mensaje (asegurándose de copiar tal cual los saltos de línea, espacios, tabulaciones, etc.) y la firma a continuación para verificar el mensaje. Tenga cuidado de no asumir más información de lo que dice el propio mensaje firmado para evitar fraudes basados en ataques de tipo man-in-the-middle.</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>The address the message was signed with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>La dirección con la que se firmó el mensaje (ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>La dirección firmada con un mensaje (p.ej. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified FugueCore address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección FugueCore indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified TillkWDMcoin address</source>
+        <translation>Verifique el mensaje para asegurarse de que se firmó con la dirección TillkWDMcoin especificada.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Verify &amp;Message</source>
-        <translation>Verificar &amp;mensaje</translation>
-    </message>
-    <message>
-        <location line="+14"/>
+        <location line="+17"/>
         <source>Reset all verify message fields</source>
-        <translation>Limpiar todos los campos de la verificación de mensaje</translation>
+        <translation>Vaciar todos los campos de la verificación de mensaje</translation>
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a FugueCore address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Introduzca una dirección FugueCore (ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a TillkWDMcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Introduce una dirección TillkWDMcoin (p.ej B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1578,8 +2057,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter FugueCore signature</source>
-        <translation>Introduzca una firma FugueCore</translation>
+        <source>Enter TillkWDMcoin signature</source>
+        <translation>Introduce la firma TillkWDMcoin</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1649,27 +2128,24 @@ Dirección: %4
     </message>
 </context>
 <context>
-    <name>SplashScreen</name>
-    <message>
-        <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The FugueCore developers</source>
-        <translation>Los programadores FugueCore</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>[testnet]</source>
-        <translation>[testnet]</translation>
-    </message>
-</context>
-<context>
     <name>TransactionDesc</name>
     <message>
-        <location filename="../transactiondesc.cpp" line="+20"/>
+        <location filename="../transactiondesc.cpp" line="+19"/>
         <source>Open until %1</source>
         <translation>Abierto hasta %1</translation>
     </message>
+    <message numerus="yes">
+        <location line="-2"/>
+        <source>Open for %n block(s)</source>
+        <translation><numerusform>Abierto para %n bloque</numerusform><numerusform>Abierto para %n bloques</numerusform></translation>
+    </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
+        <source>conflicted</source>
+        <translation>en conflicto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>%1/offline</source>
         <translation>%1/fuera de línea</translation>
     </message>
@@ -1786,8 +2262,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Las monedas generadas deben esperar 120 bloques antes de que se puedan gastar. Cuando se generó este bloque, se emitió a la red para ser agregado a la cadena de bloques. Si no consigue incorporarse a la cadena, su estado cambiará a &quot;no aceptado&quot; y las monedas no se podrán gastar. Esto puede ocurrir ocasionalmente si otro nodo genera un bloque casi al mismo tiempo que el suyo.</translation>
+        <source>Generated coins must mature 210 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
+        <translation>Las monedas generadas deben madurar 510 bloques antes de que puedan gastarse. Cuando generaste este bloque, este fue transmitido a la red para ser añadido a la cadena de bloques. Si falla al introducirse en la cadena, su estado cambiará a &quot;no aceptado&quot; y no se podrá gastar. Esto ocasionalmente puede ocurrir si otro nodo genera un bloque a unos segundos que el tuyo.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1800,7 +2276,7 @@ Dirección: %4
         <translation>Transacción</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
         <source>Inputs</source>
         <translation>entradas</translation>
     </message>
@@ -1820,17 +2296,12 @@ Dirección: %4
         <translation>falso</translation>
     </message>
     <message>
-        <location line="-209"/>
+        <location line="-211"/>
         <source>, has not been successfully broadcast yet</source>
         <translation>, todavía no se ha sido difundido satisfactoriamente</translation>
     </message>
-    <message numerus="yes">
-        <location line="-35"/>
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>Abrir para %n bloque más</numerusform><numerusform>Abrir para %n bloques más</numerusform></translation>
-    </message>
     <message>
-        <location line="+70"/>
+        <location line="+35"/>
         <source>unknown</source>
         <translation>desconocido</translation>
     </message>
@@ -1851,7 +2322,7 @@ Dirección: %4
 <context>
     <name>TransactionTableModel</name>
     <message>
-        <location filename="../transactiontablemodel.cpp" line="+225"/>
+        <location filename="../transactiontablemodel.cpp" line="+226"/>
         <source>Date</source>
         <translation>Fecha</translation>
     </message>
@@ -1870,38 +2341,48 @@ Dirección: %4
         <source>Amount</source>
         <translation>Cantidad</translation>
     </message>
-    <message numerus="yes">
-        <location line="+57"/>
-        <source>Open for %n more block(s)</source>
-        <translation><numerusform>Abrir para %n bloque más</numerusform><numerusform>Abrir para %n bloques más</numerusform></translation>
-    </message>
     <message>
-        <location line="+3"/>
+        <location line="+60"/>
         <source>Open until %1</source>
         <translation>Abierto hasta %1</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Offline (%1 confirmations)</source>
-        <translation>Fuera de línea (%1 confirmaciones)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Unconfirmed (%1 of %2 confirmations)</source>
-        <translation>No confirmado (%1 de %2 confirmaciones)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+12"/>
         <source>Confirmed (%1 confirmations)</source>
         <translation>Confirmado (%1 confirmaciones)</translation>
     </message>
     <message numerus="yes">
-        <location line="+8"/>
-        <source>Mined balance will be available when it matures in %n more block(s)</source>
-        <translation><numerusform>El saldo recién minado estará disponible cuando venza el plazo en %n bloque más</numerusform><numerusform>El saldo recién minado estará disponible cuando venza el plazo en %n bloques más</numerusform></translation>
+        <location line="-15"/>
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Abrir para %n bloque más</numerusform><numerusform>Abrir para %n bloques más</numerusform></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <source>Offline</source>
+        <translation>Sin conexión</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unconfirmed</source>
+        <translation>Sin confirmar</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Confirming (%1 of %2 recommended confirmations)</source>
+        <translation>Confirmando (%1 de %2 confirmaciones recomendadas)</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Conflicted</source>
+        <translation>En conflicto</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <translation>No vencidos (%1 confirmaciones. Estarán disponibles al cabo de %2)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>
         <translation>Este bloque no ha sido recibido por otros nodos y probablemente no sea aceptado!</translation>
     </message>
@@ -1911,7 +2392,7 @@ Dirección: %4
         <translation>Generado pero no aceptado</translation>
     </message>
     <message>
-        <location line="+43"/>
+        <location line="+42"/>
         <source>Received with</source>
         <translation>Recibido con</translation>
     </message>
@@ -1941,7 +2422,7 @@ Dirección: %4
         <translation>(nd)</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+190"/>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
         <translation>Estado de transacción. Pasa el ratón sobre este campo para ver el número de confirmaciones.</translation>
     </message>
@@ -1969,7 +2450,7 @@ Dirección: %4
 <context>
     <name>TransactionView</name>
     <message>
-        <location filename="../transactionview.cpp" line="+52"/>
+        <location filename="../transactionview.cpp" line="+55"/>
         <location line="+16"/>
         <source>All</source>
         <translation>Todo</translation>
@@ -2070,9 +2551,9 @@ Dirección: %4
         <translation>Mostrar detalles de la transacción</translation>
     </message>
     <message>
-        <location line="+139"/>
+        <location line="+144"/>
         <source>Export Transaction Data</source>
-        <translation>Exportar datos de la transacción</translation>
+        <translation>Exportar datos de transacción</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2117,12 +2598,12 @@ Dirección: %4
     <message>
         <location line="+4"/>
         <source>Error exporting</source>
-        <translation>Error exportando</translation>
+        <translation>Error al exportar</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Could not write to file %1.</source>
-        <translation>No se pudo escribir en el archivo %1.</translation>
+        <translation>No se puede escribir en el archivo %1.</translation>
     </message>
     <message>
         <location line="+100"/>
@@ -2138,100 +2619,60 @@ Dirección: %4
 <context>
     <name>WalletModel</name>
     <message>
-        <location filename="../walletmodel.cpp" line="+193"/>
-        <source>Send Coins</source>
-        <translation>Enviar monedas</translation>
-    </message>
-</context>
-<context>
-    <name>WalletView</name>
-    <message>
-        <location filename="../walletview.cpp" line="+42"/>
-        <source>&amp;Export</source>
-        <translation>&amp;Exportar</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Export the data in the current tab to a file</source>
-        <translation>Exportar a un archivo los datos de esta pestaña</translation>
-    </message>
-    <message>
-        <location line="+193"/>
-        <source>Backup Wallet</source>
-        <translation>Respaldo de monedero</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Wallet Data (*.dat)</source>
-        <translation>Datos de monedero (*.dat)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Backup Failed</source>
-        <translation>Ha fallado el respaldo</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>There was an error trying to save the wallet data to the new location.</source>
-        <translation>Se ha producido un error al intentar guardar los datos del monedero en la nueva ubicación.</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Backup Successful</source>
-        <translation>Se ha completado con éxito la copia de respaldo</translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>The wallet data was successfully saved to the new location.</source>
-        <translation>Los datos del monedero se han guardado con éxito en la nueva ubicación.</translation>
+        <location filename="../walletmodel.cpp" line="+206"/>
+        <source>Sending...</source>
+        <translation>Enviando...</translation>
     </message>
 </context>
 <context>
     <name>bitcoin-core</name>
     <message>
-        <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>FugueCore version</source>
-        <translation>Versión de FugueCore</translation>
+        <location filename="../bitcoinstrings.cpp" line="+33"/>
+        <source>TillkWDMcoin version</source>
+        <translation>versión TillkWDMcoin</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+1"/>
         <source>Usage:</source>
         <translation>Uso:</translation>
     </message>
     <message>
-        <location line="-29"/>
-        <source>Send command to -server or bitcoind</source>
-        <translation>Envíar comando a -server o bitcoind</translation>
+        <location line="+1"/>
+        <source>Send command to -server or TillkWDMcoind</source>
+        <translation>Envía un comando a -server o TillkWDMcoind</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="+1"/>
         <source>List commands</source>
         <translation>Muestra comandos
 </translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="+1"/>
         <source>Get help for a command</source>
         <translation>Recibir ayuda para un comando
 </translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+2"/>
         <source>Options:</source>
         <translation>Opciones:
 </translation>
     </message>
     <message>
-        <location line="+24"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especificar archivo de configuración (predeterminado: bitcoin.conf)
-</translation>
+        <location line="+2"/>
+        <source>Specify configuration file (default: TillkWDMcoin.conf)</source>
+        <translation>Especifica un archivo de configuración (por defecto: TillkWDMcoin.conf)</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especificar archivo pid (predeterminado: bitcoin.pid)
-</translation>
+        <location line="+1"/>
+        <source>Specify pid file (default: TillkWDMcoind.pid)</source>
+        <translation>Especifica un archivo pid (por defecto: TillkWDMcoind.pid)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Specify wallet file (within data directory)</source>
+        <translation>Especificar archivo de monedero (dentro del directorio de datos)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2239,370 +2680,205 @@ Dirección: %4
         <translation>Especificar directorio para los datos</translation>
     </message>
     <message>
-        <location line="-9"/>
+        <location line="+2"/>
         <source>Set database cache size in megabytes (default: 25)</source>
         <translation>Establecer el tamaño de caché de la base de datos en megabytes (predeterminado: 25)</translation>
     </message>
     <message>
-        <location line="-28"/>
-        <source>Listen for connections on &lt;port&gt; (default: 8333 or testnet: 18333)</source>
-        <translation>Escuchar conexiones en &lt;puerto&gt; (predeterminado: 8333 o testnet: 18333)</translation>
+        <location line="+1"/>
+        <source>Set database disk log size in megabytes (default: 100)</source>
+        <translation>Ajusta el tamaño de la base de datos del registro en megabytes (por defecto: 100)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+6"/>
+        <source>Listen for connections on &lt;port&gt; (default: 15714 or testnet: 25714)</source>
+        <translation>Escuchando conexiones en el puerto &lt;port&gt; (por defecto: 15714 o testnet: 25714)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Maintain at most &lt;n&gt; connections to peers (default: 125)</source>
         <translation>Mantener como máximo &lt;n&gt; conexiones a pares (predeterminado: 125)</translation>
     </message>
     <message>
-        <location line="-48"/>
+        <location line="+3"/>
         <source>Connect to a node to retrieve peer addresses, and disconnect</source>
         <translation>Conectar a un nodo para obtener direcciones de pares y desconectar</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+1"/>
         <source>Specify your own public address</source>
         <translation>Especifique su propia dirección pública</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+5"/>
+        <source>Bind to given address. Use [host]:port notation for IPv6</source>
+        <translation>Enlazar a la dirección dada. Utilice la notación [host]:puerto para IPv6</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Stake your coins to support network and gain reward (default: 1)</source>
+        <translation>Pon tus monedas en participación &quot;Stake&quot; para dar soporte a la red y ganar alguna recompensa (por defecto: 1)</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Threshold for disconnecting misbehaving peers (default: 100)</source>
         <translation>Umbral para la desconexión de pares con mal comportamiento (predeterminado: 100)</translation>
     </message>
     <message>
-        <location line="-134"/>
+        <location line="+1"/>
         <source>Number of seconds to keep misbehaving peers from reconnecting (default: 86400)</source>
         <translation>Número de segundos en que se evita la reconexión de pares con mal comportamiento (predeterminado: 86400)</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-44"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv4: %s</source>
         <translation>Ha ocurrido un error al configurar el puerto RPC %u para escucha en IPv4: %s</translation>
     </message>
     <message>
-        <location line="+27"/>
-        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 8332 or testnet: 18332)</source>
-        <translation>Escuchar conexiones JSON-RPC en &lt;puerto&gt; (predeterminado: 8332 o testnet:18332)</translation>
+        <location line="+51"/>
+        <source>Detach block and address databases. Increases shutdown time (default: 0)</source>
+        <translation>Separa el bloque y la base de datos de direcciones. Aumenta el tiempo de apagado (por defecto: 0)</translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+109"/>
+        <source>Error: The transaction was rejected.  This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <translation>Error: La transacción ha sido rechazada. Esto puede ocurrir si algunas de sus monedas en el monedero ya se gastaron, por ejemplo, si se usa una copia del wallet.dat y se gastaron las monedas de la copia pero no se han marcado como gastadas aquí.</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds  </source>
+        <translation>Error: Esta transacción requiere de una comisión de transacción de al menos %s debido a su tamaño, complejidad, o uso de fondos recibidos recientemente.</translation>
+    </message>
+    <message>
+        <location line="-87"/>
+        <source>Listen for JSON-RPC connections on &lt;port&gt; (default: 15715 or testnet: 25715)</source>
+        <translation>Escuchar conexiones JSON-RPC en &lt;port&gt; (predeterminado: 15715 o testnet: 25715)</translation>
+    </message>
+    <message>
+        <location line="-11"/>
         <source>Accept command line and JSON-RPC commands</source>
         <translation>Aceptar comandos consola y JSON-RPC
 </translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+101"/>
+        <source>Error: Transaction creation failed  </source>
+        <translation>Error: Fallo al crear la transacción.</translation>
+    </message>
+    <message>
+        <location line="-5"/>
+        <source>Error: Wallet locked, unable to create transaction  </source>
+        <translation>Error: Monedero bloqueado, no es posible crear una transacción</translation>
+    </message>
+    <message>
+        <location line="-8"/>
+        <source>Importing blockchain data file.</source>
+        <translation>Importando el archivo de datos de la cadena de bloques.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Importing bootstrap blockchain data file.</source>
+        <translation>Importando el archivo de datos de arranque de la cadena de bloques.</translation>
+    </message>
+    <message>
+        <location line="-88"/>
         <source>Run in the background as a daemon and accept commands</source>
-        <translation>Correr como demonio y aceptar comandos
+        <translation>Ejecutar en segundo plano como daemon y aceptar comandos
 </translation>
     </message>
     <message>
-        <location line="+37"/>
+        <location line="+1"/>
         <source>Use the test network</source>
         <translation>Usar la red de pruebas
 </translation>
     </message>
     <message>
-        <location line="-112"/>
+        <location line="-24"/>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
         <translation>Aceptar conexiones desde el exterior (predeterminado: 1 si no -proxy o -connect)</translation>
     </message>
     <message>
-        <location line="-80"/>
-        <source>%s, you must set a rpcpassword in the configuration file:
-%s
-It is recommended you use the following random password:
-rpcuser=bitcoinrpc
-rpcpassword=%s
-(you do not need to remember this password)
-The username and password MUST NOT be the same.
-If the file does not exist, create it with owner-readable-only file permissions.
-It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@foo.com
-</source>
-        <translation>%s, debe establecer un valor rpcpassword en el archivo de configuración:
-%s
-Se recomienda utilizar la siguiente contraseña aleatoria:
-rpcuser=bitcoinrpc
-rpcpassword=%s
-(no es necesario recordar esta contraseña)
-El nombre de usuario y la contraseña DEBEN NO ser iguales.
-Si el archivo no existe, créelo con permisos de archivo de solo lectura.
-Se recomienda también establecer alertnotify para recibir notificaciones de problemas.
-Por ejemplo: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@foo.com
-</translation>
-    </message>
-    <message>
-        <location line="+17"/>
+        <location line="-38"/>
         <source>An error occurred while setting up the RPC port %u for listening on IPv6, falling back to IPv4: %s</source>
         <translation>Ha ocurrido un error al configurar el puerto RPC %u para escuchar mediante IPv6. Recurriendo a IPv4: %s</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
-        <translation>Vincular a la dirección dada y escuchar siempre en ella. Utilice la notación [host]:port para IPv6</translation>
+        <location line="+117"/>
+        <source>Error initializing database environment %s! To recover, BACKUP THAT DIRECTORY, then remove everything from it except for wallet.dat.</source>
+        <translation>Error al inicializar el entorno de base de datos %s! Para recuperar, HAGA UNA COPIA DE SEGURIDAD DEL DIRECTORIO, a continuación, elimine todo de ella excepto el archivo wallet.dat.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. FugueCore is probably already running.</source>
-        <translation>No se puede bloquear el directorio de datos %s. Probablemente FugueCore ya se está ejecutando.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>¡Error: se ha rechazado la transacción! Esto puede ocurrir si ya se han gastado algunas de las monedas del monedero, como ocurriría si hubiera hecho una copia de wallet.dat y se hubieran gastado monedas a partir de la copia, con lo que no se habrían marcado aquí como gastadas.</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>¡Error: Esta transacción requiere una comisión de al menos %s debido a su monto, complejidad, o al uso de fondos recién recibidos!</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
-        <translation>Ejecutar orden cuando se reciba un aviso relevante (%s en cmd se reemplazará por el mensaje)</translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
-        <translation>Ejecutar comando cuando una transacción del monedero cambia (%s en cmd se remplazará por TxID)</translation>
+        <location line="-20"/>
+        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
+        <translation>Establecer el tamaño máximo de las transacciones alta-prioridad/baja-comisión en bytes (por defecto: 27000)</translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Set maximum size of high-priority/low-fee transactions in bytes (default: 27000)</source>
-        <translation>Establecer el tamaño máximo de las transacciones de alta prioridad/comisión baja en bytes (predeterminado:27000)</translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Esta es una versión de pre-prueba - utilícela bajo su propio riesgo. No la utilice para usos comerciales o de minería.</translation>
-    </message>
-    <message>
-        <location line="+5"/>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
         <translation>Aviso: ¡-paytxfee tiene un valor muy alto! Esta es la comisión que pagará si envía una transacción.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Warning: Displayed transactions may not be correct! You may need to upgrade, or other nodes may need to upgrade.</source>
-        <translation>Aviso: ¡Las transacciones mostradas pueden no ser correctas! Puede necesitar una actualización o bien otros nodos necesitan actualizarse.</translation>
+        <location line="+61"/>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong TillkWDMcoin will not work properly.</source>
+        <translation>Advertencia: Verifique que la fecha y hora del equipo sean correctas! Si su reloj es erróneo TillkWDMcoin no funcionará correctamente.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong FugueCore will not work properly.</source>
-        <translation>Precaución: Por favor, ¡revise que la fecha y hora de su ordenador son correctas! Si su reloj está mal, FugueCore no funcionará correctamente.</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="-31"/>
         <source>Warning: error reading wallet.dat! All keys read correctly, but transaction data or address book entries might be missing or incorrect.</source>
         <translation>Aviso: ¡Error al leer wallet.dat! Todas las claves se han leído correctamente, pero podrían faltar o ser incorrectos los datos de transacciones o las entradas de la libreta de direcciones.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="-18"/>
         <source>Warning: wallet.dat corrupt, data salvaged! Original wallet.dat saved as wallet.{timestamp}.bak in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
         <translation>Aviso: ¡Recuperados datos de wallet.dat corrupto! El wallet.dat original se ha guardado como wallet.{timestamp}.bak en %s; si hubiera errores en su saldo o transacciones, deberá restaurar una copia de seguridad.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="-30"/>
         <source>Attempt to recover private keys from a corrupt wallet.dat</source>
         <translation>Intento de recuperar claves privadas de un wallet.dat corrupto</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Block creation options:</source>
         <translation>Opciones de creación de bloques:</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="-62"/>
         <source>Connect only to the specified node(s)</source>
         <translation>Conectar sólo a los nodos (o nodo) especificados</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Corrupted block database detected</source>
-        <translation>Corrupción de base de datos de bloques detectada.</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+4"/>
         <source>Discover own IP address (default: 1 when listening and no -externalip)</source>
         <translation>Descubrir dirección IP propia (predeterminado: 1 al escuchar sin -externalip)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Do you want to rebuild the block database now?</source>
-        <translation>¿Quieres reconstruir la base de datos de bloques ahora?</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error initializing block database</source>
-        <translation>Error al inicializar la base de datos de bloques</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error initializing wallet database environment %s!</source>
-        <translation>Error al inicializar el entorno de la base de datos del monedero  %s</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error loading block database</source>
-        <translation>Error cargando base de datos de bloques</translation>
-    </message>
-    <message>
-        <location line="+4"/>
-        <source>Error opening block database</source>
-        <translation>Error al abrir base de datos de bloques.</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Error: Disk space is low!</source>
-        <translation>Error: ¡Espacio en disco bajo!</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error: Wallet locked, unable to create transaction!</source>
-        <translation>Error: ¡El monedero está bloqueado; no se puede crear la transacción!</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Error: system error: </source>
-        <translation>Error: error de sistema: </translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+94"/>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Ha fallado la escucha en todos los puertos. Use -listen=0 si desea esto.</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Failed to read block info</source>
-        <translation>No se ha podido leer la información de bloque</translation>
+        <location line="-90"/>
+        <source>Find peers using DNS lookup (default: 1)</source>
+        <translation>Encontrar pares usando la búsqueda de DNS (por defecto: 1)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Failed to read block</source>
-        <translation>No se ha podido leer el bloque</translation>
+        <location line="+5"/>
+        <source>Sync checkpoints policy (default: strict)</source>
+        <translation>Política de puntos de control de sincronización (por defecto: estricta)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Failed to sync block index</source>
-        <translation>No se ha podido sincronizar el índice de bloques</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write block index</source>
-        <translation>No se ha podido escribir en el índice de bloques</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write block info</source>
-        <translation>No se ha podido escribir la información de bloques</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write block</source>
-        <translation>No se ha podido escribir el bloque</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write file info</source>
-        <translation>No se ha podido escribir la información de archivo</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write to coin database</source>
-        <translation>No se ha podido escribir en la base de datos de monedas</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write transaction index</source>
-        <translation>No se ha podido escribir en el índice de transacciones</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Failed to write undo data</source>
-        <translation>No se han podido escribir los datos de deshacer</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Find peers using DNS lookup (default: 1 unless -connect)</source>
-        <translation>Encontrar pares mediante búsqueda de DNS (predeterminado: 1 salvo con -connect)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Generate coins (default: 0)</source>
-        <translation>Generar monedas (por defecto: 0)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>How many blocks to check at startup (default: 288, 0 = all)</source>
-        <translation>Cuántos bloques comprobar al iniciar (predeterminado: 288, 0 = todos)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>How thorough the block verification is (0-4, default: 3)</source>
-        <translation>Como es de exhaustiva la verificación de bloques (0-4, por defecto 3)</translation>
-    </message>
-    <message>
-        <location line="+19"/>
-        <source>Not enough file descriptors available.</source>
-        <translation>No hay suficientes descriptores de archivo disponibles. </translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Rebuild block chain index from current blk000??.dat files</source>
-        <translation>Reconstruir el índice de la cadena de bloques a partir de los archivos blk000??.dat actuales</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Set the number of threads to service RPC calls (default: 4)</source>
-        <translation>Establecer el número de hilos para atender las llamadas RPC (predeterminado: 4)</translation>
-    </message>
-    <message>
-        <location line="+26"/>
-        <source>Verifying blocks...</source>
-        <translation>Verificando bloques...</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Verifying wallet...</source>
-        <translation>Verificando monedero...</translation>
-    </message>
-    <message>
-        <location line="-69"/>
-        <source>Imports blocks from external blk000??.dat file</source>
-        <translation>Importa los bloques desde un archivo blk000??.dat externo</translation>
-    </message>
-    <message>
-        <location line="-76"/>
-        <source>Set the number of script verification threads (up to 16, 0 = auto, &lt;0 = leave that many cores free, default: 0)</source>
-        <translation>Configura el número de hilos para el script de verificación (hasta 16, 0 = auto, &lt;0 = leave that many cores free, por fecto: 0)</translation>
-    </message>
-    <message>
-        <location line="+77"/>
-        <source>Information</source>
-        <translation>Información</translation>
-    </message>
-    <message>
-        <location line="+3"/>
+        <location line="+83"/>
         <source>Invalid -tor address: &apos;%s&apos;</source>
         <translation>Dirección -tor inválida: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Invalid amount for -minrelaytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Inválido por el monto -minrelaytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
+        <location line="+4"/>
+        <source>Invalid amount for -reservebalance=&lt;amount&gt;</source>
+        <translation>Cantidad no válida para -reservebalance=&lt;amount&gt;</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Invalid amount for -mintxfee=&lt;amount&gt;: &apos;%s&apos;</source>
-        <translation>Inválido por el monto -mintxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Maintain a full transaction index (default: 0)</source>
-        <translation>Mantener índice de transacciones completo (predeterminado: 0)</translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="-82"/>
         <source>Maximum per-connection receive buffer, &lt;n&gt;*1000 bytes (default: 5000)</source>
         <translation>Búfer de recepción máximo por conexión, &lt;n&gt;*1000 bytes (predeterminado: 5000)</translation>
     </message>
@@ -2612,183 +2888,239 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@fo
         <translation>Búfer de recepción máximo por conexión, , &lt;n&gt;*1000 bytes (predeterminado: 1000)</translation>
     </message>
     <message>
-        <location line="+2"/>
-        <source>Only accept block chain matching built-in checkpoints (default: 1)</source>
-        <translation>Aceptar solamente cadena de bloques que concuerde con los puntos de control internos (predeterminado: 1)</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="-16"/>
         <source>Only connect to nodes in network &lt;net&gt; (IPv4, IPv6 or Tor)</source>
         <translation>Conectarse solo a nodos de la red &lt;net&gt; (IPv4, IPv6 o Tor)</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+28"/>
         <source>Output extra debugging information. Implies all other -debug* options</source>
-        <translation>Mostrar información de depuración adicional. Implica todos los demás opciones -debug*</translation>
+        <translation>Salida de información de depuración extra. Implica todas las opciones -debug* de depuración</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Output extra network debugging information</source>
-        <translation>Mostrar información de depuración adicional</translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Prepend debug output with timestamp</source>
-        <translation>Anteponer marca temporal a la información de depuración</translation>
-    </message>
-    <message>
-        <location line="+5"/>
-        <source>SSL options: (see the FugueCore Wiki for SSL setup instructions)</source>
-        <translation>Opciones SSL: (ver la FugueCore Wiki para instrucciones de configuración SSL)</translation>
+        <translation>Salida extra de información de depuración de red</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
-        <translation>Elija la versión del proxy socks a usar (4-5, predeterminado: 5)</translation>
+        <source>Prepend debug output with timestamp</source>
+        <translation>Prefijar salida de depuración con marca de tiempo</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+35"/>
+        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <translation>Opciones SSL: (ver la Bitcoin Wiki para instrucciones de configuración SSL)</translation>
+    </message>
+    <message>
+        <location line="-74"/>
+        <source>Select the version of socks proxy to use (4-5, default: 5)</source>
+        <translation>Selecciona la versión de socks proxy a usar (4-5, por defecto: 5)</translation>
+    </message>
+    <message>
+        <location line="+41"/>
         <source>Send trace/debug info to console instead of debug.log file</source>
         <translation>Enviar información de trazas/depuración a la consola en lugar de al archivo debug.log</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Send trace/debug info to debugger</source>
-        <translation>Enviar información de trazas/depuración al depurador</translation>
+        <translation>Enviar información de rastreo / depurado al depurador</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+28"/>
         <source>Set maximum block size in bytes (default: 250000)</source>
-        <translation>Establecer tamaño máximo de bloque en bytes (predeterminado: 250000)</translation>
+        <translation>Establecer el tamaño máximo de bloque en bytes (por defecto: 250000)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Set minimum block size in bytes (default: 0)</source>
         <translation>Establecer tamaño mínimo de bloque en bytes (predeterminado: 0)</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="-29"/>
         <source>Shrink debug.log file on client startup (default: 1 when no -debug)</source>
         <translation>Reducir el archivo debug.log al iniciar el cliente (predeterminado: 1 sin -debug)</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Signing transaction failed</source>
-        <translation>Transacción falló</translation>
-    </message>
-    <message>
-        <location line="+2"/>
+        <location line="-42"/>
         <source>Specify connection timeout in milliseconds (default: 5000)</source>
         <translation>Especificar el tiempo máximo de conexión en milisegundos (predeterminado: 5000)</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>System error: </source>
-        <translation>Error de sistema: </translation>
+        <location line="+109"/>
+        <source>Unable to sign checkpoint, wrong checkpointkey?
+</source>
+        <translation>No es posible firmar el punto de control, clave de punto de control incorrecta?%s</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Transaction amount too small</source>
-        <translation>Monto de la transacción muy pequeño</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Transaction amounts must be positive</source>
-        <translation>Montos de transacciones deben ser positivos</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Transaction too large</source>
-        <translation>Transacción demasiado grande</translation>
-    </message>
-    <message>
-        <location line="+7"/>
+        <location line="-80"/>
         <source>Use UPnP to map the listening port (default: 0)</source>
         <translation>Usar UPnP para asignar el puerto de escucha (predeterminado: 0)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-1"/>
         <source>Use UPnP to map the listening port (default: 1 when listening)</source>
         <translation>Usar UPnP para asignar el puerto de escucha (predeterminado: 1 al escuchar)</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="-25"/>
         <source>Use proxy to reach tor hidden services (default: same as -proxy)</source>
-        <translation>Utilizar proxy para conectar a Tor servicios ocultos (predeterminado: igual que -proxy)</translation>
+        <translation>Usar proxy para alcanzar a ver los servicios ocultos (por defecto: los mismos que -proxy)</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+42"/>
         <source>Username for JSON-RPC connections</source>
         <translation>Nombre de usuario para las conexiones JSON-RPC
 </translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Warning</source>
-        <translation>Aviso</translation>
+        <location line="+47"/>
+        <source>Verifying database integrity...</source>
+        <translation>Verificando la integridad de la base de datos...</translation>
+    </message>
+    <message>
+        <location line="+57"/>
+        <source>WARNING: syncronized checkpoint violation detected, but skipped!</source>
+        <translation>ADVERTENCIA: violación de un punto de control sincronizado detectada, se saltara!</translation>
     </message>
     <message>
         <location line="+1"/>
+        <source>Warning: Disk space is low!</source>
+        <translation>Advertencia: Espacio en disco bajo!</translation>
+    </message>
+    <message>
+        <location line="-2"/>
         <source>Warning: This version is obsolete, upgrade required!</source>
         <translation>Aviso: Esta versión es obsoleta, actualización necesaria!</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>You need to rebuild the databases using -reindex to change -txindex</source>
-        <translation>Necesita reconstruir las bases de datos con la opción -reindex para modificar -txindex</translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="-48"/>
         <source>wallet.dat corrupt, salvage failed</source>
         <translation>wallet.dat corrupto. Ha fallado la recuperación.</translation>
     </message>
     <message>
-        <location line="-50"/>
+        <location line="-54"/>
         <source>Password for JSON-RPC connections</source>
         <translation>Contraseña para las conexiones JSON-RPC
 </translation>
     </message>
     <message>
-        <location line="-67"/>
+        <location line="-84"/>
+        <source>%s, you must set a rpcpassword in the configuration file:
+ %s
+It is recommended you use the following random password:
+rpcuser=TillkWDMcoinrpc
+rpcpassword=%s
+(you do not need to remember this password)
+The username and password MUST NOT be the same.
+If the file does not exist, create it with owner-readable-only file permissions.
+It is also recommended to set alertnotify so you are notified of problems;
+for example: alertnotify=echo %%s | mail -s &quot;TillkWDMcoin Alert&quot; admin@foo.com
+</source>
+        <translation>%s, debe establecer un rpcpassword en el fichero de configuración:
+%s
+Se recomienda utilizar la siguiente contraseña aleatoria:
+rpcuser=TillkWDMcoinrpc
+rpcpassword=%s
+(no necesita recordar este password)
+El nombre de usuario y contraseña no debe ser el mismo.
+Si no existe el archivo, créelo con permisos de sólo lectura para el dueño.
+También se recomienda establecer alertnotify para ser notificado de los problemas;
+por ejemplo: alertnotify=echo %%s | mail -s &quot;TillkWDMcoin Alert&quot; admin@foo.com
+</translation>
+    </message>
+    <message>
+        <location line="+51"/>
+        <source>Find peers using internet relay chat (default: 0)</source>
+        <translation>Encontrar pares usando IRC (por defecto:1) {0)?}</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>Sync time with other nodes. Disable if time on your system is precise e.g. syncing with NTP (default: 1)</source>
+        <translation>Sincronizar el tiempo con otros nodos. Desactivar si el tiempo en su sistema es preciso, por ejemplo si usa sincronización con NTP (por defecto: 1)</translation>
+    </message>
+    <message>
+        <location line="+15"/>
+        <source>When creating transactions, ignore inputs with value less than this (default: 0.01)</source>
+        <translation>Al crear transacciones, ignorar las entradas con valor inferior a esta (por defecto: 0.01)</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Allow JSON-RPC connections from specified IP address</source>
         <translation>Permitir conexiones JSON-RPC desde la dirección IP especificada
 </translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+1"/>
         <source>Send commands to node running on &lt;ip&gt; (default: 127.0.0.1)</source>
         <translation>Enviar comando al nodo situado en &lt;ip&gt; (predeterminado: 127.0.0.1)
 </translation>
     </message>
     <message>
-        <location line="-120"/>
+        <location line="+1"/>
         <source>Execute command when the best block changes (%s in cmd is replaced by block hash)</source>
         <translation>Ejecutar un comando cuando cambia el mejor bloque (%s en cmd se sustituye por el hash de bloque)</translation>
     </message>
     <message>
-        <location line="+147"/>
+        <location line="+3"/>
+        <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
+        <translation>Ejecutar comando cuando una transacción del monedero cambia (%s en cmd se remplazará por TxID)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Require a confirmations for change (default: 0)</source>
+        <translation>Requerir confirmaciones para cambio (por defecto: 0)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Enforce transaction scripts to use canonical PUSH operators (default: 1)</source>
+        <translation>Exigir a los scripts de transacción que usen los operadores PUSH canónicos (por defecto: 1)</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Execute command when a relevant alert is received (%s in cmd is replaced by message)</source>
+        <translation>Ejecutar comando cuando una alerta relevante sea recibida (%s en la linea de comandos es reemplazado por un mensaje)</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Upgrade wallet to latest format</source>
         <translation>Actualizar el monedero al último formato</translation>
     </message>
     <message>
-        <location line="-21"/>
+        <location line="+1"/>
         <source>Set key pool size to &lt;n&gt; (default: 100)</source>
         <translation>Ajustar el número de claves en reserva &lt;n&gt; (predeterminado: 100)
 </translation>
     </message>
     <message>
-        <location line="-12"/>
+        <location line="+1"/>
         <source>Rescan the block chain for missing wallet transactions</source>
         <translation>Volver a examinar la cadena de bloques en busca de transacciones del monedero perdidas</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+2"/>
+        <source>How many blocks to check at startup (default: 2500, 0 = all)</source>
+        <translation>Cuantos bloques para comprobar al inicio (por defecto: 2500, 0 = todos)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>How thorough the block verification is (0-6, default: 1)</source>
+        <translation>Cómo de minuciosa es la verificación del bloque (0-6, por defecto: 1)</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Imports blocks from external blk000?.dat file</source>
+        <translation>Importar bloques desde el archivo externo blk000?.dat</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Use OpenSSL (https) for JSON-RPC connections</source>
         <translation>Usar OpenSSL (https) para las conexiones JSON-RPC
 </translation>
     </message>
     <message>
-        <location line="-26"/>
+        <location line="+1"/>
         <source>Server certificate file (default: server.cert)</source>
         <translation>Certificado del servidor (predeterminado: server.cert)
 </translation>
@@ -2800,64 +3132,93 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@fo
 </translation>
     </message>
     <message>
-        <location line="-151"/>
+        <location line="+1"/>
         <source>Acceptable ciphers (default: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</source>
-        <translation>Cifrados aceptados (predeterminado: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)
-</translation>
+        <translation>Cifras aceptables: (por defecto: TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH)</translation>
     </message>
     <message>
-        <location line="+165"/>
+        <location line="+53"/>
+        <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
+        <translation>Error: Monedero desbloqueado sólo para hacer &quot;stake&quot;, no es posible crear una transacción.</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>WARNING: Invalid checkpoint found! Displayed transactions may not be correct! You may need to upgrade, or notify developers.</source>
+        <translation>ADVERTENCIA: Punto de control no válido encontrado! Las transacciones que se muestran pueden no ser correctas! Puede que tenga que actualizar o notificar a los desarrolladores.</translation>
+    </message>
+    <message>
+        <location line="-158"/>
         <source>This help message</source>
         <translation>Este mensaje de ayuda
 </translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+95"/>
+        <source>Wallet %s resides outside data directory %s.</source>
+        <translation>El monedero %s reside fuera del directorio de datos %s.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Cannot obtain a lock on data directory %s.  TillkWDMcoin is probably already running.</source>
+        <translation>No se puede obtener un bloqueo en el directorio de datos %s. TillkWDMcoin probablemente ya esté en funcionamiento.</translation>
+    </message>
+    <message>
+        <location line="-98"/>
+        <source>TillkWDMcoin</source>
+        <translation>TillkWDMcoin</translation>
+    </message>
+    <message>
+        <location line="+140"/>
         <source>Unable to bind to %s on this computer (bind returned error %d, %s)</source>
         <translation>No es posible conectar con %s en este sistema (bind ha dado el error %d, %s)</translation>
     </message>
     <message>
-        <location line="-91"/>
+        <location line="-130"/>
         <source>Connect through socks proxy</source>
-        <translation>Conectar mediante proxy socks</translation>
+        <translation>Conecte a través del socks proxy</translation>
     </message>
     <message>
-        <location line="-10"/>
+        <location line="+3"/>
         <source>Allow DNS lookups for -addnode, -seednode and -connect</source>
         <translation>Permitir búsquedas DNS para -addnode, -seednode y -connect</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+122"/>
         <source>Loading addresses...</source>
         <translation>Cargando direcciones...</translation>
     </message>
     <message>
-        <location line="-35"/>
+        <location line="-15"/>
+        <source>Error loading blkindex.dat</source>
+        <translation>Error al cargar blkindex.dat</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Error loading wallet.dat: Wallet corrupted</source>
         <translation>Error al cargar wallet.dat: el monedero está dañado</translation>
     </message>
     <message>
+        <location line="+4"/>
+        <source>Error loading wallet.dat: Wallet requires newer version of TillkWDMcoin</source>
+        <translation>Error cargando wallet.dat: El monedero requiere una nueva versión de TillkWDMcoin</translation>
+    </message>
+    <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of FugueCore</source>
-        <translation>Error al cargar wallet.dat: El monedero requiere una versión más reciente de FugueCore</translation>
+        <source>Wallet needed to be rewritten: restart TillkWDMcoin to complete</source>
+        <translation>El monedero necesita ser reescrito: reinicie TillkWDMcoin para completar</translation>
     </message>
     <message>
-        <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart FugueCore to complete</source>
-        <translation>El monedero ha necesitado ser reescrito. Reinicie FugueCore para completar el proceso</translation>
-    </message>
-    <message>
-        <location line="-95"/>
+        <location line="+1"/>
         <source>Error loading wallet.dat</source>
         <translation>Error al cargar wallet.dat</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="-16"/>
         <source>Invalid -proxy address: &apos;%s&apos;</source>
         <translation>Dirección -proxy inválida: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+56"/>
+        <location line="-1"/>
         <source>Unknown network specified in -onlynet: &apos;%s&apos;</source>
         <translation>La red especificada en -onlynet &apos;%s&apos; es desconocida</translation>
     </message>
@@ -2867,87 +3228,107 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;FugueCore Alert&quot; admin@fo
         <translation>Solicitada versión de proxy -socks desconocida: %i</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="+4"/>
         <source>Cannot resolve -bind address: &apos;%s&apos;</source>
         <translation>No se puede resolver la dirección de -bind: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Cannot resolve -externalip address: &apos;%s&apos;</source>
         <translation>No se puede resolver la dirección de -externalip: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="-24"/>
         <source>Invalid amount for -paytxfee=&lt;amount&gt;: &apos;%s&apos;</source>
         <translation>Cantidad inválida para -paytxfee=&lt;amount&gt;: &apos;%s&apos;</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+44"/>
+        <source>Error: could not start node</source>
+        <translation>Error: no se pudo iniciar el nodo</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Sending...</source>
+        <translation>Enviando...</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Invalid amount</source>
         <translation>Cuantía no válida</translation>
     </message>
     <message>
-        <location line="-6"/>
+        <location line="+1"/>
         <source>Insufficient funds</source>
         <translation>Fondos insuficientes</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="-34"/>
         <source>Loading block index...</source>
         <translation>Cargando el índice de bloques...</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="-103"/>
         <source>Add a node to connect to and attempt to keep the connection open</source>
         <translation>Añadir un nodo al que conectarse y tratar de mantener la conexión abierta</translation>
     </message>
     <message>
-        <location line="-25"/>
-        <source>Unable to bind to %s on this computer. FugueCore is probably already running.</source>
-        <translation>No es posible conectar con %s en este sistema. Probablemente FugueCore ya está ejecutándose.</translation>
+        <location line="+122"/>
+        <source>Unable to bind to %s on this computer. TillkWDMcoin is probably already running.</source>
+        <translation>No se puede enlazar a %s en este equipo. TillkWDMcoin probablemente ya esté en funcionamiento.</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="-97"/>
         <source>Fee per KB to add to transactions you send</source>
-        <translation>Tarifa por KB que añadir a las transacciones que envíe</translation>
+        <translation>Comisión por KB a añadir a las transacciones que envía</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+55"/>
+        <source>Invalid amount for -mininput=&lt;amount&gt;: &apos;%s&apos;</source>
+        <translation>Cantidad no válida para -mininput=&lt;amount&gt;: &apos;%s&apos;</translation>
+    </message>
+    <message>
+        <location line="+25"/>
         <source>Loading wallet...</source>
         <translation>Cargando monedero...</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="+8"/>
         <source>Cannot downgrade wallet</source>
         <translation>No se puede rebajar el monedero</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
+        <source>Cannot initialize keypool</source>
+        <translation>No se puede inicializar el keypool</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Cannot write default address</source>
         <translation>No se puede escribir la dirección predeterminada</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+1"/>
         <source>Rescanning...</source>
         <translation>Reexplorando...</translation>
     </message>
     <message>
-        <location line="-57"/>
+        <location line="+5"/>
         <source>Done loading</source>
         <translation>Generado pero no aceptado</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="-167"/>
         <source>To use the %s option</source>
         <translation>Para utilizar la opción %s</translation>
     </message>
     <message>
-        <location line="-74"/>
+        <location line="+14"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location line="-31"/>
+        <location line="+6"/>
         <source>You must set rpcpassword=&lt;password&gt; in the configuration file:
 %s
 If the file does not exist, create it with owner-readable-only file permissions.</source>

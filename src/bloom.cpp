@@ -7,7 +7,7 @@
 #include "bloom.h"
 #include "main.h"
 #include "script.h"
-
+#include "hash.h"
 #define LN2SQUARED 0.4804530139182014246671025263266649717305529515945455
 #define LN2 0.6931471805599453094172321214581765680755001343602552
 
@@ -31,7 +31,7 @@ nFlags(nFlagsIn)
 {
 }
 
-inline unsigned int CBloomFilter::Hash4(unsigned int nHashNum, const std::vector<unsigned char>& vDataToHash) const
+inline unsigned int CBloomFilter::Hash(unsigned int nHashNum, const std::vector<unsigned char>& vDataToHash) const
 {
     // 0xFBA4C795 chosen as it guarantees a reasonable bit difference between nHashNum values.
     return MurmurHash3(nHashNum * 0xFBA4C795 + nTweak, vDataToHash) % (vData.size() * 8);
@@ -43,7 +43,7 @@ void CBloomFilter::insert(const vector<unsigned char>& vKey)
         return;
     for (unsigned int i = 0; i < nHashFuncs; i++)
     {
-        unsigned int nIndex = Hash4(i, vKey);
+        unsigned int nIndex = Hash(i, vKey);
         // Sets bit nIndex of vData
         vData[nIndex >> 3] |= bit_mask[7 & nIndex];
     }
@@ -72,7 +72,7 @@ bool CBloomFilter::contains(const vector<unsigned char>& vKey) const
         return false;
     for (unsigned int i = 0; i < nHashFuncs; i++)
     {
-        unsigned int nIndex = Hash4(i, vKey);
+        unsigned int nIndex = Hash(i, vKey);
         // Checks bit nIndex of vData
         if (!(vData[nIndex >> 3] & bit_mask[7 & nIndex]))
             return false;

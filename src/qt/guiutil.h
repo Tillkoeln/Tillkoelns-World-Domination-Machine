@@ -5,8 +5,6 @@
 #include <QObject>
 #include <QMessageBox>
 
-class SendCoinsRecipient;
-
 QT_BEGIN_NAMESPACE
 class QFont;
 class QLineEdit;
@@ -15,6 +13,7 @@ class QDateTime;
 class QUrl;
 class QAbstractItemView;
 QT_END_NAMESPACE
+class SendCoinsRecipient;
 
 /** Utility functions used by the Bitcoin Qt UI.
  */
@@ -31,7 +30,7 @@ namespace GUIUtil
     void setupAddressWidget(QLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "FugueCore:" URI into recipient object, return true on successful parsing
+    // Parse "TillkWDMcoin:" URI into recipient object, return true on successful parsing
     // See Bitcoin URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
     bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
@@ -96,7 +95,7 @@ namespace GUIUtil
     bool GetStartOnSystemStartup();
     bool SetStartOnSystemStartup(bool fAutoStart);
 
-    /** Help message for FugueCore-Qt, shown with --help. */
+    /** Help message for Bitcoin-Qt, shown with --help. */
     class HelpMessageBox : public QMessageBox
     {
         Q_OBJECT

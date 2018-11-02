@@ -18,7 +18,6 @@ public:
     ~AboutDialog();
 
     void setModel(ClientModel *model);
-
 private:
     Ui::AboutDialog *ui;
 

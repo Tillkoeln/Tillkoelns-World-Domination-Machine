@@ -11,7 +11,6 @@
 #ifndef NOMINMAX
 #define NOMINMAX
 #endif
-#define FD_SETSIZE 1024 // max number of fds in fd_set
 #include <winsock2.h>
 #include <mswsock.h>
 #include <ws2tcpip.h>
@@ -24,9 +23,11 @@
 #include <net/if.h>
 #include <netinet/in.h>
 #include <ifaddrs.h>
-#endif
 
 typedef u_int SOCKET;
+#endif
+
+
 #ifdef WIN32
 #define MSG_NOSIGNAL        0
 #define MSG_DONTWAIT        0

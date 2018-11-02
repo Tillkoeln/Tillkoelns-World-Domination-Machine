@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About FugueCore</string>
+   <string>About TillkWDMcoin</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_2">
    <item>
@@ -50,7 +50,7 @@
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string>&lt;b&gt;FugueCore&lt;/b&gt; version</string>
+          <string>&lt;b&gt;TillkWDMcoin&lt;/b&gt; version</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -91,10 +91,9 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string notr="true">Copyright &amp;copy; 1337-YYYY The Bitcoin developers featuring whoop whoop trallalalala by Tillkoeln</string>
-       </property>
-       <property name="textFormat">
-        <enum>Qt::RichText</enum>
+        <string>Copyright © 2009-2014 The Bitcoin developers
+Copyright © 2012-2014 The NovaCoin developers
+Copyright © 2014 The TillkWDMcoin developers</string>
        </property>
        <property name="textInteractionFlags">
         <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -110,9 +109,9 @@
         <string>
 This is experimental software.
 
-Distributed under the MIT/X11 software license, google gives you more info about,.
+Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-This product includes many software from many different people feel free to research around openssl or berkley´s DataBase or the Tetris developer,  and finaly google for Tillkoeln</string>
+This product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (http://www.openssl.org/) and cryptographic software written by Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>

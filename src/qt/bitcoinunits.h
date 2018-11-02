@@ -4,17 +4,15 @@
 #include <QString>
 #include <QAbstractListModel>
 
-/** FugueCore unit definitions. Encapsulates parsing and formatting
+/** Bitcoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
 class BitcoinUnits: public QAbstractListModel
 {
-    Q_OBJECT
-
 public:
     explicit BitcoinUnits(QObject *parent);
 
-    /** FugueCore units.
+    /** Bitcoin units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
@@ -60,7 +58,6 @@ public:
     int rowCount(const QModelIndex &parent) const;
     QVariant data(const QModelIndex &index, int role) const;
     ///@}
-
 private:
     QList<BitcoinUnits::Unit> unitlist;
 };

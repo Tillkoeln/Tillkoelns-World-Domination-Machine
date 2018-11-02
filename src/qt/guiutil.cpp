@@ -1,14 +1,11 @@
-#include <QApplication>
-
 #include "guiutil.h"
-
 #include "bitcoinaddressvalidator.h"
 #include "walletmodel.h"
 #include "bitcoinunits.h"
-
 #include "util.h"
 #include "init.h"
 
+#include <QString>
 #include <QDateTime>
 #include <QDoubleValidator>
 #include <QFont>
@@ -16,6 +13,7 @@
 #include <QUrl>
 #include <QTextDocument> // For Qt::escape
 #include <QAbstractItemView>
+#include <QApplication>
 #include <QClipboard>
 #include <QFileDialog>
 #include <QDesktopServices>
@@ -79,8 +77,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no FugueCore URI
-    if(!uri.isValid() || uri.scheme() != QString("FugueCore"))
+    // NovaCoin: check prefix
+    if(uri.scheme() != QString("TillkWDMcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -125,13 +123,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert FugueCore:// to FugueCore:
+    // Convert TillkWDMcoin:// to TillkWDMcoin:
     //
-    //    Cannot handle this later, because FugueCore:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because bitcoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("FugueCore://"))
+    if(uri.startsWith("TillkWDMcoin://"))
     {
-        uri.replace(0, 12, "FugueCore:");
+        uri.replace(0, 12, "TillkWDMcoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -160,10 +158,8 @@ void copyEntryData(QAbstractItemView *view, int column, int role)
 
     if(!selection.isEmpty())
     {
-        // Copy first item (global clipboard)
-        QApplication::clipboard()->setText(selection.at(0).data(role).toString(), QClipboard::Clipboard);
-        // Copy first item (global mouse selection for e.g. X11 - NOP on Windows)
-        QApplication::clipboard()->setText(selection.at(0).data(role).toString(), QClipboard::Selection);
+        // Copy first item
+        QApplication::clipboard()->setText(selection.at(0).data(role).toString());
     }
 }
 
@@ -215,7 +211,7 @@ QString getSaveFileName(QWidget *parent, const QString &caption,
 
 Qt::ConnectionType blockingGUIThreadConnection()
 {
-    if(QThread::currentThread() != qApp->thread())
+    if(QThread::currentThread() != QCoreApplication::instance()->thread())
     {
         return Qt::BlockingQueuedConnection;
     }
@@ -227,7 +223,7 @@ Qt::ConnectionType blockingGUIThreadConnection()
 
 bool checkPoint(const QPoint &p, const QWidget *w)
 {
-    QWidget *atW = QApplication::widgetAt(w->mapToGlobal(p));
+    QWidget *atW = qApp->widgetAt(w->mapToGlobal(p));
     if (!atW) return false;
     return atW->topLevelWidget() == w;
 }
@@ -262,11 +258,11 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
     {
         QWidget *widget = static_cast<QWidget*>(obj);
         QString tooltip = widget->toolTip();
-        if(tooltip.size() > size_threshold && !tooltip.startsWith("<qt/>") && !Qt::mightBeRichText(tooltip))
+        if(tooltip.size() > size_threshold && !tooltip.startsWith("<qt>") && !Qt::mightBeRichText(tooltip))
         {
             // Prefix <qt/> to make sure Qt detects this as rich text
             // Escape the current message as HTML and replace \n by <br>
-            tooltip = "<qt/>" + HtmlEscape(tooltip, true);
+            tooltip = "<qt>" + HtmlEscape(tooltip, true) + "<qt/>";
             widget->setToolTip(tooltip);
             return true;
         }
@@ -277,7 +273,7 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "FugueCore.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "TillkWDMcoin.lnk";
 }
 
 bool GetStartOnSystemStartup()
@@ -359,7 +355,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "FugueCore.desktop";
+    return GetAutostartDir() / "TillkWDMcoin.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -397,10 +393,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a FugueCore.desktop file to the autostart directory:
+        // Write a bitcoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=FugueCore\n";
+        optionFile << "Name=TillkWDMcoin\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -421,10 +417,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("FugueCore-Qt") + " " + tr("version") + " " +
+    header = tr("TillkWDMcoin-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  FugueCore-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  TillkWDMcoin-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -433,7 +429,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("FugueCore-Qt"));
+    setWindowTitle(tr("TillkWDMcoin-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));
@@ -459,3 +455,4 @@ void HelpMessageBox::showOrPrint()
 }
 
 } // namespace GUIUtil
+

@@ -8,11 +8,10 @@
 #include "wallet.h"
 
 extern CWallet* pwalletMain;
-
+extern std::string strWalletFileName;
 void StartShutdown();
-bool ShutdownRequested();
-void Shutdown();
-bool AppInit2(boost::thread_group& threadGroup);
+void Shutdown(void* parg);
+bool AppInit2();
 std::string HelpMessage();
 
 #endif

@@ -10,10 +10,10 @@
 #include "walletmodel.h"
 #include "wallet.h"
 
-#include <QClipboard>
-
 #include <string>
 #include <vector>
+
+#include <QClipboard>
 
 SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
     QDialog(parent),
@@ -24,11 +24,11 @@ SignVerifyMessageDialog::SignVerifyMessageDialog(QWidget *parent) :
 
 #if (QT_VERSION >= 0x040700)
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->addressIn_SM->setPlaceholderText(tr("Enter a FugueCore address (e.g. 61hN8btKtp3HrXgZJwyBakUzALLZ34nA4J)"));
+    ui->addressIn_SM->setPlaceholderText(tr("Enter a TillkWDMcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)"));
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
 
-    ui->addressIn_VM->setPlaceholderText(tr("Enter a FugueCore address (e.g. 61hN8btKtp3HrXgZJwyBakUzALLZ34nA4J)"));
-    ui->signatureIn_VM->setPlaceholderText(tr("Enter FugueCore signature"));
+    ui->addressIn_VM->setPlaceholderText(tr("Enter a TillkWDMcoin address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)"));
+    ui->signatureIn_VM->setPlaceholderText(tr("Enter TillkWDMcoin signature"));
 #endif
 
     GUIUtil::setupAddressWidget(ui->addressIn_SM, this);
@@ -55,13 +55,13 @@ void SignVerifyMessageDialog::setModel(WalletModel *model)
     this->model = model;
 }
 
-void SignVerifyMessageDialog::setAddress_SM(const QString &address)
+void SignVerifyMessageDialog::setAddress_SM(QString address)
 {
     ui->addressIn_SM->setText(address);
     ui->messageIn_SM->setFocus();
 }
 
-void SignVerifyMessageDialog::setAddress_VM(const QString &address)
+void SignVerifyMessageDialog::setAddress_VM(QString address)
 {
     ui->addressIn_VM->setText(address);
     ui->messageIn_VM->setFocus();
@@ -143,7 +143,7 @@ void SignVerifyMessageDialog::on_signMessageButton_SM_clicked()
     ss << ui->messageIn_SM->document()->toPlainText().toStdString();
 
     std::vector<unsigned char> vchSig;
-    if (!key.SignCompact(Hashfugue(ss.begin(), ss.end()), vchSig))
+    if (!key.SignCompact(Hash(ss.begin(), ss.end()), vchSig))
     {
         ui->statusLabel_SM->setStyleSheet("QLabel { color: red; }");
         ui->statusLabel_SM->setText(QString("<nobr>") + tr("Message signing failed.") + QString("</nobr>"));
@@ -219,7 +219,7 @@ void SignVerifyMessageDialog::on_verifyMessageButton_VM_clicked()
     ss << ui->messageIn_VM->document()->toPlainText().toStdString();
 
     CKey key;
-    if (!key.SetCompactSignature(Hashfugue(ss.begin(), ss.end()), vchSig))
+    if (!key.SetCompactSignature(Hash(ss.begin(), ss.end()), vchSig))
     {
         ui->signatureIn_VM->setValid(false);
         ui->statusLabel_VM->setStyleSheet("QLabel { color: red; }");
